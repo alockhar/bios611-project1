@@ -26,7 +26,7 @@ IP=IntraParticipants
 
 
 IP<-IP%>% mutate(WarTypeC = as.factor(case_when(
-                           WarType==4~'Civil War: Central Control',WarType==5~'Civil War: Local Issues',WarType==6~'Regional Internal',WarType==7~'Intercommunal',WarType==-8~'NA' )),V5RegionC=case_when(V5Region==1~'North America',V5Region==2~'South America',V5Region==3~'Europe',V5Region==4~'Sub-Saharan Africa',V5Region==5~'Middle East and North Africa',V5Region==6~'Asia and Oceania') )
+                           WarType==4~'Civil War: Central Control',WarType==5~'Civil War: Local Issues',WarType==6~'Regional Internal',WarType==7~'Intercommunal',WarType==-8~'NA' )),V5RegionC=case_when(V5Region==1~'North America',V5Region==2~'South America',V5Region==3~'Europe',V5Region==4~'Sub-Saharan Africa',V5Region==5~'Middle East and North Africa',V5Region==6~'Asia and Oceania'),OutcomeC=case_when(Outcome==1~"Side A wins",Outcome==2~"Side B wins",Outcome==3~"Compromise",Outcome==4~"War transformed into another War",Outcome==5~"War ongoing as of end of 2014",Outcome==6~"Stalemate",Outcome==7~"Conflict continues below war level" ) )
 
 
 
@@ -39,11 +39,24 @@ IP<-IP%>% mutate(WarTypeC = as.factor(case_when(
 table(IP$WarTypeC)
 #Output geographic region
 table(IP$V5RegionC)
+#Output outcome
+table(IP$OutcomeC)
 
 #Output Cross-tab of war type and region
 table(IP$WarTypeC,IP$V5RegionC)
+#Output Cross-tab of war type and outcome
+table(IP$WarTypeC,IP$OutcomeC)
+#Output Cross-tab of region and outcome
+table(IP$V5RegionC,IP$OutcomeC)
+
+#Transition variables (to and from)
 
 
+#Create exposure variables (Time since start in initial date of phase 1 (repeat for phases 2:4))
+
+
+
+table(IP$StartYr1)
 
 
 
