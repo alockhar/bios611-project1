@@ -131,4 +131,13 @@ ggplot(IP, aes(TotalBDeathsU,WDuratDays)) + geom_point(aes(color=Americas))
 ggplot(IP, aes(TotalBDeathsU,WDuratMo)) + geom_point(aes(color=Americas))
 
 
+#Initiator deaths versus recipient deaths
+ggplot(IP, aes(InitiatorDeaths,RecipientDeaths)) + geom_point()
+
+ggplot(IP, aes(InitiatorDeaths,RecipientDeaths)) + geom_point(aes(color=WarTypeC))
+
+ggplot(IP, aes(InitiatorDeaths,RecipientDeaths)) + geom_point(aes(color=Americas))
+
+
+
 ```
