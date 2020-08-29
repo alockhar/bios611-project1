@@ -29,26 +29,18 @@ table(unique(IP$WarNum))
 IP<-IP%>% mutate(WarTypeC = as.factor(case_when(
                            WarType==4~'Civil War: Central Control',WarType==5~'Civil War: Local Issues',WarType==6~'Regional Internal',WarType==7~'Intercommunal',WarType==-8~'NA' )),V5RegionC=case_when(V5RegionNum==1~'North America',V5RegionNum==2~'South America',V5RegionNum==3~'Europe',V5RegionNum==4~'Sub-Saharan Africa',V5RegionNum==5~'Middle East and North Africa',V5RegionNum==6~'Asia and Oceania'),OutcomeC=case_when(Outcome==1~"Side A wins",Outcome==2~"Side B wins",Outcome==3~"Compromise",Outcome==4~"War transformed into another War",Outcome==5~"War ongoing as of end of 2014",Outcome==6~"Stalemate",Outcome==7~"Conflict continues below war level" ) )
 
+#Create initiator deaths Var
+IP$InitiatorDeaths=ifelse(IP$Initiator==IP$SideA,IP$DeathsSideA,IP$DeathsSideB)
+IP$RecipientDeaths=ifelse(IP$Initiator==IP$SideA,IP$DeathsSideA,IP$DeathsSideB)
+
+#Set upper limit to deaths 250000
+IP$TotalBDeathsU=ifelse(IP$TotalBDeaths>=50000,50000,IP$TotalBDeaths)
+
+#Make Hemisphere driven variable
+IP$Americas=ifelse(IP$V5RegionNum %in% c(1,2),'Americas','Not in Americas')
 
 
-```
 
-
-```{r cars}
-
-#Output Type of War
-table(IP$WarTypeC)
-#Output geographic region
-table(IP$V5RegionC)
-#Output outcome
-table(IP$OutcomeC)
-
-#Output Cross-tab of war type and region
-table(IP$WarTypeC,IP$V5RegionC)
-#Output Cross-tab of war type and outcome
-table(IP$WarTypeC,IP$OutcomeC)
-#Output Cross-tab of region and outcome
-table(IP$V5RegionC,IP$OutcomeC)
 
 #Transition variables (to and from)
 
@@ -70,6 +62,32 @@ chk<-IP%>%select(WarNum, TransTo,TransFrom)
 
 
 
+
+
+```
+
+
+```{r cars}
+
+#Output Type of War
+table(IP$WarTypeC)
+#Output geographic region
+table(IP$V5RegionC)
+#Output outcome
+table(IP$OutcomeC)
+
+#Output Cross-tab of war type and region
+table(IP$WarTypeC,IP$V5RegionC)
+#Output Cross-tab of war type and outcome
+table(IP$WarTypeC,IP$OutcomeC)
+#Output Cross-tab of region and outcome
+table(IP$V5RegionC,IP$OutcomeC)
+
+
+
+
+
+
 #Practice plots
 
 #Total exposure time (days)
@@ -82,7 +100,35 @@ ggplot(IP,aes(x=WDuratMo))+geom_histogram()+xlab('Total number of months war las
 #Total number of battle-related deaths both sides
 ggplot(IP,aes(x=TotalBDeaths))+geom_histogram()+xlab('Total number of battle-related deaths both sides')+ylab('Frequency')
 
+#Total deaths by war type
+ggplot(IP,aes(y=TotalBDeathsU,x=WarTypeC))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')
 
+#Total deaths by Region
+ggplot(IP,aes(y=TotalBDeathsU,x=V5RegionC))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')
+
+#Total deaths by Americas
+ggplot(IP,aes(y=TotalBDeathsU,x=Americas))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')
+
+#Total deaths by Americas facet grid
+ggplot(IP,aes(y=TotalBDeathsU,x=Americas))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')+facet_grid(~ WarTypeC)
+
+
+
+#Total deaths and exposure time (days) by war type
+ggplot(IP, aes(TotalBDeathsU,WDuratDays)) + geom_point(aes(color=WarTypeC))
+#Total deaths and exposure time (months) by war type
+ggplot(IP, aes(TotalBDeathsU,WDuratMo)) + geom_point(aes(color=WarTypeC))
+
+#Total deaths and exposure time (days) by region
+ggplot(IP, aes(TotalBDeathsU,WDuratDays)) + geom_point(aes(color=V5RegionC))
+#Total deaths and exposure time (months) by region
+ggplot(IP, aes(TotalBDeathsU,WDuratMo)) + geom_point(aes(color=V5RegionC))
+
+
+#Total deaths and exposure time (days) by Americas indicator
+ggplot(IP, aes(TotalBDeathsU,WDuratDays)) + geom_point(aes(color=Americas))
+#Total deaths and exposure time (months) by region
+ggplot(IP, aes(TotalBDeathsU,WDuratMo)) + geom_point(aes(color=Americas))
 
 
 ```
