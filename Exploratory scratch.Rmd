@@ -7,22 +7,45 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## GGPLOT practice
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r cars}
 
+ls(IntraParticipants)
+
+
+
+
+```
+```{r cars}
+
+ls(IntraParticipants)
+IP=IntraParticipants
+
+
+
+IP<-IP%>% mutate(WarTypeC = as.factor(case_when(
+                           WarType==4~'Civil War: Central Control',WarType==5~'Civil War: Local Issues',WarType==6~'Regional Internal',WarType==7~'Intercommunal',WarType==-8~'NA' )),V5RegionC=case_when(V5Region==1~'North America',V5Region==2~'South America',V5Region==3~'Europe',V5Region==4~'Sub-Saharan Africa',V5Region==5~'Middle East and North Africa',V5Region==6~'Asia and Oceania') )
+
+
+
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
+```{r cars}
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+#Output Type of War
+table(IP$WarTypeC)
+#Output geographic region
+table(IP$V5RegionC)
+
+#Output Cross-tab of war type and region
+table(IP$WarTypeC,IP$V5RegionC)
+
+
+
+
+
+
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
