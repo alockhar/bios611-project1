@@ -15,18 +15,19 @@ knitr::opts_chunk$set(echo = TRUE)
 ls(IntraParticipants)
 
 
-
+ls(Overall)
 
 ```
 ```{r cars}
 
 ls(IntraParticipants)
-IP=IntraParticipants
+IP=Overall
 
 
+table(unique(IP$WarNum))
 
 IP<-IP%>% mutate(WarTypeC = as.factor(case_when(
-                           WarType==4~'Civil War: Central Control',WarType==5~'Civil War: Local Issues',WarType==6~'Regional Internal',WarType==7~'Intercommunal',WarType==-8~'NA' )),V5RegionC=case_when(V5Region==1~'North America',V5Region==2~'South America',V5Region==3~'Europe',V5Region==4~'Sub-Saharan Africa',V5Region==5~'Middle East and North Africa',V5Region==6~'Asia and Oceania'),OutcomeC=case_when(Outcome==1~"Side A wins",Outcome==2~"Side B wins",Outcome==3~"Compromise",Outcome==4~"War transformed into another War",Outcome==5~"War ongoing as of end of 2014",Outcome==6~"Stalemate",Outcome==7~"Conflict continues below war level" ) )
+                           WarType==4~'Civil War: Central Control',WarType==5~'Civil War: Local Issues',WarType==6~'Regional Internal',WarType==7~'Intercommunal',WarType==-8~'NA' )),V5RegionC=case_when(V5RegionNum==1~'North America',V5RegionNum==2~'South America',V5RegionNum==3~'Europe',V5RegionNum==4~'Sub-Saharan Africa',V5RegionNum==5~'Middle East and North Africa',V5RegionNum==6~'Asia and Oceania'),OutcomeC=case_when(Outcome==1~"Side A wins",Outcome==2~"Side B wins",Outcome==3~"Compromise",Outcome==4~"War transformed into another War",Outcome==5~"War ongoing as of end of 2014",Outcome==6~"Stalemate",Outcome==7~"Conflict continues below war level" ) )
 
 
 
@@ -53,10 +54,33 @@ table(IP$V5RegionC,IP$OutcomeC)
 
 
 #Create exposure variables (Time since start in initial date of phase 1 (repeat for phases 2:4))
+#How to deal with fragmented exposures?
 
 
 
-table(IP$StartYr1)
+#Create New ID based on all unique war combinations
+#How to deal with wars that transferred from another war?
+
+
+#How to deal with war that transferred to another war
+
+#Keep only IDs of WarNum, TransTo,TransFrom
+
+chk<-IP%>%select(WarNum, TransTo,TransFrom)
+
+
+
+#Practice plots
+
+#Total exposure time (days)
+ggplot(IP,aes(x=WDuratDays))+geom_histogram()+xlab('Total number of days war lasted')+ylab('Frequency')
+
+
+#Total exposure time (months)
+ggplot(IP,aes(x=WDuratMo))+geom_histogram()+xlab('Total number of months war lasted')+ylab('Frequency')
+
+#Total number of battle-related deaths both sides
+ggplot(IP,aes(x=TotalBDeaths))+geom_histogram()+xlab('Total number of battle-related deaths both sides')+ylab('Frequency')
 
 
 
