@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r cars}
-
+library(lubridate)
 ls(IntraParticipants)
 
 
@@ -19,6 +19,8 @@ ls(Overall)
 
 ```
 ```{r cars}
+
+#Pre-internationalized data set
 
 ls(IntraParticipants)
 IP=Overall
@@ -29,38 +31,71 @@ table(unique(IP$WarNum))
 IP<-IP%>% mutate(WarTypeC = as.factor(case_when(
                            WarType==4~'Civil War: Central Control',WarType==5~'Civil War: Local Issues',WarType==6~'Regional Internal',WarType==7~'Intercommunal',WarType==-8~'NA' )),V5RegionC=case_when(V5RegionNum==1~'North America',V5RegionNum==2~'South America',V5RegionNum==3~'Europe',V5RegionNum==4~'Sub-Saharan Africa',V5RegionNum==5~'Middle East and North Africa',V5RegionNum==6~'Asia and Oceania'),OutcomeC=case_when(Outcome==1~"Side A wins",Outcome==2~"Side B wins",Outcome==3~"Compromise",Outcome==4~"War transformed into another War",Outcome==5~"War ongoing as of end of 2014",Outcome==6~"Stalemate",Outcome==7~"Conflict continues below war level" ) )
 
-#Create initiator deaths Var
+IP$WarTypeD=ifelse(IP$WarType==4,'Civil War: Central Control',ifelse(IP$WarType==5,'Civil War: Local Issues',ifelse(IP$WarType%in%c(6,7),'Other','NA')))
+
+
+#Create initiator deaths Var (need to create war id long dataset)
 IP$InitiatorDeaths=ifelse(IP$Initiator==IP$SideA,IP$DeathsSideA,IP$DeathsSideB)
 IP$RecipientDeaths=ifelse(IP$Initiator==IP$SideA,IP$DeathsSideA,IP$DeathsSideB)
 
-#Set upper limit to deaths 250000
+#Set upper limit to deaths 50000
 IP$TotalBDeathsU=ifelse(IP$TotalBDeaths>=50000,50000,IP$TotalBDeaths)
 
 #Make Hemisphere driven variable
 IP$Americas=ifelse(IP$V5RegionNum %in% c(1,2),'Americas','Not in Americas')
 
+#Let's make some dates
 
+IP$Phase1_st=ymd( paste(IP$StartYr1, IP$StartMo1, IP$StartDy1, sep="-"))
+IP$Phase2_st=ymd( paste(IP$StartYr2, IP$StartMo2, IP$StartDy2, sep="-"))
+IP$Phase3_st=ymd( paste(IP$StartYr3, IP$StartMo3, IP$StartDy3, sep="-"))
+IP$Phase4_st=ymd( paste(IP$StartYr4, IP$StartMo4, IP$StartDy4, sep="-"))
+
+IP$Phase1_en=ymd( paste(IP$EndYr1, IP$EndMo1, IP$EndDy1, sep="-"))
+IP$Phase2_en=ymd( paste(IP$EndYr2, IP$EndMo2, IP$EndDy2, sep="-"))
+IP$Phase3_en=ymd( paste(IP$EndYr3, IP$EndMo3, IP$EndDy3, sep="-"))
+IP$Phase4_en=ymd( paste(IP$EndYr4, IP$EndMo4, IP$EndDy4, sep="-"))
+
+
+#Deaths,war types, region by time
 
 
 #Transition variables (to and from)
 
 
-#Create exposure variables (Time since start in initial date of phase 1 (repeat for phases 2:4))
-#How to deal with fragmented exposures?
+#Create dataset of wars spread out or transferred to another war
+#Look at descriptive attributes of those 
 
 
 
-#Create New ID based on all unique war combinations
-#How to deal with wars that transferred from another war?
+#Repeat above descriptive on wars that were internationalized
 
 
-#How to deal with war that transferred to another war
+#Do Aim 1 GEE on the intra participants dataset
+
+
+
+#Aim 2 will look to (cluster time) and add as variable in models
+
+
+
+#Aim 3 Decision tree/network of internationalized war (attributes)
+
+
 
 #Keep only IDs of WarNum, TransTo,TransFrom
 
 chk<-IP%>%select(WarNum, TransTo,TransFrom)
 
 
+
+#Overall dataset (Focus on descriptive statistics)
+
+
+#Long dataset (two records per war ID) To do
+
+
+#Dataset for wars which spread out to other wars To do
 
 
 
@@ -95,7 +130,7 @@ ggplot(IP,aes(x=WDuratDays))+geom_histogram()+xlab('Total number of days war las
 
 
 #Total exposure time (months)
-ggplot(IP,aes(x=WDuratMo))+geom_histogram()+xlab('Total number of months war lasted')+ylab('Frequency')
+#ggplot(IP,aes(x=WDuratMo))+geom_histogram()+xlab('Total number of months war lasted')+ylab('Frequency')
 
 #Total number of battle-related deaths both sides
 ggplot(IP,aes(x=TotalBDeaths))+geom_histogram()+xlab('Total number of battle-related deaths both sides')+ylab('Frequency')
@@ -104,20 +139,29 @@ ggplot(IP,aes(x=TotalBDeaths))+geom_histogram()+xlab('Total number of battle-rel
 ggplot(IP,aes(y=TotalBDeathsU,x=WarTypeC))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')
 
 #Total deaths by Region
-ggplot(IP,aes(y=TotalBDeathsU,x=V5RegionC))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')
+ggplot(IP,aes(y=TotalBDeathsU,x=V5RegionC))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')+theme(axis.text.x = element_text(angle = 90))
 
 #Total deaths by Americas
 ggplot(IP,aes(y=TotalBDeathsU,x=Americas))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')
 
 #Total deaths by Americas facet grid
 ggplot(IP,aes(y=TotalBDeathsU,x=Americas))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')+facet_grid(~ WarTypeC)
+ggplot(IP,aes(y=TotalBDeathsU,x=Americas))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')+facet_grid(~ WarTypeD)
+
+#Initiator deaths Repeated above
+
+
+
+#Recipient deaths repeated above
+
+
 
 
 
 #Total deaths and exposure time (days) by war type
-ggplot(IP, aes(TotalBDeathsU,WDuratDays)) + geom_point(aes(color=WarTypeC))
+ggplot(IP, aes(TotalBDeathsU,WDuratDays)) + geom_point(aes(color=WarTypeD))
 #Total deaths and exposure time (months) by war type
-ggplot(IP, aes(TotalBDeathsU,WDuratMo)) + geom_point(aes(color=WarTypeC))
+ggplot(IP, aes(TotalBDeathsU,WDuratMo)) + geom_point(aes(color=WarTypeD))
 
 #Total deaths and exposure time (days) by region
 ggplot(IP, aes(TotalBDeathsU,WDuratDays)) + geom_point(aes(color=V5RegionC))
@@ -131,12 +175,17 @@ ggplot(IP, aes(TotalBDeathsU,WDuratDays)) + geom_point(aes(color=Americas))
 ggplot(IP, aes(TotalBDeathsU,WDuratMo)) + geom_point(aes(color=Americas))
 
 
-#Initiator deaths versus recipient deaths
-ggplot(IP, aes(InitiatorDeaths,RecipientDeaths)) + geom_point()
 
-ggplot(IP, aes(InitiatorDeaths,RecipientDeaths)) + geom_point(aes(color=WarTypeC))
 
-ggplot(IP, aes(InitiatorDeaths,RecipientDeaths)) + geom_point(aes(color=Americas))
+#Temporal plots
+
+
+
+#Make map of time and average deaths. Repeat by region and war type
+
+
+#Calculate time or break between phases 1, 2,3,4.  We want to look at total delayed time and attributes above
+
 
 
 
