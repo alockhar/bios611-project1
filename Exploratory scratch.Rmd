@@ -12,6 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r cars}
 library(lubridate)
+library(taRifx)
+library(lme4)
+#Don't forget to install in MakeFile
+
+
 ls(IntraParticipants)
 
 
@@ -57,13 +62,12 @@ IP$Phase3_en=ymd( paste(IP$EndYr3, IP$EndMo3, IP$EndDy3, sep="-"))
 IP$Phase4_en=ymd( paste(IP$EndYr4, IP$EndMo4, IP$EndDy4, sep="-"))
 
 
-#Deaths,war types, region by time
 
 
-#Transition variables (to and from)
+#Transition variables (to and from)#Create dataset of wars spread out or transferred to another war
 
 
-#Create dataset of wars spread out or transferred to another war
+
 #Look at descriptive attributes of those 
 
 
@@ -89,7 +93,7 @@ chk<-IP%>%select(WarNum, TransTo,TransFrom)
 
 
 
-#Overall dataset (Focus on descriptive statistics)
+#Overall dataset (Focus on descriptive statistics) Above
 
 
 #Long dataset (two records per war ID) To do
@@ -98,6 +102,8 @@ chk<-IP%>%select(WarNum, TransTo,TransFrom)
 #Dataset for wars which spread out to other wars To do
 
 
+
+#Repeat for internationalized wars
 
 ```
 
@@ -180,13 +186,51 @@ ggplot(IP, aes(TotalBDeathsU,WDuratMo)) + geom_point(aes(color=Americas))
 #Temporal plots
 
 
+#Deaths,war types, region by time
 
-#Make map of time and average deaths. Repeat by region and war type
+p1 <- ggplot(IP, 
+        aes(x = StartYr1, y = TotalBDeathsU)) +
+  geom_point()
+
+p1
+
+p2 <- ggplot(IP, 
+        aes(x = StartYr1, y = TotalBDeathsU)) +
+  geom_point()+facet_grid(~Americas)
+
+p2
+
+
+p3 <- ggplot(IP, 
+        aes(x = StartYr1, y = TotalBDeathsU,group=WarTypeD,color=WarTypeD)) +
+  geom_point()+facet_grid(~Americas)
+
+p3
+
+
+p1 <- ggplot(IP, 
+        aes(x = StartYr1, y = TotalBDeathsU)) +
+  geom_line()+facet_grid(~Americas)
+
+p1
+
+
+
+#Take a look at number of wars that transferred to another war
+Toanothewar=subset(IP,TransTo!=-8)
+Toanothewar%>%summarize(count=n())
+
+#Take a look at numer of wars transferred from another war
+Fanothewar=subset(IP,TransFrom!=-8)
+Fanothewar%>%summarize(count=n())
 
 
 #Calculate time or break between phases 1, 2,3,4.  We want to look at total delayed time and attributes above
 
 
+
+
+#GEE 
 
 
 ```
