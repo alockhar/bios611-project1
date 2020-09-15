@@ -40,8 +40,8 @@ IP$WarTypeD=ifelse(IP$WarType==4,'Civil War: Central Control',ifelse(IP$WarType=
 
 
 #Create initiator deaths Var (need to create war id long dataset)
-IP$InitiatorDeaths=ifelse(IP$Initiator==IP$SideA,IP$DeathsSideA,IP$DeathsSideB)
-IP$RecipientDeaths=ifelse(IP$Initiator==IP$SideA,IP$DeathsSideA,IP$DeathsSideB)
+#IP$InitiatorDeaths=ifelse(IP$Initiator==IP$SideA,IP$DeathsSideA,IP$DeathsSideB)
+#IP$RecipientDeaths=ifelse(IP$Initiator==IP$SideB,IP$DeathsSideB,IP$DeathsSideA)
 
 #Set upper limit to deaths 50000
 IP$TotalBDeathsU=ifelse(IP$TotalBDeaths>=50000,50000,IP$TotalBDeaths)
@@ -62,6 +62,23 @@ IP$Phase3_en=ymd( paste(IP$EndYr3, IP$EndMo3, IP$EndDy3, sep="-"))
 IP$Phase4_en=ymd( paste(IP$EndYr4, IP$EndMo4, IP$EndDy4, sep="-"))
 
 
+
+#Test data set two observations per war number for eventual modeling)%>%select(WarNum,TotalBDeaths,TotalBDeathsU,WDuratDays,Americas,WarTypeD,InitiatorDeaths,RecipientDeaths,DeathsSideA,DeathsSideB)
+
+library(reshape2)
+
+Sub1<-IP%>%mutate(deaths=DeathsSideA)%>%select(WarNum,deaths,WDuratDays,Americas,WarTypeD,Initiator,SideA)
+Sub1$side='A'
+Sub1$Init=ifelse(Sub1$SideA==Sub1$Initiator,1,0)
+SubA<-Sub1%>%select(-c(Initiator,SideA))
+
+Sub2<-IP%>%mutate(deaths=DeathsSideB)%>%select(WarNum,deaths,WDuratDays,Americas,WarTypeD,Initiator,SideB)
+Sub2$side='B'
+Sub2$Init=ifelse(Sub2$SideB==Sub2$Initiator,1,0)
+SubB<-Sub2%>%select(-c(Initiator,SideB))
+
+
+Long=data.frame(rbind(SubA,SubB))
 
 
 #Transition variables (to and from)#Create dataset of wars spread out or transferred to another war
