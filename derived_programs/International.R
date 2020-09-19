@@ -30,3 +30,7 @@ IP$Phase3_en=ymd( paste(IP$EndYr3, IP$EndMo3, IP$EndDy3, sep="-"))
 IP$Phase4_en=ymd( paste(IP$EndYr4, IP$EndMo4, IP$EndDy4, sep="-"))
 
 write_csv(IP,"derived_data/International.csv")
+
+
+chk=read_csv("derived_data/International.csv");
+chk2=read_csv("derived_data/Overall.csv");

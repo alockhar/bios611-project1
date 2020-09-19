@@ -14,6 +14,9 @@ knitr::opts_chunk$set(echo = TRUE)
 library(lubridate)
 library(taRifx)
 library(lme4)
+library(mclust)
+library(network)
+library(igraph)
 #Don't forget to install in MakeFile
 
 
@@ -313,4 +316,86 @@ IP$Phase4_en=ymd( paste(IP$EndYr4, IP$EndMo4, IP$EndDy4, sep="-"))
 
 #glmer(TotalBDeaths ~ offset(log(WDuratDays)) + Americas +  + (1|stateID),
          #   family = poisson, data = LSss)
+
+
+
+
+
+#Aim 2
+
+library(mclust)
+set.seed(3300)
+fit.yr=Mclust(IP$StartYr1,G=2)
+plot1.yr=plot(fit.yr$classification)
+plot1.yr
+dat1=data.frame(x=IP$StartYr1,class=factor(fit.yr$classification))
+ggplot(dat1,aes(x,fill=class))+geom_histogram()
+
+
+
+
+network_l=read_csv("derived_data/International.csv");
+
+network_l$Initiator_side=ifelse(network_l$SideA==network_l$Initiator,network_l$Initiator,network_l$SideB)
+network_l$Recipient_side=ifelse(network_l$SideB!=network_l$Initiator_side,network_l$SideB,network_l$SideA)
+network_l$Initiator_side=ifelse(network_l$Initiator_side=='-8','NA',network_l$Initiator_side)
+network_l$Recipient_side=ifelse(network_l$Recipient_side=='-8','NA',network_l$Recipient_side)
+
+
+sources <- network_l %>%
+  distinct(Initiator_side) %>%
+  rename(label = Initiator_side)
+
+destinations <-  network_l %>%
+  distinct(Recipient_side) %>%
+  rename(label = Recipient_side)
+
+
+nodes <- full_join(sources, destinations, by = "label")
+nodes
+
+nodes <- nodes %>% rowid_to_column("id")
+
+per_war <- network_l %>%  
+  group_by(Initiator_side, Recipient_side) %>%
+  mutate(weight = TotalBDeathsU) %>% 
+  ungroup()
+per_war
+
+edges <- per_war %>% 
+  left_join(nodes, by = c("Initiator_side" = "label")) %>% 
+  rename(from = id)
+
+edges <- edges %>% 
+  left_join(nodes, by = c("Recipient_side" = "label")) %>% 
+  rename(to = id)
+
+edges2=select(edges, from, to, weight,Americas,Intnl)
+
+library(network)
+war_network <- network(edges2, vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
+
+plot(war_network, vertex.cex = 3,mode='circle')
+
+detach(package:network)
+rm(routes_network)
+library(igraph)
+library(RColorBrewer)
+
+war_igraph <- graph_from_data_frame(d = edges2, vertices = nodes, directed = TRUE)
+
+plot(war_igraph, edge.arrow.size = 0.2)
+
+colrs <- c("gray50", "tomato")
+V(war_igraph)$color <- colrs[V(war_igraph)$Americas]
+plot(war_igraph, edge.arrow.size = 0.2)
+
+
+plot(war_igraph)
+
+
+pal <- brewer.pal(length(unique(V(war_igraph)$Americas)), "Dark2")
+
+plot(war_igraph, vertex.color = pal[as.numeric(as.factor(vertex_attr(war_igraph, "group")))], layout=layout_randomly)
+
 ```
