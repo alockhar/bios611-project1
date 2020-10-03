@@ -1,841 +1,841 @@
-WarNum,deaths,WDuratDays,Outcome,Americas,WarTypeD,side,Init
-500,5000,1596,1,Not in Americas,Civil War: Local Issues,A,0
-502,-9,262,1,Not in Americas,Civil War: Central Control,A,0
-502.1,-9,550,1,Not in Americas,Civil War: Local Issues,A,1
-503,-9,59,1,Not in Americas,Civil War: Central Control,A,0
-504,50000,2551,4,Not in Americas,Civil War: Local Issues,A,0
-504.3,1200,430,3,Not in Americas,Other,A,0
-505,-9,483,4,Not in Americas,Civil War: Central Control,A,0
-507,-9,22,1,Not in Americas,Other,A,0
-507.5,-9,372,1,Not in Americas,Civil War: Local Issues,A,0
-508,40,4,1,Not in Americas,Civil War: Central Control,A,0
-511,3000,954,1,Not in Americas,Civil War: Local Issues,A,0
-512,5000,741,1,Not in Americas,Civil War: Local Issues,A,0
-513,200,3,2,Not in Americas,Civil War: Central Control,A,0
-515,500,115,2,Not in Americas,Civil War: Local Issues,A,0
-516,1500,91,2,Not in Americas,Other,A,1
-517,15000,252,1,Not in Americas,Civil War: Local Issues,A,1
-518,10000,447,3,Not in Americas,Civil War: Local Issues,A,0
-520,1400,352,2,Americas,Civil War: Central Control,A,0
-520.3,-9,1125,1,Americas,Civil War: Central Control,A,0
-520.5,12000,678,2,Not in Americas,Civil War: Central Control,A,0
-521,2000,87,1,Not in Americas,Other,A,0
-522,70550,2123,1,Not in Americas,Civil War: Central Control,A,0
-523,-9,68,7,Not in Americas,Civil War: Local Issues,A,0
-525,5500,907,1,Americas,Civil War: Local Issues,A,0
-525.5,-9,4,1,Americas,Civil War: Central Control,A,0
-526,-9,3403,1,Americas,Civil War: Local Issues,A,0
-527,1500,199,2,Americas,Civil War: Local Issues,A,0
-528,-9,91,1,Not in Americas,Civil War: Local Issues,A,0
-530,20000,5689,7,Not in Americas,Civil War: Local Issues,A,1
-531,600,130,1,Americas,Civil War: Local Issues,A,0
-532,15000,326,3,Not in Americas,Other,A,0
-532.5,900,381,1,Americas,Civil War: Central Control,A,0
-532.7,-9,757,1,Americas,Civil War: Local Issues,A,0
-533,1500,19,2,Not in Americas,Civil War: Local Issues,A,1
-535,-9,65,1,Not in Americas,Other,A,0
-536,-9,661,1,Americas,Civil War: Central Control,A,0
-537,-9,129,1,Not in Americas,Civil War: Local Issues,A,1
-538,1800,696,1,Americas,Civil War: Central Control,A,0
-539,-9,22,1,Not in Americas,Civil War: Local Issues,A,0
-540,-9,91,1,Not in Americas,Civil War: Local Issues,A,0
-541,700,37,2,Americas,Civil War: Central Control,A,0
-541.2,390,37,2,Not in Americas,Other,A,0
-542,400,25,1,Not in Americas,Civil War: Local Issues,A,1
-543,700,31,2,Not in Americas,Other,A,1
-544,-9,264,1,Not in Americas,Civil War: Central Control,A,0
-545,2800,572,4,Americas,Other,A,0
-546,3000,704,1,Not in Americas,Civil War: Central Control,A,0
-547,1500,289,1,Not in Americas,Civil War: Central Control,A,0
-548,1500,552,1,Americas,Civil War: Central Control,A,0
-549,1100,64,1,Not in Americas,Civil War: Central Control,A,0
-550,241,29,1,Not in Americas,Civil War: Central Control,A,0
-551,600,6,4,Not in Americas,Civil War: Local Issues,A,0
-553,-9,2358,1,Americas,Civil War: Local Issues,A,1
-554,59600,331,1,Not in Americas,Civil War: Local Issues,A,0
-554.3,-9,241,1,Not in Americas,Civil War: Local Issues,A,1
-554.5,-9,24,1,Not in Americas,Civil War: Local Issues,A,0
-555,1500,124,1,Americas,Civil War: Central Control,A,0
-555.8,-9,48,2,Not in Americas,Civil War: Local Issues,A,1
-556,4500,175,3,Not in Americas,Civil War: Local Issues,A,0
-557,-9,437,2,Americas,Civil War: Central Control,A,0
-557.1,-9,93,1,Not in Americas,Civil War: Local Issues,A,0
-557.2,-9,121,1,Not in Americas,Civil War: Local Issues,A,0
-557.3,1400,226,2,Americas,Civil War: Central Control,A,0
-557.8,100,34,1,Americas,Civil War: Central Control,A,0
-557.9,1400,211,1,Not in Americas,Civil War: Local Issues,A,0
-558,200,101,1,Americas,Civil War: Central Control,A,0
-560,1000,488,1,Americas,Civil War: Central Control,A,0
-561,-9,1038,2,Americas,Civil War: Central Control,A,0
-562,3000,11,2,Not in Americas,Civil War: Local Issues,A,1
-562.5,-9,128,1,Americas,Civil War: Central Control,A,0
-563,30000,1534,2,Americas,Civil War: Central Control,A,0
-565,-9,952,2,Americas,Civil War: Central Control,A,0
-566,2000,47,2,Not in Americas,Other,A,1
-567,-9,1905,1,Not in Americas,Civil War: Central Control,A,0
-568,-9,2812,1,Not in Americas,Civil War: Local Issues,A,0
-570,-9,4341,1,Not in Americas,Civil War: Local Issues,A,0
-571,-9,4870,1,Not in Americas,Civil War: Local Issues,A,0
-572,360000,1470,1,Americas,Civil War: Local Issues,A,0
-573,-9,212,2,Americas,Civil War: Central Control,A,0
-575,5000,346,3,Not in Americas,Civil War: Local Issues,A,1
-576,-9,4144,1,Not in Americas,Civil War: Local Issues,A,0
-577,608,43,1,Americas,Other,A,0
-578,-9,44,1,Americas,Civil War: Central Control,A,0
-579,5000,448,1,Not in Americas,Civil War: Local Issues,A,0
-580,-9,223,1,Americas,Civil War: Central Control,A,0
-580.5,2413,227,7,Not in Americas,Civil War: Local Issues,A,1
-581,-9,331,1,Not in Americas,Civil War: Local Issues,A,0
-582,-9,668,2,Not in Americas,Civil War: Local Issues,A,0
-582.3,1000,194,1,Not in Americas,Civil War: Central Control,A,0
-582.5,-9,361,1,Americas,Civil War: Central Control,A,0
-583,-9,843,1,Not in Americas,Civil War: Local Issues,A,0
-585,-9,15,1,Not in Americas,Civil War: Local Issues,A,0
-586,-9,337,1,Americas,Civil War: Central Control,A,0
-586.5,-9,31,1,Not in Americas,Other,A,1
-587,1800,136,2,Americas,Civil War: Central Control,A,0
-587.8,-9,231,2,Americas,Civil War: Central Control,A,0
-588,3600,511,1,Not in Americas,Civil War: Central Control,A,1
-591,800,12,2,Not in Americas,Civil War: Central Control,A,0
-592,-9,391,2,Americas,Civil War: Central Control,A,0
-592.5,-9,983,2,Americas,Civil War: Central Control,A,0
-592.7,-9,301,1,Not in Americas,Other,A,0
-593,200,294,1,Americas,Civil War: Local Issues,A,1
-595,-9,77,2,Americas,Civil War: Central Control,A,0
-596,879,72,1,Not in Americas,Civil War: Central Control,A,0
-596.7,-9,241,1,Not in Americas,Other,A,0
-597,7000,1388,1,Not in Americas,Civil War: Central Control,A,0
-597.5,500,233,1,Americas,Civil War: Local Issues,A,1
-598,-9,175,1,Not in Americas,Civil War: Local Issues,A,1
-600,-9,74,1,Americas,Civil War: Central Control,A,0
-601,10000,360,4,Not in Americas,Civil War: Local Issues,A,0
-602,1900,309,2,Americas,Civil War: Central Control,A,0
-603,-9,618,1,Not in Americas,Civil War: Local Issues,A,1
-605,2430,265,1,Americas,Civil War: Central Control,A,0
-606,-9,109,2,Americas,Civil War: Central Control,A,0
-607,6399,236,1,Not in Americas,Civil War: Central Control,A,1
-608,200,213,1,Americas,Civil War: Local Issues,A,1
-609,-9,41,2,Americas,Civil War: Central Control,A,0
-610,550,11,1,Americas,Civil War: Local Issues,A,0
-610.5,3500,393,4,Not in Americas,Civil War: Local Issues,A,0
-611,2400,282,1,Americas,Civil War: Central Control,A,0
-612,330,333,1,Americas,Civil War: Central Control,A,0
-613,200,70,1,Americas,Civil War: Local Issues,A,0
-616,-9,811,1,Not in Americas,Civil War: Local Issues,A,0
-616.5,-9,4,1,Americas,Civil War: Central Control,A,0
-617,-9,233,2,Americas,Civil War: Central Control,A,0
-618,500,36,1,Not in Americas,Civil War: Central Control,A,0
-619,-9,206,2,Americas,Civil War: Central Control,A,0
-620,-9,570,1,Americas,Civil War: Central Control,A,0
-621,-9,221,1,Americas,Civil War: Central Control,A,0
-623,500,78,3,Not in Americas,Civil War: Local Issues,A,0
-625,-9,146,2,Americas,Civil War: Central Control,A,0
-626,-9,47,1,Americas,Civil War: Central Control,A,0
-627,-9,221,2,Americas,Civil War: Central Control,A,0
-628,-9,374,1,Not in Americas,Civil War: Local Issues,A,0
-630,6000,272,1,Not in Americas,Civil War: Local Issues,A,1
-630.2,4500,99,3,Not in Americas,Civil War: Local Issues,A,1
-631,-9,335,4,Not in Americas,Civil War: Local Issues,A,0
-631.5,-9,88,1,Americas,Civil War: Central Control,A,0
-632,5000,365,1,Americas,Civil War: Local Issues,A,1
-632.3,-9,118,1,Americas,Civil War: Central Control,A,0
-632.6,6000,421,7,Not in Americas,Civil War: Local Issues,A,0
-633,1200,141,2,Americas,Civil War: Central Control,A,0
-635,80,178,1,Americas,Civil War: Local Issues,A,0
-636,47000,1115,1,Americas,Civil War: Central Control,A,0
-637,2000,560,1,Americas,Civil War: Local Issues,A,1
-638,-9,573,1,Americas,Civil War: Central Control,A,0
-639,30000,1472,6,Not in Americas,Civil War: Local Issues,A,0
-640,4500,395,1,Not in Americas,Civil War: Local Issues,A,0
-641,900,250,1,Americas,Civil War: Central Control,A,0
-641.5,1900,140,3,Not in Americas,Civil War: Local Issues,A,1
-643,2300,340,1,Not in Americas,Civil War: Central Control,A,1
-645,-9,45,1,Not in Americas,Civil War: Central Control,A,0
-646,600,366,2,Not in Americas,Civil War: Central Control,A,0
-647,-9,385,2,Not in Americas,Civil War: Central Control,A,1
-647.5,7000,702,6,Not in Americas,Civil War: Local Issues,A,1
-648,-9,34,1,Not in Americas,Civil War: Central Control,A,0
-649,-9,311,2,Americas,Civil War: Central Control,A,0
-650,5000,932,4,Not in Americas,Civil War: Local Issues,A,0
-650.8,100,58,1,Not in Americas,Civil War: Local Issues,A,1
-652,90000,1240,2,Americas,Civil War: Central Control,A,0
-656,3000,206,2,Americas,Civil War: Central Control,A,0
-657,4000,68,3,Not in Americas,Civil War: Central Control,A,0
-657.3,-9,12,1,Americas,Civil War: Central Control,A,0
-658,50,59,1,Americas,Civil War: Local Issues,A,0
-665,-9,50,1,Not in Americas,Civil War: Local Issues,A,1
-667,-9,1071,1,Americas,Civil War: Central Control,A,0
-672,-9,143,1,Not in Americas,Civil War: Local Issues,A,0
-672.5,1000,481,1,Americas,Civil War: Local Issues,A,1
-673,90015,2066,1,Americas,Civil War: Central Control,A,0
-674,2000,171,2,Not in Americas,Civil War: Central Control,A,0
-675,150,234,1,Not in Americas,Civil War: Local Issues,A,0
-675.5,10000,321,1,Not in Americas,Civil War: Central Control,A,0
-676,-9,105,1,Not in Americas,Other,A,1
-676.5,-9,452,3,Not in Americas,Civil War: Local Issues,A,1
-677,702000,1062,1,Not in Americas,Civil War: Central Control,A,0
-680,6250,109,1,Not in Americas,Civil War: Central Control,A,0
-681,1500,73,4,Not in Americas,Other,A,0
-682,100,118,1,Not in Americas,Other,A,0
-683,1000,321,2,Not in Americas,Civil War: Central Control,A,0
-684,-9,203,1,Not in Americas,Other,A,1
-684.5,-9,517,1,Not in Americas,Civil War: Central Control,A,0
-685,-9,10,2,Not in Americas,Other,A,0
-685.5,10000,277,1,Not in Americas,Civil War: Local Issues,A,0
-686,1700,285,1,Not in Americas,Civil War: Local Issues,A,0
-687,-9,1237,1,Not in Americas,Civil War: Local Issues,A,0
-688,300,707,1,Not in Americas,Other,A,1
-689,1100,556,1,Not in Americas,Civil War: Local Issues,A,0
-690,1900,12,1,Not in Americas,Civil War: Central Control,A,0
-691,2500,587,1,Not in Americas,Civil War: Central Control,A,0
-692,2500,7,2,Not in Americas,Civil War: Central Control,A,1
-693,500,6,1,Not in Americas,Civil War: Central Control,A,0
-695,-9,157,1,Americas,Civil War: Central Control,A,0
-696,2000,82,2,Americas,Civil War: Central Control,A,0
-697,700,361,1,Not in Americas,Civil War: Central Control,A,0
-697.3,-9,61,2,Not in Americas,Civil War: Central Control,A,1
-697.6,2250,219,1,Not in Americas,Civil War: Local Issues,A,0
-697.8,600,361,2,Not in Americas,Other,A,1
-698,-9,149,4,Not in Americas,Other,A,1
-700,-9,767,2,Not in Americas,Civil War: Central Control,A,0
-701,55000,1039,3,Americas,Civil War: Central Control,A,0
-702,-9,133,1,Not in Americas,Other,A,0
-702.5,-9,343,4,Not in Americas,Civil War: Local Issues,A,0
-703,-9,556,1,Not in Americas,Civil War: Local Issues,A,0
-705,3750,334,1,Not in Americas,Civil War: Central Control,A,0
-707,400,62,1,Americas,Civil War: Central Control,A,0
-707.3,-9,281,1,Not in Americas,Civil War: Central Control,A,1
-707.5,37500,477,1,Not in Americas,Civil War: Central Control,A,1
-708,-9,210,1,Not in Americas,Civil War: Local Issues,A,1
-709,700,167,1,Not in Americas,Civil War: Local Issues,A,1
-710,200000,2211,3,Not in Americas,Civil War: Central Control,A,1
-711,-9,316,4,Not in Americas,Other,A,0
-711.5,-9,669,2,Not in Americas,Other,A,1
-712,100,12,1,Americas,Civil War: Central Control,A,0
-712.5,600,184,1,Not in Americas,Civil War: Local Issues,A,0
-713,110,71,1,Americas,Civil War: Central Control,A,0
-715,1050,86,1,Americas,Civil War: Central Control,A,0
-715.6,-9,325,1,Not in Americas,Other,A,0
-716,-9,86,1,Not in Americas,Civil War: Central Control,A,1
-717,284,15,1,Not in Americas,Civil War: Central Control,A,0
-718,181300,972,2,Not in Americas,Civil War: Central Control,A,0
-718.5,200,398,1,Not in Americas,Civil War: Central Control,A,0
-719,-9,1012,6,Not in Americas,Civil War: Central Control,A,1
-719.6,-9,146,1,Not in Americas,Civil War: Local Issues,A,0
-719.8,-9,340,3,Not in Americas,Civil War: Local Issues,A,0
-720,737,39,1,Not in Americas,Civil War: Central Control,A,0
-721,13100,911,1,Not in Americas,Civil War: Local Issues,A,0
-722,25000,954,1,Not in Americas,Civil War: Local Issues,A,0
-723,20000,1674,1,Not in Americas,Civil War: Local Issues,A,0
-723.5,600000,1662,2,Not in Americas,Civil War: Central Control,A,0
-724,18180,1325,1,Not in Americas,Civil War: Central Control,A,0
-726,200,22,1,Not in Americas,Civil War: Local Issues,A,0
-727,1500,164,1,Americas,Civil War: Central Control,A,0
-728,-9,26,2,Not in Americas,Civil War: Central Control,A,0
-730,1500,36,2,Americas,Civil War: Central Control,A,0
-730.5,1352,969,7,Not in Americas,Civil War: Central Control,A,0
-731,16800,1954,1,Americas,Civil War: Central Control,A,0
-732.5,250,811,1,Not in Americas,Civil War: Central Control,A,1
-733,1578,1474,1,Not in Americas,Civil War: Local Issues,A,0
-734,-9,111,1,Not in Americas,Civil War: Local Issues,A,1
-736,8000,4114,1,Not in Americas,Civil War: Central Control,A,1
-737,-9,4,2,Americas,Civil War: Central Control,A,0
-739,-9,2719,7,Americas,Civil War: Central Control,A,1
-740,-9,95,2,Americas,Civil War: Central Control,A,0
-740.5,-9,661,1,Not in Americas,Civil War: Local Issues,A,0
-741,10000,1124,1,Not in Americas,Civil War: Local Issues,A,1
-741.5,-9,331,7,Not in Americas,Civil War: Local Issues,A,1
-742,4000,1257,1,Not in Americas,Civil War: Central Control,A,1
-743,-9,86,6,Not in Americas,Civil War: Central Control,A,0
-745,2000,219,2,Americas,Civil War: Central Control,A,1
-746,500,528,7,Not in Americas,Civil War: Central Control,A,1
-747,-9,4,1,Not in Americas,Civil War: Central Control,A,0
-748,25458,1820,4,Not in Americas,Civil War: Central Control,A,0
-749,-9,2256,4,Not in Americas,Civil War: Central Control,A,0
-750,-9,911,1,Not in Americas,Civil War: Local Issues,A,0
-752,4500,815,6,Not in Americas,Civil War: Local Issues,A,0
-753,-9,130,2,Not in Americas,Civil War: Central Control,A,0
-755,-9,2693,1,Not in Americas,Civil War: Central Control,A,0
-757,-9,286,3,Not in Americas,Civil War: Local Issues,A,0
-758,-9,3049,3,Not in Americas,Civil War: Local Issues,A,0
-760,100,205,1,Not in Americas,Civil War: Central Control,A,0
-761,-9,716,1,Not in Americas,Civil War: Local Issues,A,0
-762,305,536,1,Not in Americas,Civil War: Central Control,A,0
-765,2000,439,3,Not in Americas,Civil War: Local Issues,A,1
-766,869,133,7,Americas,Civil War: Central Control,A,0
-767,-9,9828,7,Not in Americas,Civil War: Central Control,A,1
-768,-9,9,1,Not in Americas,Civil War: Local Issues,A,1
-770,1028,538,7,Americas,Civil War: Central Control,A,1
-771.5,-9,690,1,Not in Americas,Civil War: Local Issues,A,1
-772,-9,236,4,Not in Americas,Other,A,0
-775,30000,908,1,Not in Americas,Civil War: Local Issues,A,1
-776,-9,361,1,Not in Americas,Civil War: Local Issues,A,1
-776.3,550,1172,1,Not in Americas,Civil War: Central Control,A,0
-777,2000,447,3,Not in Americas,Civil War: Local Issues,A,0
-778,-9,511,1,Not in Americas,Civil War: Central Control,A,0
-780,750,12,1,Not in Americas,Civil War: Central Control,A,1
-781,100,303,1,Americas,Civil War: Central Control,A,1
-782,5000,248,4,Not in Americas,Civil War: Local Issues,A,1
-783,63,87,1,Not in Americas,Civil War: Central Control,A,0
-785,44398,1214,2,Not in Americas,Civil War: Central Control,A,0
-786,12000,3349,7,Not in Americas,Civil War: Local Issues,A,0
-787,1300,631,7,Not in Americas,Civil War: Central Control,A,1
-788,-9,959,6,Not in Americas,Other,A,1
-789,250,27,1,Not in Americas,Civil War: Central Control,A,0
-792,3300,1372,1,Not in Americas,Civil War: Local Issues,A,1
-793,3000,5,2,Americas,Civil War: Central Control,A,0
-795,2035,777,6,Not in Americas,Civil War: Local Issues,A,1
-797,2500,380,1,Not in Americas,Civil War: Local Issues,A,0
-798,7100,1726,1,Not in Americas,Civil War: Local Issues,A,0
-800,470,655,1,Americas,Civil War: Central Control,A,0
-801,-9,534,3,Not in Americas,Other,A,0
-803,-9,1111,1,Not in Americas,Civil War: Local Issues,A,0
-804,36000,5493,3,Not in Americas,Civil War: Central Control,A,0
-804.5,950,1317,2,Not in Americas,Civil War: Central Control,A,0
-805,-9,382,4,Not in Americas,Civil War: Local Issues,A,0
-805.3,300,4,1,Not in Americas,Civil War: Central Control,A,0
-806,1800,1029,1,Not in Americas,Civil War: Local Issues,A,1
-806.3,-9,566,1,Not in Americas,Civil War: Local Issues,A,0
-806.8,2000,354,1,Not in Americas,Civil War: Central Control,A,0
-807,1534,237,6,Not in Americas,Other,A,0
-808,2000,984,1,Not in Americas,Civil War: Local Issues,A,0
-809,1800,2,2,Not in Americas,Civil War: Central Control,A,0
-810,-9,34,1,Not in Americas,Civil War: Central Control,A,0
-811,4200,1870,1,Americas,Civil War: Central Control,A,1
-812,5900,591,4,Not in Americas,Civil War: Central Control,A,0
-815,1000,310,2,Americas,Civil War: Central Control,A,0
-815.5,500,87,2,Not in Americas,Civil War: Central Control,A,0
-816,3000,1742,1,Not in Americas,Civil War: Central Control,A,1
-817,10000,4427,3,Americas,Civil War: Central Control,A,0
-820,4500,1376,2,Not in Americas,Civil War: Local Issues,A,0
-823,55,24,1,Not in Americas,Civil War: Local Issues,A,1
-824,-9,4128,6,Not in Americas,Civil War: Central Control,A,0
-825,-9,4135,1,Not in Americas,Civil War: Central Control,A,0
-826,153500,3366,2,Not in Americas,Civil War: Local Issues,A,0
-826.5,1000,26,1,Not in Americas,Civil War: Central Control,A,0
-828,7150,2170,3,Americas,Civil War: Central Control,A,0
-828.3,39516,1355,2,Not in Americas,Civil War: Central Control,A,0
-829,2242,3525,1,Americas,Civil War: Central Control,A,0
-833,-9,312,2,Not in Americas,Civil War: Central Control,A,0
-834,-9,6811,3,Not in Americas,Civil War: Central Control,A,0
-835,1000,1464,4,Not in Americas,Civil War: Local Issues,A,0
-837,250,60,1,Not in Americas,Civil War: Local Issues,A,1
-838,-9,585,7,Not in Americas,Civil War: Local Issues,A,0
-840,-9,1304,1,Not in Americas,Civil War: Local Issues,A,1
-842,-9,19,2,Not in Americas,Civil War: Central Control,A,0
-843,2000,376,1,Not in Americas,Civil War: Central Control,A,0
-845,551,870,1,Not in Americas,Civil War: Central Control,A,0
-845.5,3000,1081,1,Americas,Civil War: Central Control,A,1
-846,-9,2287,6,Not in Americas,Other,A,1
-848,-9,961,2,Not in Americas,Civil War: Central Control,A,0
-849,12825,9688,5,Americas,Civil War: Central Control,A,0
-850,-9,600,2,Not in Americas,Civil War: Central Control,A,1
-851,-9,1140,2,Not in Americas,Civil War: Central Control,A,0
-852,3000,602,2,Not in Americas,Civil War: Central Control,A,0
-853,1500,1440,1,Not in Americas,Civil War: Local Issues,A,0
-854,-9,748,3,Not in Americas,Civil War: Central Control,A,0
-856,-9,9,2,Not in Americas,Civil War: Central Control,A,0
-857,-9,335,3,Not in Americas,Civil War: Central Control,A,0
-858,-9,451,7,Not in Americas,Civil War: Local Issues,A,0
-859,-9,3969,3,Not in Americas,Civil War: Local Issues,A,0
-860,-9,304,7,Not in Americas,Civil War: Local Issues,A,1
-862,-9,30,1,Not in Americas,Civil War: Central Control,A,0
-862.1,-9,227,6,Not in Americas,Civil War: Local Issues,A,0
-863,-9,1831,3,Not in Americas,Civil War: Central Control,A,0
-864,-9,241,2,Not in Americas,Civil War: Local Issues,A,1
-865,4819,3018,1,Not in Americas,Civil War: Local Issues,A,1
-865.8,-9,2270,6,Not in Americas,Civil War: Central Control,A,0
-866,-9,178,7,Not in Americas,Other,A,0
-868,-9,151,6,Not in Americas,Other,A,0
-871,-9,726,2,Not in Americas,Civil War: Central Control,A,0
-872,4000,400,4,Not in Americas,Civil War: Local Issues,A,0
-873,-9,187,3,Not in Americas,Civil War: Local Issues,A,1
-874,5000,5041,7,Not in Americas,Civil War: Local Issues,A,0
-874.5,-9,211,3,Not in Americas,Other,A,1
-875,5000,3728,7,Not in Americas,Civil War: Central Control,A,0
-876,-9,1852,3,Not in Americas,Civil War: Central Control,A,0
-877,34216,1191,1,Not in Americas,Civil War: Local Issues,A,0
-877.5,-9,3339,4,Not in Americas,Civil War: Central Control,A,0
-878,5000,538,2,Not in Americas,Civil War: Local Issues,A,1
-879,-9,1161,3,Not in Americas,Civil War: Central Control,A,0
-880,-9,738,3,Not in Americas,Civil War: Central Control,A,0
-881,-9,1886,1,Not in Americas,Civil War: Central Control,A,1
-882,1750,116,6,Not in Americas,Other,A,0
-883,-9,1710,7,Not in Americas,Civil War: Central Control,A,0
-885,1226,137,1,Not in Americas,Civil War: Local Issues,A,1
-886,-9,103,2,Not in Americas,Civil War: Central Control,A,1
-887,-9,372,6,Not in Americas,Other,A,0
-887.5,-9,180,6,Not in Americas,Other,A,1
-888,4000,621,2,Not in Americas,Civil War: Local Issues,A,0
-891,-9,181,1,Not in Americas,Civil War: Local Issues,A,0
-893,-9,54,6,Not in Americas,Civil War: Local Issues,A,0
-895,-9,218,2,Not in Americas,Civil War: Central Control,A,0
-896,300,584,1,Not in Americas,Civil War: Central Control,A,0
-897,-9,130,2,Not in Americas,Civil War: Central Control,A,1
-897.5,-9,43,6,Not in Americas,Other,A,1
-898,-9,688,2,Not in Americas,Civil War: Central Control,A,0
-900,400,384,4,Not in Americas,Civil War: Local Issues,A,1
-902,-9,113,2,Not in Americas,Civil War: Central Control,A,0
-905,-9,1576,3,Not in Americas,Civil War: Central Control,A,0
-906,-9,794,7,Not in Americas,Civil War: Central Control,A,0
-907,-9,1159,1,Not in Americas,Civil War: Central Control,A,1
-908,-9,332,1,Not in Americas,Civil War: Central Control,A,0
-910,3000,1104,3,Not in Americas,Other,A,0
-912,-9,1848,3,Not in Americas,Civil War: Local Issues,A,0
-913,200,79,7,Not in Americas,Civil War: Local Issues,A,0
-915,5000,1497,1,Not in Americas,Civil War: Local Issues,A,0
-916,500,487,3,Not in Americas,Civil War: Local Issues,A,0
-917,-9,247,6,Not in Americas,Civil War: Central Control,A,0
-918,150,961,3,Not in Americas,Civil War: Central Control,A,0
-920,-9,104,1,Not in Americas,Civil War: Central Control,A,0
-921,2000,1388,3,Not in Americas,Civil War: Central Control,A,0
-922,-9,440,2,Not in Americas,Civil War: Central Control,A,0
-925,-9,186,3,Not in Americas,Civil War: Central Control,A,0
-926,400,159,6,Not in Americas,Civil War: Local Issues,A,0
-927,-9,1309,7,Not in Americas,Civil War: Local Issues,A,0
-932,1200,673,3,Not in Americas,Civil War: Local Issues,A,1
-933,-9,182,6,Not in Americas,Other,A,0
-935,300,289,1,Not in Americas,Civil War: Central Control,A,1
-936,672,721,7,Not in Americas,Civil War: Central Control,A,0
-937,-9,422,7,Not in Americas,Civil War: Central Control,A,0
-940,5750,1017,1,Not in Americas,Civil War: Local Issues,A,1
-940.8,-9,1844,1,Not in Americas,Civil War: Central Control,A,0
-941,1850,528,6,Not in Americas,Civil War: Central Control,A,0
-942,5739,3059,5,Not in Americas,Civil War: Local Issues,A,0
-971,8000,1354,4,Not in Americas,Civil War: Central Control,A,0
-973,-9,51,2,Not in Americas,Civil War: Central Control,A,1
-976,4500,243,2,Not in Americas,Civil War: Central Control,A,0
-978,-9,1130,5,Not in Americas,Civil War: Central Control,A,1
-979,70020,1645,5,Not in Americas,Civil War: Central Control,A,1
-980,850,593,6,Not in Americas,Civil War: Local Issues,A,1
-985,371,407,1,Not in Americas,Civil War: Local Issues,A,0
-990,-9,106,2,Not in Americas,Civil War: Central Control,A,0
-990.4,200,955,5,Not in Americas,Civil War: Central Control,A,0
-991,10680,737,5,Not in Americas,Civil War: Central Control,A,1
-991.4,-9,721,5,Not in Americas,Civil War: Central Control,A,0
-991.5,-9,140,4,Not in Americas,Other,A,1
-992,600,385,5,Not in Americas,Civil War: Central Control,A,0
-992.5,-9,659,5,Not in Americas,Civil War: Central Control,A,1
-993,3245,493,5,Not in Americas,Civil War: Local Issues,A,0
-994,-9,570,5,Not in Americas,Civil War: Central Control,A,1
-997,1000,189,5,Not in Americas,Other,A,1
-500,6000,1596,1,Not in Americas,Civil War: Local Issues,B,0
-502,-9,262,1,Not in Americas,Civil War: Central Control,B,1
-502.1,-9,550,1,Not in Americas,Civil War: Local Issues,B,0
-503,-9,59,1,Not in Americas,Civil War: Central Control,B,0
-504,15177,2551,4,Not in Americas,Civil War: Local Issues,B,1
-504.3,40,430,3,Not in Americas,Other,B,1
-505,-9,483,4,Not in Americas,Civil War: Central Control,B,1
-507,-9,22,1,Not in Americas,Other,B,0
-507.5,-9,372,1,Not in Americas,Civil War: Local Issues,B,1
-508,6320,4,1,Not in Americas,Civil War: Central Control,B,1
-511,2000,954,1,Not in Americas,Civil War: Local Issues,B,1
-512,10000,741,1,Not in Americas,Civil War: Local Issues,B,0
-513,1800,3,2,Not in Americas,Civil War: Central Control,B,1
-515,600,115,2,Not in Americas,Civil War: Local Issues,B,0
-516,500,91,2,Not in Americas,Other,B,0
-517,20000,252,1,Not in Americas,Civil War: Local Issues,B,0
-518,6000,447,3,Not in Americas,Civil War: Local Issues,B,1
-520,1000,352,2,Americas,Civil War: Central Control,B,1
-520.3,-9,1125,1,Americas,Civil War: Central Control,B,0
-520.5,8100,678,2,Not in Americas,Civil War: Central Control,B,1
-521,2000,87,1,Not in Americas,Other,B,0
-522,60000,2123,1,Not in Americas,Civil War: Central Control,B,1
-523,-9,68,7,Not in Americas,Civil War: Local Issues,B,1
-525,6500,907,1,Americas,Civil War: Local Issues,B,1
-525.5,-9,4,1,Americas,Civil War: Central Control,B,1
-526,-9,3403,1,Americas,Civil War: Local Issues,B,1
-527,700,199,2,Americas,Civil War: Local Issues,B,1
-528,-9,91,1,Not in Americas,Civil War: Local Issues,B,1
-530,-9,5689,7,Not in Americas,Civil War: Local Issues,B,0
-531,1200,130,1,Americas,Civil War: Local Issues,B,1
-532,2000,326,3,Not in Americas,Other,B,1
-532.5,800,381,1,Americas,Civil War: Central Control,B,1
-532.7,5000,757,1,Americas,Civil War: Local Issues,B,1
-533,500,19,2,Not in Americas,Civil War: Local Issues,B,0
-535,-9,65,1,Not in Americas,Other,B,0
-536,-9,661,1,Americas,Civil War: Central Control,B,1
-537,-9,129,1,Not in Americas,Civil War: Local Issues,B,0
-538,4000,696,1,Americas,Civil War: Central Control,B,1
-539,-9,22,1,Not in Americas,Civil War: Local Issues,B,1
-540,-9,91,1,Not in Americas,Civil War: Local Issues,B,1
-541,500,37,2,Americas,Civil War: Central Control,B,1
-541.2,973,37,2,Not in Americas,Other,B,1
-542,3600,25,1,Not in Americas,Civil War: Local Issues,B,0
-543,350,31,2,Not in Americas,Other,B,0
-544,-9,264,1,Not in Americas,Civil War: Central Control,B,1
-545,1500,572,4,Americas,Other,B,1
-546,7000,704,1,Not in Americas,Civil War: Central Control,B,1
-547,-9,289,1,Not in Americas,Civil War: Central Control,B,1
-548,500,552,1,Americas,Civil War: Central Control,B,1
-549,3000,64,1,Not in Americas,Civil War: Central Control,B,1
-550,3000,29,1,Not in Americas,Civil War: Central Control,B,1
-551,430,6,4,Not in Americas,Civil War: Local Issues,B,1
-553,-9,2358,1,Americas,Civil War: Local Issues,B,0
-554,45000,331,1,Not in Americas,Civil War: Local Issues,B,0
-554.3,-9,241,1,Not in Americas,Civil War: Local Issues,B,0
-554.5,-9,24,1,Not in Americas,Civil War: Local Issues,B,1
-555,2500,124,1,Americas,Civil War: Central Control,B,1
-555.8,-9,48,2,Not in Americas,Civil War: Local Issues,B,0
-556,2000,175,3,Not in Americas,Civil War: Local Issues,B,0
-557,-9,437,2,Americas,Civil War: Central Control,B,1
-557.1,-9,93,1,Not in Americas,Civil War: Local Issues,B,1
-557.2,-9,121,1,Not in Americas,Civil War: Local Issues,B,1
-557.3,600,226,2,Americas,Civil War: Central Control,B,1
-557.8,1000,34,1,Americas,Civil War: Central Control,B,1
-557.9,500,211,1,Not in Americas,Civil War: Local Issues,B,1
-558,1000,101,1,Americas,Civil War: Central Control,B,1
-560,2000,488,1,Americas,Civil War: Central Control,B,1
-561,-9,1038,2,Americas,Civil War: Central Control,B,1
-562,400,11,2,Not in Americas,Civil War: Local Issues,B,0
-562.5,-9,128,1,Americas,Civil War: Central Control,B,1
-563,10000,1534,2,Americas,Civil War: Central Control,B,1
-565,-9,952,2,Americas,Civil War: Central Control,B,1
-566,1000,47,2,Not in Americas,Other,B,0
-567,-9,1905,1,Not in Americas,Civil War: Central Control,B,1
-568,-9,2812,1,Not in Americas,Civil War: Local Issues,B,0
-570,-9,4341,1,Not in Americas,Civil War: Local Issues,B,1
-571,-9,4870,1,Not in Americas,Civil War: Local Issues,B,1
-572,258000,1470,1,Americas,Civil War: Local Issues,B,1
-573,-9,212,2,Americas,Civil War: Central Control,B,1
-575,2000,346,3,Not in Americas,Civil War: Local Issues,B,0
-576,-9,4144,1,Not in Americas,Civil War: Local Issues,B,1
-577,513,43,1,Americas,Other,B,1
-578,-9,44,1,Americas,Civil War: Central Control,B,1
-579,6500,448,1,Not in Americas,Civil War: Local Issues,B,1
-580,-9,223,1,Americas,Civil War: Central Control,B,0
-580.5,6587,227,7,Not in Americas,Civil War: Local Issues,B,0
-581,-9,331,1,Not in Americas,Civil War: Local Issues,B,1
-582,-9,668,2,Not in Americas,Civil War: Local Issues,B,1
-582.3,1300,194,1,Not in Americas,Civil War: Central Control,B,1
-582.5,-9,361,1,Americas,Civil War: Central Control,B,1
-583,-9,843,1,Not in Americas,Civil War: Local Issues,B,1
-585,-9,15,1,Not in Americas,Civil War: Local Issues,B,1
-586,-9,337,1,Americas,Civil War: Central Control,B,0
-586.5,-9,31,1,Not in Americas,Other,B,0
-587,1000,136,2,Americas,Civil War: Central Control,B,1
-587.8,-9,231,2,Americas,Civil War: Central Control,B,1
-588,5400,511,1,Not in Americas,Civil War: Central Control,B,0
-591,800,12,2,Not in Americas,Civil War: Central Control,B,1
-592,-9,391,2,Americas,Civil War: Central Control,B,1
-592.5,-9,983,2,Americas,Civil War: Central Control,B,1
-592.7,-9,301,1,Not in Americas,Other,B,1
-593,1300,294,1,Americas,Civil War: Local Issues,B,0
-595,-9,77,2,Americas,Civil War: Central Control,B,0
-596,20500,72,1,Not in Americas,Civil War: Central Control,B,0
-596.7,-9,241,1,Not in Americas,Other,B,1
-597,43000,1388,1,Not in Americas,Civil War: Central Control,B,1
-597.5,1500,233,1,Americas,Civil War: Local Issues,B,0
-598,-9,175,1,Not in Americas,Civil War: Local Issues,B,0
-600,-9,74,1,Americas,Civil War: Central Control,B,0
-601,13000,360,4,Not in Americas,Civil War: Local Issues,B,0
-602,1200,309,2,Americas,Civil War: Central Control,B,1
-603,-9,618,1,Not in Americas,Civil War: Local Issues,B,0
-605,2070,265,1,Americas,Civil War: Central Control,B,1
-606,-9,109,2,Americas,Civil War: Central Control,B,1
-607,7000,236,1,Not in Americas,Civil War: Central Control,B,0
-608,1500,213,1,Americas,Civil War: Local Issues,B,0
-609,-9,41,2,Americas,Civil War: Central Control,B,1
-610,825,11,1,Americas,Civil War: Local Issues,B,1
-610.5,6500,393,4,Not in Americas,Civil War: Local Issues,B,1
-611,400,282,1,Americas,Civil War: Central Control,B,1
-612,820,333,1,Americas,Civil War: Central Control,B,1
-613,2000,70,1,Americas,Civil War: Local Issues,B,1
-616,-9,811,1,Not in Americas,Civil War: Local Issues,B,1
-616.5,-9,4,1,Americas,Civil War: Central Control,B,1
-617,-9,233,2,Americas,Civil War: Central Control,B,1
-618,10000,36,1,Not in Americas,Civil War: Central Control,B,0
-619,-9,206,2,Americas,Civil War: Central Control,B,1
-620,-9,570,1,Americas,Civil War: Central Control,B,1
-621,-9,221,1,Americas,Civil War: Central Control,B,1
-623,500,78,3,Not in Americas,Civil War: Local Issues,B,0
-625,-9,146,2,Americas,Civil War: Central Control,B,1
-626,-9,47,1,Americas,Civil War: Central Control,B,1
-627,-9,221,2,Americas,Civil War: Central Control,B,1
-628,-9,374,1,Not in Americas,Civil War: Local Issues,B,1
-630,4000,272,1,Not in Americas,Civil War: Local Issues,B,0
-630.2,500,99,3,Not in Americas,Civil War: Local Issues,B,0
-631,-9,335,4,Not in Americas,Civil War: Local Issues,B,1
-631.5,-9,88,1,Americas,Civil War: Central Control,B,1
-632,10000,365,1,Americas,Civil War: Local Issues,B,0
-632.3,-9,118,1,Americas,Civil War: Central Control,B,1
-632.6,4000,421,7,Not in Americas,Civil War: Local Issues,B,1
-633,800,141,2,Americas,Civil War: Central Control,B,1
-635,1100,178,1,Americas,Civil War: Local Issues,B,1
-636,53000,1115,1,Americas,Civil War: Central Control,B,1
-637,-9,560,1,Americas,Civil War: Local Issues,B,0
-638,-9,573,1,Americas,Civil War: Central Control,B,1
-639,15000,1472,6,Not in Americas,Civil War: Local Issues,B,1
-640,1500,395,1,Not in Americas,Civil War: Local Issues,B,1
-641,700,250,1,Americas,Civil War: Central Control,B,1
-641.5,600,140,3,Not in Americas,Civil War: Local Issues,B,0
-643,3000,340,1,Not in Americas,Civil War: Central Control,B,0
-645,-9,45,1,Not in Americas,Civil War: Central Control,B,1
-646,800,366,2,Not in Americas,Civil War: Central Control,B,1
-647,-9,385,2,Not in Americas,Civil War: Central Control,B,0
-647.5,3000,702,6,Not in Americas,Civil War: Local Issues,B,0
-648,-9,34,1,Not in Americas,Civil War: Central Control,B,1
-649,-9,311,2,Americas,Civil War: Central Control,B,1
-650,-9,932,4,Not in Americas,Civil War: Local Issues,B,1
-650.8,1000,58,1,Not in Americas,Civil War: Local Issues,B,0
-652,60022,1240,2,Americas,Civil War: Central Control,B,0
-656,1000,206,2,Americas,Civil War: Central Control,B,1
-657,2000,68,3,Not in Americas,Civil War: Central Control,B,1
-657.3,-9,12,1,Americas,Civil War: Central Control,B,1
-658,1000,59,1,Americas,Civil War: Local Issues,B,1
-665,-9,50,1,Not in Americas,Civil War: Local Issues,B,0
-667,-9,1071,1,Americas,Civil War: Central Control,B,1
-672,-9,143,1,Not in Americas,Civil War: Local Issues,B,1
-672.5,6000,481,1,Americas,Civil War: Local Issues,B,0
-673,60000,2066,1,Americas,Civil War: Central Control,B,1
-674,2000,171,2,Not in Americas,Civil War: Central Control,B,1
-675,1850,234,1,Not in Americas,Civil War: Local Issues,B,0
-675.5,10000,321,1,Not in Americas,Civil War: Central Control,B,1
-676,-9,105,1,Not in Americas,Other,B,0
-676.5,-9,452,3,Not in Americas,Civil War: Local Issues,B,0
-677,327225,1062,1,Not in Americas,Civil War: Central Control,B,1
-680,17900,109,1,Not in Americas,Civil War: Central Control,B,1
-681,1000,73,4,Not in Americas,Other,B,0
-682,2900,118,1,Not in Americas,Other,B,1
-683,500,321,2,Not in Americas,Civil War: Central Control,B,1
-684,-9,203,1,Not in Americas,Other,B,0
-684.5,-9,517,1,Not in Americas,Civil War: Central Control,B,1
-685,-9,10,2,Not in Americas,Other,B,0
-685.5,9688,277,1,Not in Americas,Civil War: Local Issues,B,1
-686,7500,285,1,Not in Americas,Civil War: Local Issues,B,1
-687,-9,1237,1,Not in Americas,Civil War: Local Issues,B,0
-688,3000,707,1,Not in Americas,Other,B,0
-689,900,556,1,Not in Americas,Civil War: Local Issues,B,1
-690,2700,12,1,Not in Americas,Civil War: Central Control,B,1
-691,500,587,1,Not in Americas,Civil War: Central Control,B,1
-692,2500,7,2,Not in Americas,Civil War: Central Control,B,0
-693,1000,6,1,Not in Americas,Civil War: Central Control,B,1
-695,-9,157,1,Americas,Civil War: Central Control,B,0
-696,1000,82,2,Americas,Civil War: Central Control,B,1
-697,400,361,1,Not in Americas,Civil War: Central Control,B,1
-697.3,-9,61,2,Not in Americas,Civil War: Central Control,B,0
-697.6,2750,219,1,Not in Americas,Civil War: Local Issues,B,1
-697.8,400,361,2,Not in Americas,Other,B,0
-698,-9,149,4,Not in Americas,Other,B,0
-700,-9,767,2,Not in Americas,Civil War: Central Control,B,1
-701,35000,1039,3,Americas,Civil War: Central Control,B,1
-702,-9,133,1,Not in Americas,Other,B,1
-702.5,-9,343,4,Not in Americas,Civil War: Local Issues,B,1
-703,-9,556,1,Not in Americas,Civil War: Local Issues,B,1
-705,3750,334,1,Not in Americas,Civil War: Central Control,B,1
-707,1600,62,1,Americas,Civil War: Central Control,B,0
-707.3,-9,281,1,Not in Americas,Civil War: Central Control,B,0
-707.5,62500,477,1,Not in Americas,Civil War: Central Control,B,0
-708,-9,210,1,Not in Americas,Civil War: Local Issues,B,0
-709,300,167,1,Not in Americas,Civil War: Local Issues,B,0
-710,200000,2211,3,Not in Americas,Civil War: Central Control,B,0
-711,-9,316,4,Not in Americas,Other,B,0
-711.5,-9,669,2,Not in Americas,Other,B,0
-712,2500,12,1,Americas,Civil War: Central Control,B,1
-712.5,1400,184,1,Not in Americas,Civil War: Local Issues,B,1
-713,1100,71,1,Americas,Civil War: Central Control,B,1
-715,2200,86,1,Americas,Civil War: Central Control,B,1
-715.6,-9,325,1,Not in Americas,Other,B,1
-716,-9,86,1,Not in Americas,Civil War: Central Control,B,0
-717,1051,15,1,Not in Americas,Civil War: Central Control,B,1
-718,128100,972,2,Not in Americas,Civil War: Central Control,B,1
-718.5,1000,398,1,Not in Americas,Civil War: Central Control,B,1
-719,-9,1012,6,Not in Americas,Civil War: Central Control,B,0
-719.6,-9,146,1,Not in Americas,Civil War: Local Issues,B,1
-719.8,-9,340,3,Not in Americas,Civil War: Local Issues,B,1
-720,1000,39,1,Not in Americas,Civil War: Central Control,B,1
-721,8700,911,1,Not in Americas,Civil War: Local Issues,B,1
-722,56600,954,1,Not in Americas,Civil War: Local Issues,B,1
-723,30000,1674,1,Not in Americas,Civil War: Local Issues,B,1
-723.5,600000,1662,2,Not in Americas,Civil War: Central Control,B,1
-724,50000,1325,1,Not in Americas,Civil War: Central Control,B,1
-726,1800,22,1,Not in Americas,Civil War: Local Issues,B,1
-727,2500,164,1,Americas,Civil War: Central Control,B,1
-728,-9,26,2,Not in Americas,Civil War: Central Control,B,1
-730,100,36,2,Americas,Civil War: Central Control,B,1
-730.5,2072,969,7,Not in Americas,Civil War: Central Control,B,0
-731,19200,1954,1,Americas,Civil War: Central Control,B,1
-732.5,2000,811,1,Not in Americas,Civil War: Central Control,B,0
-733,9695,1474,1,Not in Americas,Civil War: Local Issues,B,1
-734,-9,111,1,Not in Americas,Civil War: Local Issues,B,0
-736,12000,4114,1,Not in Americas,Civil War: Central Control,B,0
-737,-9,4,2,Americas,Civil War: Central Control,B,1
-739,-9,2719,7,Americas,Civil War: Central Control,B,0
-740,-9,95,2,Americas,Civil War: Central Control,B,1
-740.5,-9,661,1,Not in Americas,Civil War: Local Issues,B,0
-741,10000,1124,1,Not in Americas,Civil War: Local Issues,B,0
-741.5,-9,331,7,Not in Americas,Civil War: Local Issues,B,0
-742,2000,1257,1,Not in Americas,Civil War: Central Control,B,0
-743,-9,86,6,Not in Americas,Civil War: Central Control,B,1
-745,1000,219,2,Americas,Civil War: Central Control,B,0
-746,1000,528,7,Not in Americas,Civil War: Central Control,B,0
-747,-9,4,1,Not in Americas,Civil War: Central Control,B,1
-748,41500,1820,4,Not in Americas,Civil War: Central Control,B,1
-749,-9,2256,4,Not in Americas,Civil War: Central Control,B,1
-750,-9,911,1,Not in Americas,Civil War: Local Issues,B,1
-752,3500,815,6,Not in Americas,Civil War: Local Issues,B,1
-753,-9,130,2,Not in Americas,Civil War: Central Control,B,1
-755,-9,2693,1,Not in Americas,Civil War: Central Control,B,1
-757,-9,286,3,Not in Americas,Civil War: Local Issues,B,1
-758,-9,3049,3,Not in Americas,Civil War: Local Issues,B,1
-760,900,205,1,Not in Americas,Civil War: Central Control,B,0
-761,-9,716,1,Not in Americas,Civil War: Local Issues,B,1
-762,4500,536,1,Not in Americas,Civil War: Central Control,B,1
-765,1000,439,3,Not in Americas,Civil War: Local Issues,B,0
-766,600,133,7,Americas,Civil War: Central Control,B,1
-767,-9,9828,7,Not in Americas,Civil War: Central Control,B,0
-768,-9,9,1,Not in Americas,Civil War: Local Issues,B,0
-770,1400,538,7,Americas,Civil War: Central Control,B,0
-771.5,-9,690,1,Not in Americas,Civil War: Local Issues,B,0
-772,-9,236,4,Not in Americas,Other,B,1
-775,15000,908,1,Not in Americas,Civil War: Local Issues,B,0
-776,-9,361,1,Not in Americas,Civil War: Local Issues,B,0
-776.3,3000,1172,1,Not in Americas,Civil War: Central Control,B,1
-777,1000,447,3,Not in Americas,Civil War: Local Issues,B,0
-778,-9,511,1,Not in Americas,Civil War: Central Control,B,1
-780,1000,12,1,Not in Americas,Civil War: Central Control,B,0
-781,900,303,1,Americas,Civil War: Central Control,B,0
-782,15000,248,4,Not in Americas,Civil War: Local Issues,B,0
-783,1937,87,1,Not in Americas,Civil War: Central Control,B,1
-785,56000,1214,2,Not in Americas,Civil War: Central Control,B,1
-786,20000,3349,7,Not in Americas,Civil War: Local Issues,B,0
-787,700,631,7,Not in Americas,Civil War: Central Control,B,0
-788,-9,959,6,Not in Americas,Other,B,0
-789,750,27,1,Not in Americas,Civil War: Central Control,B,1
-792,5300,1372,1,Not in Americas,Civil War: Local Issues,B,0
-793,200,5,2,Americas,Civil War: Central Control,B,1
-795,1200,777,6,Not in Americas,Civil War: Local Issues,B,0
-797,2000,380,1,Not in Americas,Civil War: Local Issues,B,0
-798,6000,1726,1,Not in Americas,Civil War: Local Issues,B,1
-800,4000,655,1,Americas,Civil War: Central Control,B,1
-801,-9,534,3,Not in Americas,Other,B,0
-803,5000,1111,1,Not in Americas,Civil War: Local Issues,B,1
-804,66600,5493,3,Not in Americas,Civil War: Central Control,B,1
-804.5,10000,1317,2,Not in Americas,Civil War: Central Control,B,1
-805,-9,382,4,Not in Americas,Civil War: Local Issues,B,1
-805.3,700,4,1,Not in Americas,Civil War: Central Control,B,1
-806,3200,1029,1,Not in Americas,Civil War: Local Issues,B,0
-806.3,-9,566,1,Not in Americas,Civil War: Local Issues,B,1
-806.8,2000,354,1,Not in Americas,Civil War: Central Control,B,1
-807,1600,237,6,Not in Americas,Other,B,0
-808,20000,984,1,Not in Americas,Civil War: Local Issues,B,1
-809,200,2,2,Not in Americas,Civil War: Central Control,B,1
-810,-9,34,1,Not in Americas,Civil War: Central Control,B,1
-811,17500,1870,1,Americas,Civil War: Central Control,B,0
-812,9000,591,4,Not in Americas,Civil War: Central Control,B,0
-815,2000,310,2,Americas,Civil War: Central Control,B,1
-815.5,500,87,2,Not in Americas,Civil War: Central Control,B,0
-816,7000,1742,1,Not in Americas,Civil War: Central Control,B,0
-817,14000,4427,3,Americas,Civil War: Central Control,B,0
-820,1700,1376,2,Not in Americas,Civil War: Local Issues,B,1
-823,1000,24,1,Not in Americas,Civil War: Local Issues,B,0
-824,-9,4128,6,Not in Americas,Civil War: Central Control,B,1
-825,-9,4135,1,Not in Americas,Civil War: Central Control,B,1
-826,80000,3366,2,Not in Americas,Civil War: Local Issues,B,1
-826.5,2000,26,1,Not in Americas,Civil War: Central Control,B,1
-828,25250,2170,3,Americas,Civil War: Central Control,B,1
-828.3,6000,1355,2,Not in Americas,Civil War: Central Control,B,1
-829,10466,3525,1,Americas,Civil War: Central Control,B,1
-833,-9,312,2,Not in Americas,Civil War: Central Control,B,0
-834,-9,6811,3,Not in Americas,Civil War: Central Control,B,0
-835,3000,1464,4,Not in Americas,Civil War: Local Issues,B,0
-837,750,60,1,Not in Americas,Civil War: Local Issues,B,0
-838,-9,585,7,Not in Americas,Civil War: Local Issues,B,1
-840,-9,1304,1,Not in Americas,Civil War: Local Issues,B,0
-842,-9,19,2,Not in Americas,Civil War: Central Control,B,0
-843,5000,376,1,Not in Americas,Civil War: Central Control,B,1
-845,9449,870,1,Not in Americas,Civil War: Central Control,B,1
-845.5,6000,1081,1,Americas,Civil War: Central Control,B,0
-846,-9,2287,6,Not in Americas,Other,B,0
-848,-9,961,2,Not in Americas,Civil War: Central Control,B,1
-849,23463,9688,5,Americas,Civil War: Central Control,B,1
-850,-9,600,2,Not in Americas,Civil War: Central Control,B,0
-851,-9,1140,2,Not in Americas,Civil War: Central Control,B,1
-852,800,602,2,Not in Americas,Civil War: Central Control,B,1
-853,6000,1440,1,Not in Americas,Civil War: Local Issues,B,0
-854,-9,748,3,Not in Americas,Civil War: Central Control,B,1
-856,-9,9,2,Not in Americas,Civil War: Central Control,B,1
-857,-9,335,3,Not in Americas,Civil War: Central Control,B,0
-858,-9,451,7,Not in Americas,Civil War: Local Issues,B,1
-859,-9,3969,3,Not in Americas,Civil War: Local Issues,B,1
-860,-9,304,7,Not in Americas,Civil War: Local Issues,B,0
-862,-9,30,1,Not in Americas,Civil War: Central Control,B,0
-862.1,-9,227,6,Not in Americas,Civil War: Local Issues,B,0
-863,-9,1831,3,Not in Americas,Civil War: Central Control,B,1
-864,-9,241,2,Not in Americas,Civil War: Local Issues,B,0
-865,23238,3018,1,Not in Americas,Civil War: Local Issues,B,0
-865.8,-9,2270,6,Not in Americas,Civil War: Central Control,B,0
-866,-9,178,7,Not in Americas,Other,B,0
-868,-9,151,6,Not in Americas,Other,B,0
-871,-9,726,2,Not in Americas,Civil War: Central Control,B,1
-872,3000,400,4,Not in Americas,Civil War: Local Issues,B,1
-873,-9,187,3,Not in Americas,Civil War: Local Issues,B,0
-874,18476,5041,7,Not in Americas,Civil War: Local Issues,B,0
-874.5,-9,211,3,Not in Americas,Other,B,0
-875,15200,3728,7,Not in Americas,Civil War: Central Control,B,1
-876,-9,1852,3,Not in Americas,Civil War: Central Control,B,0
-877,14737,1191,1,Not in Americas,Civil War: Local Issues,B,1
-877.5,-9,3339,4,Not in Americas,Civil War: Central Control,B,0
-878,3000,538,2,Not in Americas,Civil War: Local Issues,B,0
-879,-9,1161,3,Not in Americas,Civil War: Central Control,B,0
-880,-9,738,3,Not in Americas,Civil War: Central Control,B,1
-881,-9,1886,1,Not in Americas,Civil War: Central Control,B,0
-882,1750,116,6,Not in Americas,Other,B,1
-883,-9,1710,7,Not in Americas,Civil War: Central Control,B,1
-885,1774,137,1,Not in Americas,Civil War: Local Issues,B,0
-886,-9,103,2,Not in Americas,Civil War: Central Control,B,0
-887,-9,372,6,Not in Americas,Other,B,0
-887.5,-9,180,6,Not in Americas,Other,B,0
-888,6000,621,2,Not in Americas,Civil War: Local Issues,B,1
-891,-9,181,1,Not in Americas,Civil War: Local Issues,B,0
-893,-9,54,6,Not in Americas,Civil War: Local Issues,B,0
-895,-9,218,2,Not in Americas,Civil War: Central Control,B,0
-896,3000,584,1,Not in Americas,Civil War: Central Control,B,1
-897,-9,130,2,Not in Americas,Civil War: Central Control,B,0
-897.5,-9,43,6,Not in Americas,Other,B,0
-898,-9,688,2,Not in Americas,Civil War: Central Control,B,1
-900,800,384,4,Not in Americas,Civil War: Local Issues,B,0
-902,-9,113,2,Not in Americas,Civil War: Central Control,B,0
-905,-9,1576,3,Not in Americas,Civil War: Central Control,B,0
-906,-9,794,7,Not in Americas,Civil War: Central Control,B,0
-907,-9,1159,1,Not in Americas,Civil War: Central Control,B,0
-908,-9,332,1,Not in Americas,Civil War: Central Control,B,1
-910,2000,1104,3,Not in Americas,Other,B,1
-912,-9,1848,3,Not in Americas,Civil War: Local Issues,B,1
-913,800,79,7,Not in Americas,Civil War: Local Issues,B,1
-915,3000,1497,1,Not in Americas,Civil War: Local Issues,B,0
-916,1500,487,3,Not in Americas,Civil War: Local Issues,B,0
-917,-9,247,6,Not in Americas,Civil War: Central Control,B,1
-918,3000,961,3,Not in Americas,Civil War: Central Control,B,0
-920,-9,104,1,Not in Americas,Civil War: Central Control,B,0
-921,4000,1388,3,Not in Americas,Civil War: Central Control,B,1
-922,-9,440,2,Not in Americas,Civil War: Central Control,B,0
-925,-8,186,3,Not in Americas,Civil War: Central Control,B,0
-926,600,159,6,Not in Americas,Civil War: Local Issues,B,0
-927,-9,1309,7,Not in Americas,Civil War: Local Issues,B,0
-932,1800,673,3,Not in Americas,Civil War: Local Issues,B,0
-933,-9,182,6,Not in Americas,Other,B,1
-935,700,289,1,Not in Americas,Civil War: Central Control,B,0
-936,2655,721,7,Not in Americas,Civil War: Central Control,B,0
-937,-9,422,7,Not in Americas,Civil War: Central Control,B,1
-940,14250,1017,1,Not in Americas,Civil War: Local Issues,B,0
-940.8,-9,1844,1,Not in Americas,Civil War: Central Control,B,1
-941,1150,528,6,Not in Americas,Civil War: Central Control,B,1
-942,31246,3059,5,Not in Americas,Civil War: Local Issues,B,1
-971,2500,1354,4,Not in Americas,Civil War: Central Control,B,1
-973,-9,51,2,Not in Americas,Civil War: Central Control,B,0
-976,4500,243,2,Not in Americas,Civil War: Central Control,B,1
-978,-9,1130,5,Not in Americas,Civil War: Central Control,B,0
-979,50000,1645,5,Not in Americas,Civil War: Central Control,B,0
-980,850,593,6,Not in Americas,Civil War: Local Issues,B,0
-985,709,407,1,Not in Americas,Civil War: Local Issues,B,0
-990,-9,106,2,Not in Americas,Civil War: Central Control,B,1
-990.4,1600,955,5,Not in Americas,Civil War: Central Control,B,1
-991,-9,737,5,Not in Americas,Civil War: Central Control,B,0
-991.4,-9,721,5,Not in Americas,Civil War: Central Control,B,1
-991.5,-9,140,4,Not in Americas,Other,B,0
-992,4000,385,5,Not in Americas,Civil War: Central Control,B,0
-992.5,-9,659,5,Not in Americas,Civil War: Central Control,B,0
-993,2581,493,5,Not in Americas,Civil War: Local Issues,B,1
-994,-9,570,5,Not in Americas,Civil War: Central Control,B,0
-997,350,189,5,Not in Americas,Other,B,0
+WarNum,deaths,WDuratDays,OutcomeD,Americas,WarTypeD,side,Init
+500,5000,1596,Side A,Not in Americas,Civil War: Local Issues,A,0
+502,-9,262,Side A,Not in Americas,Civil War: Central Control,A,0
+502.1,-9,550,Side A,Not in Americas,Civil War: Local Issues,A,1
+503,-9,59,Side A,Not in Americas,Civil War: Central Control,A,0
+504,50000,2551,Other,Not in Americas,Civil War: Local Issues,A,0
+504.3,1200,430,Other,Not in Americas,Other,A,0
+505,-9,483,Other,Not in Americas,Civil War: Central Control,A,0
+507,-9,22,Side A,Not in Americas,Other,A,0
+507.5,-9,372,Side A,Not in Americas,Civil War: Local Issues,A,0
+508,40,4,Side A,Not in Americas,Civil War: Central Control,A,0
+511,3000,954,Side A,Not in Americas,Civil War: Local Issues,A,0
+512,5000,741,Side A,Not in Americas,Civil War: Local Issues,A,0
+513,200,3,Side B,Not in Americas,Civil War: Central Control,A,0
+515,500,115,Side B,Not in Americas,Civil War: Local Issues,A,0
+516,1500,91,Side B,Not in Americas,Other,A,1
+517,15000,252,Side A,Not in Americas,Civil War: Local Issues,A,1
+518,10000,447,Other,Not in Americas,Civil War: Local Issues,A,0
+520,1400,352,Side B,Americas,Civil War: Central Control,A,0
+520.3,-9,1125,Side A,Americas,Civil War: Central Control,A,0
+520.5,12000,678,Side B,Not in Americas,Civil War: Central Control,A,0
+521,2000,87,Side A,Not in Americas,Other,A,0
+522,70550,2123,Side A,Not in Americas,Civil War: Central Control,A,0
+523,-9,68,Other,Not in Americas,Civil War: Local Issues,A,0
+525,5500,907,Side A,Americas,Civil War: Local Issues,A,0
+525.5,-9,4,Side A,Americas,Civil War: Central Control,A,0
+526,-9,3403,Side A,Americas,Civil War: Local Issues,A,0
+527,1500,199,Side B,Americas,Civil War: Local Issues,A,0
+528,-9,91,Side A,Not in Americas,Civil War: Local Issues,A,0
+530,20000,5689,Other,Not in Americas,Civil War: Local Issues,A,1
+531,600,130,Side A,Americas,Civil War: Local Issues,A,0
+532,15000,326,Other,Not in Americas,Other,A,0
+532.5,900,381,Side A,Americas,Civil War: Central Control,A,0
+532.7,-9,757,Side A,Americas,Civil War: Local Issues,A,0
+533,1500,19,Side B,Not in Americas,Civil War: Local Issues,A,1
+535,-9,65,Side A,Not in Americas,Other,A,0
+536,-9,661,Side A,Americas,Civil War: Central Control,A,0
+537,-9,129,Side A,Not in Americas,Civil War: Local Issues,A,1
+538,1800,696,Side A,Americas,Civil War: Central Control,A,0
+539,-9,22,Side A,Not in Americas,Civil War: Local Issues,A,0
+540,-9,91,Side A,Not in Americas,Civil War: Local Issues,A,0
+541,700,37,Side B,Americas,Civil War: Central Control,A,0
+541.2,390,37,Side B,Not in Americas,Other,A,0
+542,400,25,Side A,Not in Americas,Civil War: Local Issues,A,1
+543,700,31,Side B,Not in Americas,Other,A,1
+544,-9,264,Side A,Not in Americas,Civil War: Central Control,A,0
+545,2800,572,Other,Americas,Other,A,0
+546,3000,704,Side A,Not in Americas,Civil War: Central Control,A,0
+547,1500,289,Side A,Not in Americas,Civil War: Central Control,A,0
+548,1500,552,Side A,Americas,Civil War: Central Control,A,0
+549,1100,64,Side A,Not in Americas,Civil War: Central Control,A,0
+550,241,29,Side A,Not in Americas,Civil War: Central Control,A,0
+551,600,6,Other,Not in Americas,Civil War: Local Issues,A,0
+553,-9,2358,Side A,Americas,Civil War: Local Issues,A,1
+554,59600,331,Side A,Not in Americas,Civil War: Local Issues,A,0
+554.3,-9,241,Side A,Not in Americas,Civil War: Local Issues,A,1
+554.5,-9,24,Side A,Not in Americas,Civil War: Local Issues,A,0
+555,1500,124,Side A,Americas,Civil War: Central Control,A,0
+555.8,-9,48,Side B,Not in Americas,Civil War: Local Issues,A,1
+556,4500,175,Other,Not in Americas,Civil War: Local Issues,A,0
+557,-9,437,Side B,Americas,Civil War: Central Control,A,0
+557.1,-9,93,Side A,Not in Americas,Civil War: Local Issues,A,0
+557.2,-9,121,Side A,Not in Americas,Civil War: Local Issues,A,0
+557.3,1400,226,Side B,Americas,Civil War: Central Control,A,0
+557.8,100,34,Side A,Americas,Civil War: Central Control,A,0
+557.9,1400,211,Side A,Not in Americas,Civil War: Local Issues,A,0
+558,200,101,Side A,Americas,Civil War: Central Control,A,0
+560,1000,488,Side A,Americas,Civil War: Central Control,A,0
+561,-9,1038,Side B,Americas,Civil War: Central Control,A,0
+562,3000,11,Side B,Not in Americas,Civil War: Local Issues,A,1
+562.5,-9,128,Side A,Americas,Civil War: Central Control,A,0
+563,30000,1534,Side B,Americas,Civil War: Central Control,A,0
+565,-9,952,Side B,Americas,Civil War: Central Control,A,0
+566,2000,47,Side B,Not in Americas,Other,A,1
+567,-9,1905,Side A,Not in Americas,Civil War: Central Control,A,0
+568,-9,2812,Side A,Not in Americas,Civil War: Local Issues,A,0
+570,-9,4341,Side A,Not in Americas,Civil War: Local Issues,A,0
+571,-9,4870,Side A,Not in Americas,Civil War: Local Issues,A,0
+572,360000,1470,Side A,Americas,Civil War: Local Issues,A,0
+573,-9,212,Side B,Americas,Civil War: Central Control,A,0
+575,5000,346,Other,Not in Americas,Civil War: Local Issues,A,1
+576,-9,4144,Side A,Not in Americas,Civil War: Local Issues,A,0
+577,608,43,Side A,Americas,Other,A,0
+578,-9,44,Side A,Americas,Civil War: Central Control,A,0
+579,5000,448,Side A,Not in Americas,Civil War: Local Issues,A,0
+580,-9,223,Side A,Americas,Civil War: Central Control,A,0
+580.5,2413,227,Other,Not in Americas,Civil War: Local Issues,A,1
+581,-9,331,Side A,Not in Americas,Civil War: Local Issues,A,0
+582,-9,668,Side B,Not in Americas,Civil War: Local Issues,A,0
+582.3,1000,194,Side A,Not in Americas,Civil War: Central Control,A,0
+582.5,-9,361,Side A,Americas,Civil War: Central Control,A,0
+583,-9,843,Side A,Not in Americas,Civil War: Local Issues,A,0
+585,-9,15,Side A,Not in Americas,Civil War: Local Issues,A,0
+586,-9,337,Side A,Americas,Civil War: Central Control,A,0
+586.5,-9,31,Side A,Not in Americas,Other,A,1
+587,1800,136,Side B,Americas,Civil War: Central Control,A,0
+587.8,-9,231,Side B,Americas,Civil War: Central Control,A,0
+588,3600,511,Side A,Not in Americas,Civil War: Central Control,A,1
+591,800,12,Side B,Not in Americas,Civil War: Central Control,A,0
+592,-9,391,Side B,Americas,Civil War: Central Control,A,0
+592.5,-9,983,Side B,Americas,Civil War: Central Control,A,0
+592.7,-9,301,Side A,Not in Americas,Other,A,0
+593,200,294,Side A,Americas,Civil War: Local Issues,A,1
+595,-9,77,Side B,Americas,Civil War: Central Control,A,0
+596,879,72,Side A,Not in Americas,Civil War: Central Control,A,0
+596.7,-9,241,Side A,Not in Americas,Other,A,0
+597,7000,1388,Side A,Not in Americas,Civil War: Central Control,A,0
+597.5,500,233,Side A,Americas,Civil War: Local Issues,A,1
+598,-9,175,Side A,Not in Americas,Civil War: Local Issues,A,1
+600,-9,74,Side A,Americas,Civil War: Central Control,A,0
+601,10000,360,Other,Not in Americas,Civil War: Local Issues,A,0
+602,1900,309,Side B,Americas,Civil War: Central Control,A,0
+603,-9,618,Side A,Not in Americas,Civil War: Local Issues,A,1
+605,2430,265,Side A,Americas,Civil War: Central Control,A,0
+606,-9,109,Side B,Americas,Civil War: Central Control,A,0
+607,6399,236,Side A,Not in Americas,Civil War: Central Control,A,1
+608,200,213,Side A,Americas,Civil War: Local Issues,A,1
+609,-9,41,Side B,Americas,Civil War: Central Control,A,0
+610,550,11,Side A,Americas,Civil War: Local Issues,A,0
+610.5,3500,393,Other,Not in Americas,Civil War: Local Issues,A,0
+611,2400,282,Side A,Americas,Civil War: Central Control,A,0
+612,330,333,Side A,Americas,Civil War: Central Control,A,0
+613,200,70,Side A,Americas,Civil War: Local Issues,A,0
+616,-9,811,Side A,Not in Americas,Civil War: Local Issues,A,0
+616.5,-9,4,Side A,Americas,Civil War: Central Control,A,0
+617,-9,233,Side B,Americas,Civil War: Central Control,A,0
+618,500,36,Side A,Not in Americas,Civil War: Central Control,A,0
+619,-9,206,Side B,Americas,Civil War: Central Control,A,0
+620,-9,570,Side A,Americas,Civil War: Central Control,A,0
+621,-9,221,Side A,Americas,Civil War: Central Control,A,0
+623,500,78,Other,Not in Americas,Civil War: Local Issues,A,0
+625,-9,146,Side B,Americas,Civil War: Central Control,A,0
+626,-9,47,Side A,Americas,Civil War: Central Control,A,0
+627,-9,221,Side B,Americas,Civil War: Central Control,A,0
+628,-9,374,Side A,Not in Americas,Civil War: Local Issues,A,0
+630,6000,272,Side A,Not in Americas,Civil War: Local Issues,A,1
+630.2,4500,99,Other,Not in Americas,Civil War: Local Issues,A,1
+631,-9,335,Other,Not in Americas,Civil War: Local Issues,A,0
+631.5,-9,88,Side A,Americas,Civil War: Central Control,A,0
+632,5000,365,Side A,Americas,Civil War: Local Issues,A,1
+632.3,-9,118,Side A,Americas,Civil War: Central Control,A,0
+632.6,6000,421,Other,Not in Americas,Civil War: Local Issues,A,0
+633,1200,141,Side B,Americas,Civil War: Central Control,A,0
+635,80,178,Side A,Americas,Civil War: Local Issues,A,0
+636,47000,1115,Side A,Americas,Civil War: Central Control,A,0
+637,2000,560,Side A,Americas,Civil War: Local Issues,A,1
+638,-9,573,Side A,Americas,Civil War: Central Control,A,0
+639,30000,1472,Other,Not in Americas,Civil War: Local Issues,A,0
+640,4500,395,Side A,Not in Americas,Civil War: Local Issues,A,0
+641,900,250,Side A,Americas,Civil War: Central Control,A,0
+641.5,1900,140,Other,Not in Americas,Civil War: Local Issues,A,1
+643,2300,340,Side A,Not in Americas,Civil War: Central Control,A,1
+645,-9,45,Side A,Not in Americas,Civil War: Central Control,A,0
+646,600,366,Side B,Not in Americas,Civil War: Central Control,A,0
+647,-9,385,Side B,Not in Americas,Civil War: Central Control,A,1
+647.5,7000,702,Other,Not in Americas,Civil War: Local Issues,A,1
+648,-9,34,Side A,Not in Americas,Civil War: Central Control,A,0
+649,-9,311,Side B,Americas,Civil War: Central Control,A,0
+650,5000,932,Other,Not in Americas,Civil War: Local Issues,A,0
+650.8,100,58,Side A,Not in Americas,Civil War: Local Issues,A,1
+652,90000,1240,Side B,Americas,Civil War: Central Control,A,0
+656,3000,206,Side B,Americas,Civil War: Central Control,A,0
+657,4000,68,Other,Not in Americas,Civil War: Central Control,A,0
+657.3,-9,12,Side A,Americas,Civil War: Central Control,A,0
+658,50,59,Side A,Americas,Civil War: Local Issues,A,0
+665,-9,50,Side A,Not in Americas,Civil War: Local Issues,A,1
+667,-9,1071,Side A,Americas,Civil War: Central Control,A,0
+672,-9,143,Side A,Not in Americas,Civil War: Local Issues,A,0
+672.5,1000,481,Side A,Americas,Civil War: Local Issues,A,1
+673,90015,2066,Side A,Americas,Civil War: Central Control,A,0
+674,2000,171,Side B,Not in Americas,Civil War: Central Control,A,0
+675,150,234,Side A,Not in Americas,Civil War: Local Issues,A,0
+675.5,10000,321,Side A,Not in Americas,Civil War: Central Control,A,0
+676,-9,105,Side A,Not in Americas,Other,A,1
+676.5,-9,452,Other,Not in Americas,Civil War: Local Issues,A,1
+677,702000,1062,Side A,Not in Americas,Civil War: Central Control,A,0
+680,6250,109,Side A,Not in Americas,Civil War: Central Control,A,0
+681,1500,73,Other,Not in Americas,Other,A,0
+682,100,118,Side A,Not in Americas,Other,A,0
+683,1000,321,Side B,Not in Americas,Civil War: Central Control,A,0
+684,-9,203,Side A,Not in Americas,Other,A,1
+684.5,-9,517,Side A,Not in Americas,Civil War: Central Control,A,0
+685,-9,10,Side B,Not in Americas,Other,A,0
+685.5,10000,277,Side A,Not in Americas,Civil War: Local Issues,A,0
+686,1700,285,Side A,Not in Americas,Civil War: Local Issues,A,0
+687,-9,1237,Side A,Not in Americas,Civil War: Local Issues,A,0
+688,300,707,Side A,Not in Americas,Other,A,1
+689,1100,556,Side A,Not in Americas,Civil War: Local Issues,A,0
+690,1900,12,Side A,Not in Americas,Civil War: Central Control,A,0
+691,2500,587,Side A,Not in Americas,Civil War: Central Control,A,0
+692,2500,7,Side B,Not in Americas,Civil War: Central Control,A,1
+693,500,6,Side A,Not in Americas,Civil War: Central Control,A,0
+695,-9,157,Side A,Americas,Civil War: Central Control,A,0
+696,2000,82,Side B,Americas,Civil War: Central Control,A,0
+697,700,361,Side A,Not in Americas,Civil War: Central Control,A,0
+697.3,-9,61,Side B,Not in Americas,Civil War: Central Control,A,1
+697.6,2250,219,Side A,Not in Americas,Civil War: Local Issues,A,0
+697.8,600,361,Side B,Not in Americas,Other,A,1
+698,-9,149,Other,Not in Americas,Other,A,1
+700,-9,767,Side B,Not in Americas,Civil War: Central Control,A,0
+701,55000,1039,Other,Americas,Civil War: Central Control,A,0
+702,-9,133,Side A,Not in Americas,Other,A,0
+702.5,-9,343,Other,Not in Americas,Civil War: Local Issues,A,0
+703,-9,556,Side A,Not in Americas,Civil War: Local Issues,A,0
+705,3750,334,Side A,Not in Americas,Civil War: Central Control,A,0
+707,400,62,Side A,Americas,Civil War: Central Control,A,0
+707.3,-9,281,Side A,Not in Americas,Civil War: Central Control,A,1
+707.5,37500,477,Side A,Not in Americas,Civil War: Central Control,A,1
+708,-9,210,Side A,Not in Americas,Civil War: Local Issues,A,1
+709,700,167,Side A,Not in Americas,Civil War: Local Issues,A,1
+710,200000,2211,Other,Not in Americas,Civil War: Central Control,A,1
+711,-9,316,Other,Not in Americas,Other,A,0
+711.5,-9,669,Side B,Not in Americas,Other,A,1
+712,100,12,Side A,Americas,Civil War: Central Control,A,0
+712.5,600,184,Side A,Not in Americas,Civil War: Local Issues,A,0
+713,110,71,Side A,Americas,Civil War: Central Control,A,0
+715,1050,86,Side A,Americas,Civil War: Central Control,A,0
+715.6,-9,325,Side A,Not in Americas,Other,A,0
+716,-9,86,Side A,Not in Americas,Civil War: Central Control,A,1
+717,284,15,Side A,Not in Americas,Civil War: Central Control,A,0
+718,181300,972,Side B,Not in Americas,Civil War: Central Control,A,0
+718.5,200,398,Side A,Not in Americas,Civil War: Central Control,A,0
+719,-9,1012,Other,Not in Americas,Civil War: Central Control,A,1
+719.6,-9,146,Side A,Not in Americas,Civil War: Local Issues,A,0
+719.8,-9,340,Other,Not in Americas,Civil War: Local Issues,A,0
+720,737,39,Side A,Not in Americas,Civil War: Central Control,A,0
+721,13100,911,Side A,Not in Americas,Civil War: Local Issues,A,0
+722,25000,954,Side A,Not in Americas,Civil War: Local Issues,A,0
+723,20000,1674,Side A,Not in Americas,Civil War: Local Issues,A,0
+723.5,600000,1662,Side B,Not in Americas,Civil War: Central Control,A,0
+724,18180,1325,Side A,Not in Americas,Civil War: Central Control,A,0
+726,200,22,Side A,Not in Americas,Civil War: Local Issues,A,0
+727,1500,164,Side A,Americas,Civil War: Central Control,A,0
+728,-9,26,Side B,Not in Americas,Civil War: Central Control,A,0
+730,1500,36,Side B,Americas,Civil War: Central Control,A,0
+730.5,1352,969,Other,Not in Americas,Civil War: Central Control,A,0
+731,16800,1954,Side A,Americas,Civil War: Central Control,A,0
+732.5,250,811,Side A,Not in Americas,Civil War: Central Control,A,1
+733,1578,1474,Side A,Not in Americas,Civil War: Local Issues,A,0
+734,-9,111,Side A,Not in Americas,Civil War: Local Issues,A,1
+736,8000,4114,Side A,Not in Americas,Civil War: Central Control,A,1
+737,-9,4,Side B,Americas,Civil War: Central Control,A,0
+739,-9,2719,Other,Americas,Civil War: Central Control,A,1
+740,-9,95,Side B,Americas,Civil War: Central Control,A,0
+740.5,-9,661,Side A,Not in Americas,Civil War: Local Issues,A,0
+741,10000,1124,Side A,Not in Americas,Civil War: Local Issues,A,1
+741.5,-9,331,Other,Not in Americas,Civil War: Local Issues,A,1
+742,4000,1257,Side A,Not in Americas,Civil War: Central Control,A,1
+743,-9,86,Other,Not in Americas,Civil War: Central Control,A,0
+745,2000,219,Side B,Americas,Civil War: Central Control,A,1
+746,500,528,Other,Not in Americas,Civil War: Central Control,A,1
+747,-9,4,Side A,Not in Americas,Civil War: Central Control,A,0
+748,25458,1820,Other,Not in Americas,Civil War: Central Control,A,0
+749,-9,2256,Other,Not in Americas,Civil War: Central Control,A,0
+750,-9,911,Side A,Not in Americas,Civil War: Local Issues,A,0
+752,4500,815,Other,Not in Americas,Civil War: Local Issues,A,0
+753,-9,130,Side B,Not in Americas,Civil War: Central Control,A,0
+755,-9,2693,Side A,Not in Americas,Civil War: Central Control,A,0
+757,-9,286,Other,Not in Americas,Civil War: Local Issues,A,0
+758,-9,3049,Other,Not in Americas,Civil War: Local Issues,A,0
+760,100,205,Side A,Not in Americas,Civil War: Central Control,A,0
+761,-9,716,Side A,Not in Americas,Civil War: Local Issues,A,0
+762,305,536,Side A,Not in Americas,Civil War: Central Control,A,0
+765,2000,439,Other,Not in Americas,Civil War: Local Issues,A,1
+766,869,133,Other,Americas,Civil War: Central Control,A,0
+767,-9,9828,Other,Not in Americas,Civil War: Central Control,A,1
+768,-9,9,Side A,Not in Americas,Civil War: Local Issues,A,1
+770,1028,538,Other,Americas,Civil War: Central Control,A,1
+771.5,-9,690,Side A,Not in Americas,Civil War: Local Issues,A,1
+772,-9,236,Other,Not in Americas,Other,A,0
+775,30000,908,Side A,Not in Americas,Civil War: Local Issues,A,1
+776,-9,361,Side A,Not in Americas,Civil War: Local Issues,A,1
+776.3,550,1172,Side A,Not in Americas,Civil War: Central Control,A,0
+777,2000,447,Other,Not in Americas,Civil War: Local Issues,A,0
+778,-9,511,Side A,Not in Americas,Civil War: Central Control,A,0
+780,750,12,Side A,Not in Americas,Civil War: Central Control,A,1
+781,100,303,Side A,Americas,Civil War: Central Control,A,1
+782,5000,248,Other,Not in Americas,Civil War: Local Issues,A,1
+783,63,87,Side A,Not in Americas,Civil War: Central Control,A,0
+785,44398,1214,Side B,Not in Americas,Civil War: Central Control,A,0
+786,12000,3349,Other,Not in Americas,Civil War: Local Issues,A,0
+787,1300,631,Other,Not in Americas,Civil War: Central Control,A,1
+788,-9,959,Other,Not in Americas,Other,A,1
+789,250,27,Side A,Not in Americas,Civil War: Central Control,A,0
+792,3300,1372,Side A,Not in Americas,Civil War: Local Issues,A,1
+793,3000,5,Side B,Americas,Civil War: Central Control,A,0
+795,2035,777,Other,Not in Americas,Civil War: Local Issues,A,1
+797,2500,380,Side A,Not in Americas,Civil War: Local Issues,A,0
+798,7100,1726,Side A,Not in Americas,Civil War: Local Issues,A,0
+800,470,655,Side A,Americas,Civil War: Central Control,A,0
+801,-9,534,Other,Not in Americas,Other,A,0
+803,-9,1111,Side A,Not in Americas,Civil War: Local Issues,A,0
+804,36000,5493,Other,Not in Americas,Civil War: Central Control,A,0
+804.5,950,1317,Side B,Not in Americas,Civil War: Central Control,A,0
+805,-9,382,Other,Not in Americas,Civil War: Local Issues,A,0
+805.3,300,4,Side A,Not in Americas,Civil War: Central Control,A,0
+806,1800,1029,Side A,Not in Americas,Civil War: Local Issues,A,1
+806.3,-9,566,Side A,Not in Americas,Civil War: Local Issues,A,0
+806.8,2000,354,Side A,Not in Americas,Civil War: Central Control,A,0
+807,1534,237,Other,Not in Americas,Other,A,0
+808,2000,984,Side A,Not in Americas,Civil War: Local Issues,A,0
+809,1800,2,Side B,Not in Americas,Civil War: Central Control,A,0
+810,-9,34,Side A,Not in Americas,Civil War: Central Control,A,0
+811,4200,1870,Side A,Americas,Civil War: Central Control,A,1
+812,5900,591,Other,Not in Americas,Civil War: Central Control,A,0
+815,1000,310,Side B,Americas,Civil War: Central Control,A,0
+815.5,500,87,Side B,Not in Americas,Civil War: Central Control,A,0
+816,3000,1742,Side A,Not in Americas,Civil War: Central Control,A,1
+817,10000,4427,Other,Americas,Civil War: Central Control,A,0
+820,4500,1376,Side B,Not in Americas,Civil War: Local Issues,A,0
+823,55,24,Side A,Not in Americas,Civil War: Local Issues,A,1
+824,-9,4128,Other,Not in Americas,Civil War: Central Control,A,0
+825,-9,4135,Side A,Not in Americas,Civil War: Central Control,A,0
+826,153500,3366,Side B,Not in Americas,Civil War: Local Issues,A,0
+826.5,1000,26,Side A,Not in Americas,Civil War: Central Control,A,0
+828,7150,2170,Other,Americas,Civil War: Central Control,A,0
+828.3,39516,1355,Side B,Not in Americas,Civil War: Central Control,A,0
+829,2242,3525,Side A,Americas,Civil War: Central Control,A,0
+833,-9,312,Side B,Not in Americas,Civil War: Central Control,A,0
+834,-9,6811,Other,Not in Americas,Civil War: Central Control,A,0
+835,1000,1464,Other,Not in Americas,Civil War: Local Issues,A,0
+837,250,60,Side A,Not in Americas,Civil War: Local Issues,A,1
+838,-9,585,Other,Not in Americas,Civil War: Local Issues,A,0
+840,-9,1304,Side A,Not in Americas,Civil War: Local Issues,A,1
+842,-9,19,Side B,Not in Americas,Civil War: Central Control,A,0
+843,2000,376,Side A,Not in Americas,Civil War: Central Control,A,0
+845,551,870,Side A,Not in Americas,Civil War: Central Control,A,0
+845.5,3000,1081,Side A,Americas,Civil War: Central Control,A,1
+846,-9,2287,Other,Not in Americas,Other,A,1
+848,-9,961,Side B,Not in Americas,Civil War: Central Control,A,0
+849,12825,9688,Other,Americas,Civil War: Central Control,A,0
+850,-9,600,Side B,Not in Americas,Civil War: Central Control,A,1
+851,-9,1140,Side B,Not in Americas,Civil War: Central Control,A,0
+852,3000,602,Side B,Not in Americas,Civil War: Central Control,A,0
+853,1500,1440,Side A,Not in Americas,Civil War: Local Issues,A,0
+854,-9,748,Other,Not in Americas,Civil War: Central Control,A,0
+856,-9,9,Side B,Not in Americas,Civil War: Central Control,A,0
+857,-9,335,Other,Not in Americas,Civil War: Central Control,A,0
+858,-9,451,Other,Not in Americas,Civil War: Local Issues,A,0
+859,-9,3969,Other,Not in Americas,Civil War: Local Issues,A,0
+860,-9,304,Other,Not in Americas,Civil War: Local Issues,A,1
+862,-9,30,Side A,Not in Americas,Civil War: Central Control,A,0
+862.1,-9,227,Other,Not in Americas,Civil War: Local Issues,A,0
+863,-9,1831,Other,Not in Americas,Civil War: Central Control,A,0
+864,-9,241,Side B,Not in Americas,Civil War: Local Issues,A,1
+865,4819,3018,Side A,Not in Americas,Civil War: Local Issues,A,1
+865.8,-9,2270,Other,Not in Americas,Civil War: Central Control,A,0
+866,-9,178,Other,Not in Americas,Other,A,0
+868,-9,151,Other,Not in Americas,Other,A,0
+871,-9,726,Side B,Not in Americas,Civil War: Central Control,A,0
+872,4000,400,Other,Not in Americas,Civil War: Local Issues,A,0
+873,-9,187,Other,Not in Americas,Civil War: Local Issues,A,1
+874,5000,5041,Other,Not in Americas,Civil War: Local Issues,A,0
+874.5,-9,211,Other,Not in Americas,Other,A,1
+875,5000,3728,Other,Not in Americas,Civil War: Central Control,A,0
+876,-9,1852,Other,Not in Americas,Civil War: Central Control,A,0
+877,34216,1191,Side A,Not in Americas,Civil War: Local Issues,A,0
+877.5,-9,3339,Other,Not in Americas,Civil War: Central Control,A,0
+878,5000,538,Side B,Not in Americas,Civil War: Local Issues,A,1
+879,-9,1161,Other,Not in Americas,Civil War: Central Control,A,0
+880,-9,738,Other,Not in Americas,Civil War: Central Control,A,0
+881,-9,1886,Side A,Not in Americas,Civil War: Central Control,A,1
+882,1750,116,Other,Not in Americas,Other,A,0
+883,-9,1710,Other,Not in Americas,Civil War: Central Control,A,0
+885,1226,137,Side A,Not in Americas,Civil War: Local Issues,A,1
+886,-9,103,Side B,Not in Americas,Civil War: Central Control,A,1
+887,-9,372,Other,Not in Americas,Other,A,0
+887.5,-9,180,Other,Not in Americas,Other,A,1
+888,4000,621,Side B,Not in Americas,Civil War: Local Issues,A,0
+891,-9,181,Side A,Not in Americas,Civil War: Local Issues,A,0
+893,-9,54,Other,Not in Americas,Civil War: Local Issues,A,0
+895,-9,218,Side B,Not in Americas,Civil War: Central Control,A,0
+896,300,584,Side A,Not in Americas,Civil War: Central Control,A,0
+897,-9,130,Side B,Not in Americas,Civil War: Central Control,A,1
+897.5,-9,43,Other,Not in Americas,Other,A,1
+898,-9,688,Side B,Not in Americas,Civil War: Central Control,A,0
+900,400,384,Other,Not in Americas,Civil War: Local Issues,A,1
+902,-9,113,Side B,Not in Americas,Civil War: Central Control,A,0
+905,-9,1576,Other,Not in Americas,Civil War: Central Control,A,0
+906,-9,794,Other,Not in Americas,Civil War: Central Control,A,0
+907,-9,1159,Side A,Not in Americas,Civil War: Central Control,A,1
+908,-9,332,Side A,Not in Americas,Civil War: Central Control,A,0
+910,3000,1104,Other,Not in Americas,Other,A,0
+912,-9,1848,Other,Not in Americas,Civil War: Local Issues,A,0
+913,200,79,Other,Not in Americas,Civil War: Local Issues,A,0
+915,5000,1497,Side A,Not in Americas,Civil War: Local Issues,A,0
+916,500,487,Other,Not in Americas,Civil War: Local Issues,A,0
+917,-9,247,Other,Not in Americas,Civil War: Central Control,A,0
+918,150,961,Other,Not in Americas,Civil War: Central Control,A,0
+920,-9,104,Side A,Not in Americas,Civil War: Central Control,A,0
+921,2000,1388,Other,Not in Americas,Civil War: Central Control,A,0
+922,-9,440,Side B,Not in Americas,Civil War: Central Control,A,0
+925,-9,186,Other,Not in Americas,Civil War: Central Control,A,0
+926,400,159,Other,Not in Americas,Civil War: Local Issues,A,0
+927,-9,1309,Other,Not in Americas,Civil War: Local Issues,A,0
+932,1200,673,Other,Not in Americas,Civil War: Local Issues,A,1
+933,-9,182,Other,Not in Americas,Other,A,0
+935,300,289,Side A,Not in Americas,Civil War: Central Control,A,1
+936,672,721,Other,Not in Americas,Civil War: Central Control,A,0
+937,-9,422,Other,Not in Americas,Civil War: Central Control,A,0
+940,5750,1017,Side A,Not in Americas,Civil War: Local Issues,A,1
+940.8,-9,1844,Side A,Not in Americas,Civil War: Central Control,A,0
+941,1850,528,Other,Not in Americas,Civil War: Central Control,A,0
+942,5739,3059,Other,Not in Americas,Civil War: Local Issues,A,0
+971,8000,1354,Other,Not in Americas,Civil War: Central Control,A,0
+973,-9,51,Side B,Not in Americas,Civil War: Central Control,A,1
+976,4500,243,Side B,Not in Americas,Civil War: Central Control,A,0
+978,-9,1130,Other,Not in Americas,Civil War: Central Control,A,1
+979,70020,1645,Other,Not in Americas,Civil War: Central Control,A,1
+980,850,593,Other,Not in Americas,Civil War: Local Issues,A,1
+985,371,407,Side A,Not in Americas,Civil War: Local Issues,A,0
+990,-9,106,Side B,Not in Americas,Civil War: Central Control,A,0
+990.4,200,955,Other,Not in Americas,Civil War: Central Control,A,0
+991,10680,737,Other,Not in Americas,Civil War: Central Control,A,1
+991.4,-9,721,Other,Not in Americas,Civil War: Central Control,A,0
+991.5,-9,140,Other,Not in Americas,Other,A,1
+992,600,385,Other,Not in Americas,Civil War: Central Control,A,0
+992.5,-9,659,Other,Not in Americas,Civil War: Central Control,A,1
+993,3245,493,Other,Not in Americas,Civil War: Local Issues,A,0
+994,-9,570,Other,Not in Americas,Civil War: Central Control,A,1
+997,1000,189,Other,Not in Americas,Other,A,1
+500,6000,1596,Side A,Not in Americas,Civil War: Local Issues,B,0
+502,-9,262,Side A,Not in Americas,Civil War: Central Control,B,1
+502.1,-9,550,Side A,Not in Americas,Civil War: Local Issues,B,0
+503,-9,59,Side A,Not in Americas,Civil War: Central Control,B,0
+504,15177,2551,Other,Not in Americas,Civil War: Local Issues,B,1
+504.3,40,430,Other,Not in Americas,Other,B,1
+505,-9,483,Other,Not in Americas,Civil War: Central Control,B,1
+507,-9,22,Side A,Not in Americas,Other,B,0
+507.5,-9,372,Side A,Not in Americas,Civil War: Local Issues,B,1
+508,6320,4,Side A,Not in Americas,Civil War: Central Control,B,1
+511,2000,954,Side A,Not in Americas,Civil War: Local Issues,B,1
+512,10000,741,Side A,Not in Americas,Civil War: Local Issues,B,0
+513,1800,3,Side B,Not in Americas,Civil War: Central Control,B,1
+515,600,115,Side B,Not in Americas,Civil War: Local Issues,B,0
+516,500,91,Side B,Not in Americas,Other,B,0
+517,20000,252,Side A,Not in Americas,Civil War: Local Issues,B,0
+518,6000,447,Other,Not in Americas,Civil War: Local Issues,B,1
+520,1000,352,Side B,Americas,Civil War: Central Control,B,1
+520.3,-9,1125,Side A,Americas,Civil War: Central Control,B,0
+520.5,8100,678,Side B,Not in Americas,Civil War: Central Control,B,1
+521,2000,87,Side A,Not in Americas,Other,B,0
+522,60000,2123,Side A,Not in Americas,Civil War: Central Control,B,1
+523,-9,68,Other,Not in Americas,Civil War: Local Issues,B,1
+525,6500,907,Side A,Americas,Civil War: Local Issues,B,1
+525.5,-9,4,Side A,Americas,Civil War: Central Control,B,1
+526,-9,3403,Side A,Americas,Civil War: Local Issues,B,1
+527,700,199,Side B,Americas,Civil War: Local Issues,B,1
+528,-9,91,Side A,Not in Americas,Civil War: Local Issues,B,1
+530,-9,5689,Other,Not in Americas,Civil War: Local Issues,B,0
+531,1200,130,Side A,Americas,Civil War: Local Issues,B,1
+532,2000,326,Other,Not in Americas,Other,B,1
+532.5,800,381,Side A,Americas,Civil War: Central Control,B,1
+532.7,5000,757,Side A,Americas,Civil War: Local Issues,B,1
+533,500,19,Side B,Not in Americas,Civil War: Local Issues,B,0
+535,-9,65,Side A,Not in Americas,Other,B,0
+536,-9,661,Side A,Americas,Civil War: Central Control,B,1
+537,-9,129,Side A,Not in Americas,Civil War: Local Issues,B,0
+538,4000,696,Side A,Americas,Civil War: Central Control,B,1
+539,-9,22,Side A,Not in Americas,Civil War: Local Issues,B,1
+540,-9,91,Side A,Not in Americas,Civil War: Local Issues,B,1
+541,500,37,Side B,Americas,Civil War: Central Control,B,1
+541.2,973,37,Side B,Not in Americas,Other,B,1
+542,3600,25,Side A,Not in Americas,Civil War: Local Issues,B,0
+543,350,31,Side B,Not in Americas,Other,B,0
+544,-9,264,Side A,Not in Americas,Civil War: Central Control,B,1
+545,1500,572,Other,Americas,Other,B,1
+546,7000,704,Side A,Not in Americas,Civil War: Central Control,B,1
+547,-9,289,Side A,Not in Americas,Civil War: Central Control,B,1
+548,500,552,Side A,Americas,Civil War: Central Control,B,1
+549,3000,64,Side A,Not in Americas,Civil War: Central Control,B,1
+550,3000,29,Side A,Not in Americas,Civil War: Central Control,B,1
+551,430,6,Other,Not in Americas,Civil War: Local Issues,B,1
+553,-9,2358,Side A,Americas,Civil War: Local Issues,B,0
+554,45000,331,Side A,Not in Americas,Civil War: Local Issues,B,0
+554.3,-9,241,Side A,Not in Americas,Civil War: Local Issues,B,0
+554.5,-9,24,Side A,Not in Americas,Civil War: Local Issues,B,1
+555,2500,124,Side A,Americas,Civil War: Central Control,B,1
+555.8,-9,48,Side B,Not in Americas,Civil War: Local Issues,B,0
+556,2000,175,Other,Not in Americas,Civil War: Local Issues,B,0
+557,-9,437,Side B,Americas,Civil War: Central Control,B,1
+557.1,-9,93,Side A,Not in Americas,Civil War: Local Issues,B,1
+557.2,-9,121,Side A,Not in Americas,Civil War: Local Issues,B,1
+557.3,600,226,Side B,Americas,Civil War: Central Control,B,1
+557.8,1000,34,Side A,Americas,Civil War: Central Control,B,1
+557.9,500,211,Side A,Not in Americas,Civil War: Local Issues,B,1
+558,1000,101,Side A,Americas,Civil War: Central Control,B,1
+560,2000,488,Side A,Americas,Civil War: Central Control,B,1
+561,-9,1038,Side B,Americas,Civil War: Central Control,B,1
+562,400,11,Side B,Not in Americas,Civil War: Local Issues,B,0
+562.5,-9,128,Side A,Americas,Civil War: Central Control,B,1
+563,10000,1534,Side B,Americas,Civil War: Central Control,B,1
+565,-9,952,Side B,Americas,Civil War: Central Control,B,1
+566,1000,47,Side B,Not in Americas,Other,B,0
+567,-9,1905,Side A,Not in Americas,Civil War: Central Control,B,1
+568,-9,2812,Side A,Not in Americas,Civil War: Local Issues,B,0
+570,-9,4341,Side A,Not in Americas,Civil War: Local Issues,B,1
+571,-9,4870,Side A,Not in Americas,Civil War: Local Issues,B,1
+572,258000,1470,Side A,Americas,Civil War: Local Issues,B,1
+573,-9,212,Side B,Americas,Civil War: Central Control,B,1
+575,2000,346,Other,Not in Americas,Civil War: Local Issues,B,0
+576,-9,4144,Side A,Not in Americas,Civil War: Local Issues,B,1
+577,513,43,Side A,Americas,Other,B,1
+578,-9,44,Side A,Americas,Civil War: Central Control,B,1
+579,6500,448,Side A,Not in Americas,Civil War: Local Issues,B,1
+580,-9,223,Side A,Americas,Civil War: Central Control,B,0
+580.5,6587,227,Other,Not in Americas,Civil War: Local Issues,B,0
+581,-9,331,Side A,Not in Americas,Civil War: Local Issues,B,1
+582,-9,668,Side B,Not in Americas,Civil War: Local Issues,B,1
+582.3,1300,194,Side A,Not in Americas,Civil War: Central Control,B,1
+582.5,-9,361,Side A,Americas,Civil War: Central Control,B,1
+583,-9,843,Side A,Not in Americas,Civil War: Local Issues,B,1
+585,-9,15,Side A,Not in Americas,Civil War: Local Issues,B,1
+586,-9,337,Side A,Americas,Civil War: Central Control,B,0
+586.5,-9,31,Side A,Not in Americas,Other,B,0
+587,1000,136,Side B,Americas,Civil War: Central Control,B,1
+587.8,-9,231,Side B,Americas,Civil War: Central Control,B,1
+588,5400,511,Side A,Not in Americas,Civil War: Central Control,B,0
+591,800,12,Side B,Not in Americas,Civil War: Central Control,B,1
+592,-9,391,Side B,Americas,Civil War: Central Control,B,1
+592.5,-9,983,Side B,Americas,Civil War: Central Control,B,1
+592.7,-9,301,Side A,Not in Americas,Other,B,1
+593,1300,294,Side A,Americas,Civil War: Local Issues,B,0
+595,-9,77,Side B,Americas,Civil War: Central Control,B,0
+596,20500,72,Side A,Not in Americas,Civil War: Central Control,B,0
+596.7,-9,241,Side A,Not in Americas,Other,B,1
+597,43000,1388,Side A,Not in Americas,Civil War: Central Control,B,1
+597.5,1500,233,Side A,Americas,Civil War: Local Issues,B,0
+598,-9,175,Side A,Not in Americas,Civil War: Local Issues,B,0
+600,-9,74,Side A,Americas,Civil War: Central Control,B,0
+601,13000,360,Other,Not in Americas,Civil War: Local Issues,B,0
+602,1200,309,Side B,Americas,Civil War: Central Control,B,1
+603,-9,618,Side A,Not in Americas,Civil War: Local Issues,B,0
+605,2070,265,Side A,Americas,Civil War: Central Control,B,1
+606,-9,109,Side B,Americas,Civil War: Central Control,B,1
+607,7000,236,Side A,Not in Americas,Civil War: Central Control,B,0
+608,1500,213,Side A,Americas,Civil War: Local Issues,B,0
+609,-9,41,Side B,Americas,Civil War: Central Control,B,1
+610,825,11,Side A,Americas,Civil War: Local Issues,B,1
+610.5,6500,393,Other,Not in Americas,Civil War: Local Issues,B,1
+611,400,282,Side A,Americas,Civil War: Central Control,B,1
+612,820,333,Side A,Americas,Civil War: Central Control,B,1
+613,2000,70,Side A,Americas,Civil War: Local Issues,B,1
+616,-9,811,Side A,Not in Americas,Civil War: Local Issues,B,1
+616.5,-9,4,Side A,Americas,Civil War: Central Control,B,1
+617,-9,233,Side B,Americas,Civil War: Central Control,B,1
+618,10000,36,Side A,Not in Americas,Civil War: Central Control,B,0
+619,-9,206,Side B,Americas,Civil War: Central Control,B,1
+620,-9,570,Side A,Americas,Civil War: Central Control,B,1
+621,-9,221,Side A,Americas,Civil War: Central Control,B,1
+623,500,78,Other,Not in Americas,Civil War: Local Issues,B,0
+625,-9,146,Side B,Americas,Civil War: Central Control,B,1
+626,-9,47,Side A,Americas,Civil War: Central Control,B,1
+627,-9,221,Side B,Americas,Civil War: Central Control,B,1
+628,-9,374,Side A,Not in Americas,Civil War: Local Issues,B,1
+630,4000,272,Side A,Not in Americas,Civil War: Local Issues,B,0
+630.2,500,99,Other,Not in Americas,Civil War: Local Issues,B,0
+631,-9,335,Other,Not in Americas,Civil War: Local Issues,B,1
+631.5,-9,88,Side A,Americas,Civil War: Central Control,B,1
+632,10000,365,Side A,Americas,Civil War: Local Issues,B,0
+632.3,-9,118,Side A,Americas,Civil War: Central Control,B,1
+632.6,4000,421,Other,Not in Americas,Civil War: Local Issues,B,1
+633,800,141,Side B,Americas,Civil War: Central Control,B,1
+635,1100,178,Side A,Americas,Civil War: Local Issues,B,1
+636,53000,1115,Side A,Americas,Civil War: Central Control,B,1
+637,-9,560,Side A,Americas,Civil War: Local Issues,B,0
+638,-9,573,Side A,Americas,Civil War: Central Control,B,1
+639,15000,1472,Other,Not in Americas,Civil War: Local Issues,B,1
+640,1500,395,Side A,Not in Americas,Civil War: Local Issues,B,1
+641,700,250,Side A,Americas,Civil War: Central Control,B,1
+641.5,600,140,Other,Not in Americas,Civil War: Local Issues,B,0
+643,3000,340,Side A,Not in Americas,Civil War: Central Control,B,0
+645,-9,45,Side A,Not in Americas,Civil War: Central Control,B,1
+646,800,366,Side B,Not in Americas,Civil War: Central Control,B,1
+647,-9,385,Side B,Not in Americas,Civil War: Central Control,B,0
+647.5,3000,702,Other,Not in Americas,Civil War: Local Issues,B,0
+648,-9,34,Side A,Not in Americas,Civil War: Central Control,B,1
+649,-9,311,Side B,Americas,Civil War: Central Control,B,1
+650,-9,932,Other,Not in Americas,Civil War: Local Issues,B,1
+650.8,1000,58,Side A,Not in Americas,Civil War: Local Issues,B,0
+652,60022,1240,Side B,Americas,Civil War: Central Control,B,0
+656,1000,206,Side B,Americas,Civil War: Central Control,B,1
+657,2000,68,Other,Not in Americas,Civil War: Central Control,B,1
+657.3,-9,12,Side A,Americas,Civil War: Central Control,B,1
+658,1000,59,Side A,Americas,Civil War: Local Issues,B,1
+665,-9,50,Side A,Not in Americas,Civil War: Local Issues,B,0
+667,-9,1071,Side A,Americas,Civil War: Central Control,B,1
+672,-9,143,Side A,Not in Americas,Civil War: Local Issues,B,1
+672.5,6000,481,Side A,Americas,Civil War: Local Issues,B,0
+673,60000,2066,Side A,Americas,Civil War: Central Control,B,1
+674,2000,171,Side B,Not in Americas,Civil War: Central Control,B,1
+675,1850,234,Side A,Not in Americas,Civil War: Local Issues,B,0
+675.5,10000,321,Side A,Not in Americas,Civil War: Central Control,B,1
+676,-9,105,Side A,Not in Americas,Other,B,0
+676.5,-9,452,Other,Not in Americas,Civil War: Local Issues,B,0
+677,327225,1062,Side A,Not in Americas,Civil War: Central Control,B,1
+680,17900,109,Side A,Not in Americas,Civil War: Central Control,B,1
+681,1000,73,Other,Not in Americas,Other,B,0
+682,2900,118,Side A,Not in Americas,Other,B,1
+683,500,321,Side B,Not in Americas,Civil War: Central Control,B,1
+684,-9,203,Side A,Not in Americas,Other,B,0
+684.5,-9,517,Side A,Not in Americas,Civil War: Central Control,B,1
+685,-9,10,Side B,Not in Americas,Other,B,0
+685.5,9688,277,Side A,Not in Americas,Civil War: Local Issues,B,1
+686,7500,285,Side A,Not in Americas,Civil War: Local Issues,B,1
+687,-9,1237,Side A,Not in Americas,Civil War: Local Issues,B,0
+688,3000,707,Side A,Not in Americas,Other,B,0
+689,900,556,Side A,Not in Americas,Civil War: Local Issues,B,1
+690,2700,12,Side A,Not in Americas,Civil War: Central Control,B,1
+691,500,587,Side A,Not in Americas,Civil War: Central Control,B,1
+692,2500,7,Side B,Not in Americas,Civil War: Central Control,B,0
+693,1000,6,Side A,Not in Americas,Civil War: Central Control,B,1
+695,-9,157,Side A,Americas,Civil War: Central Control,B,0
+696,1000,82,Side B,Americas,Civil War: Central Control,B,1
+697,400,361,Side A,Not in Americas,Civil War: Central Control,B,1
+697.3,-9,61,Side B,Not in Americas,Civil War: Central Control,B,0
+697.6,2750,219,Side A,Not in Americas,Civil War: Local Issues,B,1
+697.8,400,361,Side B,Not in Americas,Other,B,0
+698,-9,149,Other,Not in Americas,Other,B,0
+700,-9,767,Side B,Not in Americas,Civil War: Central Control,B,1
+701,35000,1039,Other,Americas,Civil War: Central Control,B,1
+702,-9,133,Side A,Not in Americas,Other,B,1
+702.5,-9,343,Other,Not in Americas,Civil War: Local Issues,B,1
+703,-9,556,Side A,Not in Americas,Civil War: Local Issues,B,1
+705,3750,334,Side A,Not in Americas,Civil War: Central Control,B,1
+707,1600,62,Side A,Americas,Civil War: Central Control,B,0
+707.3,-9,281,Side A,Not in Americas,Civil War: Central Control,B,0
+707.5,62500,477,Side A,Not in Americas,Civil War: Central Control,B,0
+708,-9,210,Side A,Not in Americas,Civil War: Local Issues,B,0
+709,300,167,Side A,Not in Americas,Civil War: Local Issues,B,0
+710,200000,2211,Other,Not in Americas,Civil War: Central Control,B,0
+711,-9,316,Other,Not in Americas,Other,B,0
+711.5,-9,669,Side B,Not in Americas,Other,B,0
+712,2500,12,Side A,Americas,Civil War: Central Control,B,1
+712.5,1400,184,Side A,Not in Americas,Civil War: Local Issues,B,1
+713,1100,71,Side A,Americas,Civil War: Central Control,B,1
+715,2200,86,Side A,Americas,Civil War: Central Control,B,1
+715.6,-9,325,Side A,Not in Americas,Other,B,1
+716,-9,86,Side A,Not in Americas,Civil War: Central Control,B,0
+717,1051,15,Side A,Not in Americas,Civil War: Central Control,B,1
+718,128100,972,Side B,Not in Americas,Civil War: Central Control,B,1
+718.5,1000,398,Side A,Not in Americas,Civil War: Central Control,B,1
+719,-9,1012,Other,Not in Americas,Civil War: Central Control,B,0
+719.6,-9,146,Side A,Not in Americas,Civil War: Local Issues,B,1
+719.8,-9,340,Other,Not in Americas,Civil War: Local Issues,B,1
+720,1000,39,Side A,Not in Americas,Civil War: Central Control,B,1
+721,8700,911,Side A,Not in Americas,Civil War: Local Issues,B,1
+722,56600,954,Side A,Not in Americas,Civil War: Local Issues,B,1
+723,30000,1674,Side A,Not in Americas,Civil War: Local Issues,B,1
+723.5,600000,1662,Side B,Not in Americas,Civil War: Central Control,B,1
+724,50000,1325,Side A,Not in Americas,Civil War: Central Control,B,1
+726,1800,22,Side A,Not in Americas,Civil War: Local Issues,B,1
+727,2500,164,Side A,Americas,Civil War: Central Control,B,1
+728,-9,26,Side B,Not in Americas,Civil War: Central Control,B,1
+730,100,36,Side B,Americas,Civil War: Central Control,B,1
+730.5,2072,969,Other,Not in Americas,Civil War: Central Control,B,0
+731,19200,1954,Side A,Americas,Civil War: Central Control,B,1
+732.5,2000,811,Side A,Not in Americas,Civil War: Central Control,B,0
+733,9695,1474,Side A,Not in Americas,Civil War: Local Issues,B,1
+734,-9,111,Side A,Not in Americas,Civil War: Local Issues,B,0
+736,12000,4114,Side A,Not in Americas,Civil War: Central Control,B,0
+737,-9,4,Side B,Americas,Civil War: Central Control,B,1
+739,-9,2719,Other,Americas,Civil War: Central Control,B,0
+740,-9,95,Side B,Americas,Civil War: Central Control,B,1
+740.5,-9,661,Side A,Not in Americas,Civil War: Local Issues,B,0
+741,10000,1124,Side A,Not in Americas,Civil War: Local Issues,B,0
+741.5,-9,331,Other,Not in Americas,Civil War: Local Issues,B,0
+742,2000,1257,Side A,Not in Americas,Civil War: Central Control,B,0
+743,-9,86,Other,Not in Americas,Civil War: Central Control,B,1
+745,1000,219,Side B,Americas,Civil War: Central Control,B,0
+746,1000,528,Other,Not in Americas,Civil War: Central Control,B,0
+747,-9,4,Side A,Not in Americas,Civil War: Central Control,B,1
+748,41500,1820,Other,Not in Americas,Civil War: Central Control,B,1
+749,-9,2256,Other,Not in Americas,Civil War: Central Control,B,1
+750,-9,911,Side A,Not in Americas,Civil War: Local Issues,B,1
+752,3500,815,Other,Not in Americas,Civil War: Local Issues,B,1
+753,-9,130,Side B,Not in Americas,Civil War: Central Control,B,1
+755,-9,2693,Side A,Not in Americas,Civil War: Central Control,B,1
+757,-9,286,Other,Not in Americas,Civil War: Local Issues,B,1
+758,-9,3049,Other,Not in Americas,Civil War: Local Issues,B,1
+760,900,205,Side A,Not in Americas,Civil War: Central Control,B,0
+761,-9,716,Side A,Not in Americas,Civil War: Local Issues,B,1
+762,4500,536,Side A,Not in Americas,Civil War: Central Control,B,1
+765,1000,439,Other,Not in Americas,Civil War: Local Issues,B,0
+766,600,133,Other,Americas,Civil War: Central Control,B,1
+767,-9,9828,Other,Not in Americas,Civil War: Central Control,B,0
+768,-9,9,Side A,Not in Americas,Civil War: Local Issues,B,0
+770,1400,538,Other,Americas,Civil War: Central Control,B,0
+771.5,-9,690,Side A,Not in Americas,Civil War: Local Issues,B,0
+772,-9,236,Other,Not in Americas,Other,B,1
+775,15000,908,Side A,Not in Americas,Civil War: Local Issues,B,0
+776,-9,361,Side A,Not in Americas,Civil War: Local Issues,B,0
+776.3,3000,1172,Side A,Not in Americas,Civil War: Central Control,B,1
+777,1000,447,Other,Not in Americas,Civil War: Local Issues,B,0
+778,-9,511,Side A,Not in Americas,Civil War: Central Control,B,1
+780,1000,12,Side A,Not in Americas,Civil War: Central Control,B,0
+781,900,303,Side A,Americas,Civil War: Central Control,B,0
+782,15000,248,Other,Not in Americas,Civil War: Local Issues,B,0
+783,1937,87,Side A,Not in Americas,Civil War: Central Control,B,1
+785,56000,1214,Side B,Not in Americas,Civil War: Central Control,B,1
+786,20000,3349,Other,Not in Americas,Civil War: Local Issues,B,0
+787,700,631,Other,Not in Americas,Civil War: Central Control,B,0
+788,-9,959,Other,Not in Americas,Other,B,0
+789,750,27,Side A,Not in Americas,Civil War: Central Control,B,1
+792,5300,1372,Side A,Not in Americas,Civil War: Local Issues,B,0
+793,200,5,Side B,Americas,Civil War: Central Control,B,1
+795,1200,777,Other,Not in Americas,Civil War: Local Issues,B,0
+797,2000,380,Side A,Not in Americas,Civil War: Local Issues,B,0
+798,6000,1726,Side A,Not in Americas,Civil War: Local Issues,B,1
+800,4000,655,Side A,Americas,Civil War: Central Control,B,1
+801,-9,534,Other,Not in Americas,Other,B,0
+803,5000,1111,Side A,Not in Americas,Civil War: Local Issues,B,1
+804,66600,5493,Other,Not in Americas,Civil War: Central Control,B,1
+804.5,10000,1317,Side B,Not in Americas,Civil War: Central Control,B,1
+805,-9,382,Other,Not in Americas,Civil War: Local Issues,B,1
+805.3,700,4,Side A,Not in Americas,Civil War: Central Control,B,1
+806,3200,1029,Side A,Not in Americas,Civil War: Local Issues,B,0
+806.3,-9,566,Side A,Not in Americas,Civil War: Local Issues,B,1
+806.8,2000,354,Side A,Not in Americas,Civil War: Central Control,B,1
+807,1600,237,Other,Not in Americas,Other,B,0
+808,20000,984,Side A,Not in Americas,Civil War: Local Issues,B,1
+809,200,2,Side B,Not in Americas,Civil War: Central Control,B,1
+810,-9,34,Side A,Not in Americas,Civil War: Central Control,B,1
+811,17500,1870,Side A,Americas,Civil War: Central Control,B,0
+812,9000,591,Other,Not in Americas,Civil War: Central Control,B,0
+815,2000,310,Side B,Americas,Civil War: Central Control,B,1
+815.5,500,87,Side B,Not in Americas,Civil War: Central Control,B,0
+816,7000,1742,Side A,Not in Americas,Civil War: Central Control,B,0
+817,14000,4427,Other,Americas,Civil War: Central Control,B,0
+820,1700,1376,Side B,Not in Americas,Civil War: Local Issues,B,1
+823,1000,24,Side A,Not in Americas,Civil War: Local Issues,B,0
+824,-9,4128,Other,Not in Americas,Civil War: Central Control,B,1
+825,-9,4135,Side A,Not in Americas,Civil War: Central Control,B,1
+826,80000,3366,Side B,Not in Americas,Civil War: Local Issues,B,1
+826.5,2000,26,Side A,Not in Americas,Civil War: Central Control,B,1
+828,25250,2170,Other,Americas,Civil War: Central Control,B,1
+828.3,6000,1355,Side B,Not in Americas,Civil War: Central Control,B,1
+829,10466,3525,Side A,Americas,Civil War: Central Control,B,1
+833,-9,312,Side B,Not in Americas,Civil War: Central Control,B,0
+834,-9,6811,Other,Not in Americas,Civil War: Central Control,B,0
+835,3000,1464,Other,Not in Americas,Civil War: Local Issues,B,0
+837,750,60,Side A,Not in Americas,Civil War: Local Issues,B,0
+838,-9,585,Other,Not in Americas,Civil War: Local Issues,B,1
+840,-9,1304,Side A,Not in Americas,Civil War: Local Issues,B,0
+842,-9,19,Side B,Not in Americas,Civil War: Central Control,B,0
+843,5000,376,Side A,Not in Americas,Civil War: Central Control,B,1
+845,9449,870,Side A,Not in Americas,Civil War: Central Control,B,1
+845.5,6000,1081,Side A,Americas,Civil War: Central Control,B,0
+846,-9,2287,Other,Not in Americas,Other,B,0
+848,-9,961,Side B,Not in Americas,Civil War: Central Control,B,1
+849,23463,9688,Other,Americas,Civil War: Central Control,B,1
+850,-9,600,Side B,Not in Americas,Civil War: Central Control,B,0
+851,-9,1140,Side B,Not in Americas,Civil War: Central Control,B,1
+852,800,602,Side B,Not in Americas,Civil War: Central Control,B,1
+853,6000,1440,Side A,Not in Americas,Civil War: Local Issues,B,0
+854,-9,748,Other,Not in Americas,Civil War: Central Control,B,1
+856,-9,9,Side B,Not in Americas,Civil War: Central Control,B,1
+857,-9,335,Other,Not in Americas,Civil War: Central Control,B,0
+858,-9,451,Other,Not in Americas,Civil War: Local Issues,B,1
+859,-9,3969,Other,Not in Americas,Civil War: Local Issues,B,1
+860,-9,304,Other,Not in Americas,Civil War: Local Issues,B,0
+862,-9,30,Side A,Not in Americas,Civil War: Central Control,B,0
+862.1,-9,227,Other,Not in Americas,Civil War: Local Issues,B,0
+863,-9,1831,Other,Not in Americas,Civil War: Central Control,B,1
+864,-9,241,Side B,Not in Americas,Civil War: Local Issues,B,0
+865,23238,3018,Side A,Not in Americas,Civil War: Local Issues,B,0
+865.8,-9,2270,Other,Not in Americas,Civil War: Central Control,B,0
+866,-9,178,Other,Not in Americas,Other,B,0
+868,-9,151,Other,Not in Americas,Other,B,0
+871,-9,726,Side B,Not in Americas,Civil War: Central Control,B,1
+872,3000,400,Other,Not in Americas,Civil War: Local Issues,B,1
+873,-9,187,Other,Not in Americas,Civil War: Local Issues,B,0
+874,18476,5041,Other,Not in Americas,Civil War: Local Issues,B,0
+874.5,-9,211,Other,Not in Americas,Other,B,0
+875,15200,3728,Other,Not in Americas,Civil War: Central Control,B,1
+876,-9,1852,Other,Not in Americas,Civil War: Central Control,B,0
+877,14737,1191,Side A,Not in Americas,Civil War: Local Issues,B,1
+877.5,-9,3339,Other,Not in Americas,Civil War: Central Control,B,0
+878,3000,538,Side B,Not in Americas,Civil War: Local Issues,B,0
+879,-9,1161,Other,Not in Americas,Civil War: Central Control,B,0
+880,-9,738,Other,Not in Americas,Civil War: Central Control,B,1
+881,-9,1886,Side A,Not in Americas,Civil War: Central Control,B,0
+882,1750,116,Other,Not in Americas,Other,B,1
+883,-9,1710,Other,Not in Americas,Civil War: Central Control,B,1
+885,1774,137,Side A,Not in Americas,Civil War: Local Issues,B,0
+886,-9,103,Side B,Not in Americas,Civil War: Central Control,B,0
+887,-9,372,Other,Not in Americas,Other,B,0
+887.5,-9,180,Other,Not in Americas,Other,B,0
+888,6000,621,Side B,Not in Americas,Civil War: Local Issues,B,1
+891,-9,181,Side A,Not in Americas,Civil War: Local Issues,B,0
+893,-9,54,Other,Not in Americas,Civil War: Local Issues,B,0
+895,-9,218,Side B,Not in Americas,Civil War: Central Control,B,0
+896,3000,584,Side A,Not in Americas,Civil War: Central Control,B,1
+897,-9,130,Side B,Not in Americas,Civil War: Central Control,B,0
+897.5,-9,43,Other,Not in Americas,Other,B,0
+898,-9,688,Side B,Not in Americas,Civil War: Central Control,B,1
+900,800,384,Other,Not in Americas,Civil War: Local Issues,B,0
+902,-9,113,Side B,Not in Americas,Civil War: Central Control,B,0
+905,-9,1576,Other,Not in Americas,Civil War: Central Control,B,0
+906,-9,794,Other,Not in Americas,Civil War: Central Control,B,0
+907,-9,1159,Side A,Not in Americas,Civil War: Central Control,B,0
+908,-9,332,Side A,Not in Americas,Civil War: Central Control,B,1
+910,2000,1104,Other,Not in Americas,Other,B,1
+912,-9,1848,Other,Not in Americas,Civil War: Local Issues,B,1
+913,800,79,Other,Not in Americas,Civil War: Local Issues,B,1
+915,3000,1497,Side A,Not in Americas,Civil War: Local Issues,B,0
+916,1500,487,Other,Not in Americas,Civil War: Local Issues,B,0
+917,-9,247,Other,Not in Americas,Civil War: Central Control,B,1
+918,3000,961,Other,Not in Americas,Civil War: Central Control,B,0
+920,-9,104,Side A,Not in Americas,Civil War: Central Control,B,0
+921,4000,1388,Other,Not in Americas,Civil War: Central Control,B,1
+922,-9,440,Side B,Not in Americas,Civil War: Central Control,B,0
+925,-8,186,Other,Not in Americas,Civil War: Central Control,B,0
+926,600,159,Other,Not in Americas,Civil War: Local Issues,B,0
+927,-9,1309,Other,Not in Americas,Civil War: Local Issues,B,0
+932,1800,673,Other,Not in Americas,Civil War: Local Issues,B,0
+933,-9,182,Other,Not in Americas,Other,B,1
+935,700,289,Side A,Not in Americas,Civil War: Central Control,B,0
+936,2655,721,Other,Not in Americas,Civil War: Central Control,B,0
+937,-9,422,Other,Not in Americas,Civil War: Central Control,B,1
+940,14250,1017,Side A,Not in Americas,Civil War: Local Issues,B,0
+940.8,-9,1844,Side A,Not in Americas,Civil War: Central Control,B,1
+941,1150,528,Other,Not in Americas,Civil War: Central Control,B,1
+942,31246,3059,Other,Not in Americas,Civil War: Local Issues,B,1
+971,2500,1354,Other,Not in Americas,Civil War: Central Control,B,1
+973,-9,51,Side B,Not in Americas,Civil War: Central Control,B,0
+976,4500,243,Side B,Not in Americas,Civil War: Central Control,B,1
+978,-9,1130,Other,Not in Americas,Civil War: Central Control,B,0
+979,50000,1645,Other,Not in Americas,Civil War: Central Control,B,0
+980,850,593,Other,Not in Americas,Civil War: Local Issues,B,0
+985,709,407,Side A,Not in Americas,Civil War: Local Issues,B,0
+990,-9,106,Side B,Not in Americas,Civil War: Central Control,B,1
+990.4,1600,955,Other,Not in Americas,Civil War: Central Control,B,1
+991,-9,737,Other,Not in Americas,Civil War: Central Control,B,0
+991.4,-9,721,Other,Not in Americas,Civil War: Central Control,B,1
+991.5,-9,140,Other,Not in Americas,Other,B,0
+992,4000,385,Other,Not in Americas,Civil War: Central Control,B,0
+992.5,-9,659,Other,Not in Americas,Civil War: Central Control,B,0
+993,2581,493,Other,Not in Americas,Civil War: Local Issues,B,1
+994,-9,570,Other,Not in Americas,Civil War: Central Control,B,0
+997,350,189,Other,Not in Americas,Other,B,0
