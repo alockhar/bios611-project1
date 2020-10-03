@@ -42,6 +42,9 @@ IP$InitiatorDeaths=ifelse(IP$SideA==IP$Initiator,IP$DeathsSideA,IP$DeathsSideB)
 IP$RecipientDeaths=ifelse(IP$SideA!=IP$Initiator,IP$DeathsSideA,IP$DeathsSideB)
 
 IP$AbsDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,IP$InitiatorDeaths-IP$RecipientDeaths,NaN)
+IP$RelDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,(IP$InitiatorDeaths-IP$RecipientDeaths)/IP$InitiatorDeaths,NaN)
+
+
 
 #End Derived program for overall data set
 write_csv(IP,"derived_data/Overall.csv")
