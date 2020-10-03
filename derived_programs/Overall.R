@@ -16,6 +16,7 @@ IP<-Overall%>% mutate(WarTypeC = as.factor(case_when(
 
 IP$WarTypeD=ifelse(IP$WarType==4,'Civil War: Central Control',ifelse(IP$WarType==5,'Civil War: Local Issues',ifelse(IP$WarType%in%c(6,7),'Other','NA')))
 
+IP$OutcomeD=ifelse(IP$Outcome==1,'Side A',ifelse(IP$Outcome==2,'Side B','Other'))
 
 #Create a variable for set upper limit to deaths 50000 after checking limit to deaths
 IP$TotalBDeathsU=ifelse(IP$TotalBDeaths>=50000,50000,IP$TotalBDeaths)
@@ -37,7 +38,10 @@ IP$Phase4_en=ymd( paste(IP$EndYr4, IP$EndMo4, IP$EndDy4, sep="-"))
 
 
 #Consider making transition to and from variables
+IP$InitiatorDeaths=ifelse(IP$SideA==IP$Initiator,IP$DeathsSideA,IP$DeathsSideB)
+IP$RecipientDeaths=ifelse(IP$SideA!=IP$Initiator,IP$DeathsSideA,IP$DeathsSideB)
 
+IP$AbsDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,IP$InitiatorDeaths-IP$RecipientDeaths,NaN)
 
 #End Derived program for overall data set
 write_csv(IP,"derived_data/Overall.csv")

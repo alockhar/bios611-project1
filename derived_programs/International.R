@@ -6,6 +6,9 @@ IP<-IP%>% mutate(WarTypeC = as.factor(case_when(
 
 IP$WarTypeD=ifelse(IP$WarType==4,'Civil War: Central Control',ifelse(IP$WarType==5,'Civil War: Local Issues',ifelse(IP$WarType%in%c(6,7),'Other','NA')))
 
+IP$OutcomeD=ifelse(IP$Outcome==1,'Side A',ifelse(IP$Outcome==2,'Side B','Other'))
+
+
 
 #Create initiator deaths Var (need to create war id long dataset)
 #IP$InitiatorDeaths=ifelse(IP$Initiator==IP$SideA,IP$DeathsSideA,IP$DeathsSideB)
@@ -17,7 +20,11 @@ IP$TotalBDeathsU=ifelse(IP$TotalBDeaths>=50000,50000,IP$TotalBDeaths)
 #Make Hemisphere driven variable
 IP$Americas=ifelse(IP$V5Region %in% c(1,2),'Americas','Not in Americas')
 
-#Let's make some dates
+
+
+
+
+#Let's make some dates by war phase
 
 IP$Phase1_st=ymd( paste(IP$StartYr1, IP$StartMo1, IP$StartDy1, sep="-"))
 IP$Phase2_st=ymd( paste(IP$StartYr2, IP$StartMo2, IP$StartDy2, sep="-"))
@@ -29,8 +36,16 @@ IP$Phase2_en=ymd( paste(IP$EndYr2, IP$EndMo2, IP$EndDy2, sep="-"))
 IP$Phase3_en=ymd( paste(IP$EndYr3, IP$EndMo3, IP$EndDy3, sep="-"))
 IP$Phase4_en=ymd( paste(IP$EndYr4, IP$EndMo4, IP$EndDy4, sep="-"))
 
+
+IP$InitiatorDeaths=ifelse(IP$SideA==IP$Initiator,IP$`Deaths A`,IP$`Deaths B`)
+IP$RecipientDeaths=ifelse(IP$SideA!=IP$Initiator,IP$`Deaths A`,IP$`Deaths B`)
+
+
+
 write_csv(IP,"derived_data/International.csv")
 
 
-chk=read_csv("derived_data/International.csv");
-chk2=read_csv("derived_data/Overall.csv");
+
+
+#chk=read_csv("derived_data/International.csv");
+#chk2=read_csv("derived_data/Overall.csv");
