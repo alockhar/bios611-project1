@@ -1,5 +1,5 @@
 library(dplyr)
-
+library(mice)
 
 #R script to generate additional derived variables from Overall dataset
 
@@ -41,11 +41,25 @@ IP$Phase4_en=ymd( paste(IP$EndYr4, IP$EndMo4, IP$EndDy4, sep="-"))
 IP$InitiatorDeaths=ifelse(IP$SideA==IP$Initiator,IP$DeathsSideA,IP$DeathsSideB)
 IP$RecipientDeaths=ifelse(IP$SideA!=IP$Initiator,IP$DeathsSideA,IP$DeathsSideB)
 
+IP$InitiatorDeaths2=ifelse(IP$InitiatorDeaths==-9,NaN,IP$InitiatorDeaths)
+IP$RecipientDeaths2=ifelse(IP$RecipientDeaths==-9,NaN,IP$RecipientDeaths)
+
+
 IP$AbsDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,IP$InitiatorDeaths-IP$RecipientDeaths,NaN)
 IP$RelDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,(IP$InitiatorDeaths-IP$RecipientDeaths)/IP$InitiatorDeaths,NaN)
 
+IP$StartYR_Norm=IP$StartYr1-min(IP$StartYr1) 
+IP$Americas=as.factor(IP$Americas)
+IP$WarTypeD=as.factor(IP$WarTypeD)
 
 
+
+ImpDS<-IP%>%select(WarNum,StartYr1,InitiatorDeaths2,RecipientDeaths2,WarTypeD,Americas)
+
+ID=mice(ImpDS)
+anescomp <- mice::complete(ID, 1)%>% rename(InitiatorDeathsImp=InitiatorDeaths2,RecipientDeathsImp=RecipientDeaths2)%>%select(WarNum,InitiatorDeathsImp,RecipientDeathsImp)
+
+IP<-IP%>%left_join(.,anescomp)
 #End Derived program for overall data set
 write_csv(IP,"derived_data/Overall.csv")
 

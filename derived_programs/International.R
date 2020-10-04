@@ -44,12 +44,19 @@ IP$RecipientDeaths=ifelse(IP$SideA!=IP$Initiator,IP$`Deaths A`,IP$`Deaths B`)
 IP$AbsDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,IP$InitiatorDeaths-IP$RecipientDeaths,NaN)
 IP$RelDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,(IP$InitiatorDeaths-IP$RecipientDeaths)/IP$InitiatorDeaths,NaN)
 
+IP$StartYR_Norm=IP$StartYr1-min(IP$StartYr1) 
+IP$Americas=as.factor(IP$Americas)
+IP$WarTypeD=as.factor(IP$WarTypeD)
 
+
+ImpDS<-IP%>%select(WarNum,StartYr1,InitiatorDeaths2,RecipientDeaths2,WarTypeD,Americas)
+
+ID=mice(ImpDS)
+anescomp <- mice::complete(ID, 1)%>% rename(InitiatorDeathsImp=InitiatorDeaths2,RecipientDeathsImp=RecipientDeaths2)%>%select(WarNum,InitiatorDeathsImp,RecipientDeathsImp)
+
+IP<-IP%>%left_join(.,anescomp)
 
 write_csv(IP,"derived_data/International.csv")
 
 
 
-
-#chk=read_csv("derived_data/International.csv");
-#chk2=read_csv("derived_data/Overall.csv");
