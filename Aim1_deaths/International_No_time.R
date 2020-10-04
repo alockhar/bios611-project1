@@ -52,14 +52,12 @@ dupe=subset(IP_Mod1,seqid!=1)
 mod1_te=rbind(mod1_te,dupe)
 
 
+default_idx2=sample(1:nrow(df3b), .5*nrow(df3b))
 
-
-default_idx=sample(1:nrow(df3b), .5*nrow(df3b))
-
-mod2_tr <- IP_Mod2[ default_idx, ]
-mod2_te <- IP_Mod2[-default_idx, ]
-dupe=subset(IP_Mod2,seqid!=1)
-mod2_te=rbind(mod2_te,dupe)
+mod2_tr <- IP_Mod2[ default_idx2, ]
+mod2_te <- IP_Mod2[-default_idx2, ]
+#dupe2=subset(IP_Mod2,seqid!=1)
+#mod2_te=rbind(mod2_te,dupe2)
 
 
 
@@ -149,34 +147,40 @@ print(sum((mod2_te$RelDiffDeaths - Yhat)^2))
 
 #Repeat on imputed
 
-IP_Mod1<-IP%>%select(WarNum,Americas,StartYR_Norm,WarTypeD,WDuratDays,AbsDiffDeaths,AbsDiffDeathsImp)
-IP_Mod2<-IP%>%select(WarNum,Americas,StartYR_Norm,WarTypeD,WDuratDays,RelDiffDeaths,RelDiffDeathsImp)
+IP_Mod1<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,AbsDiffDeaths,AbsDiffDeathsImp,InitiatorForces,RecipientForces)
 
-#Simplest overall models
-lm_fit=glm(AbsDiffDeathsImp ~Americas+StartYR_Norm+WDuratDays+WarTypeD,
-           data = IP_Mod1, family='gaussian')
-
-summary(lm_fit)
-
-lm_fit2=glm(RelDiffDeathsImp ~Americas+StartYR_Norm+WDuratDays+WarTypeD,
-            data = IP_Mod2, family='gaussian')
-
-summary(lm_fit2)
+IP_Mod2<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,RelDiffDeaths,RelDiffDeathsImp,InitiatorForces,RecipientForces)
 
 
+#Create partition with seed
 
-#Absolute deaths
+df3=IP_Mod1 %>% dplyr::distinct(as.factor(WarNum), .keep_all = TRUE)
+df3b=IP_Mod2 %>% dplyr::distinct(as.factor(WarNum), .keep_all = TRUE)
+
+
 
 
 set.seed(280)
-default_idx=sample(1:nrow(IP_Mod1), .5*nrow(IP_Mod1))
 
 
-mod1_tr <- IP_Mod1[ default_idx, ]
-mod1_te <- IP_Mod1[-default_idx, ]
 
-mod2_tr <- IP_Mod2[ default_idx, ]
-mod2_te <- IP_Mod2[-default_idx, ]
+
+default_idx=sample(1:nrow(df3), .5*nrow(df3))
+
+
+mod1_tr <- df3[ default_idx, ]
+mod1_te <- df3[-default_idx, ]
+#dupe=IP_Mod1 %>% group_by(WarNum) %>% filter(duplicated(WarNum) | n()==1)
+dupe=subset(IP_Mod1,seqid!=1)
+mod1_te=rbind(mod1_te,dupe)
+
+
+default_idx2=sample(1:nrow(df3b), .5*nrow(df3b))
+
+mod2_tr <- IP_Mod2[ default_idx2, ]
+mod2_te <- IP_Mod2[-default_idx2, ]
+#dupe2=subset(IP_Mod2,seqid!=1)
+#mod2_te=rbind(mod2_te,dupe2)
 
 
 
@@ -188,7 +192,7 @@ set.seed(7279)
 cv_5 = trainControl(method = "cv", number = 5)
 
 
-rpartFit1 <- train(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD, 
+rpartFit1 <- train(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD+InitiatorForces+RecipientForces, 
                    trControl=cv_5, 
                    method = "glm", 
                    data=mod1_tr,family="gaussian")
@@ -199,7 +203,7 @@ summary(rpartFit1)
 #
 
 
-model.gbm <- gbm(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD,
+model.gbm <- gbm(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD+InitiatorForces+RecipientForces,
                  distribution="gaussian",
                  data=mod1_tr,
                  n.trees = 200,
