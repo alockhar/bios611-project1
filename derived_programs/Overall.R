@@ -67,6 +67,9 @@ IP$AbsDiffDeathsImp=IP$InitiatorDeaths-IP$RecipientDeaths
 IP$RelDiffDeathsImp=(IP$InitiatorDeaths-IP$RecipientDeaths)/IP$InitiatorDeaths
 
 
+IP$OutcomeE=ifelse(IP$SideA==IP$Initiator & IP$OutcomeD=='Side A' ,'Initiator Won',ifelse(IP$SideB==IP$Initiator & IP$OutcomeD=='Side B' ,'Recipient Won','Other'))
+
+
 
 write_csv(IP,"derived_data/Overall.csv")
 

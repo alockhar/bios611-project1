@@ -29,9 +29,14 @@ nodes
 
 nodes <- nodes %>% rowid_to_column("id")
 
-per_war <- network_l %>%  
-  group_by(Initiator_side, Recipient_side) %>%
-  mutate(weight = TotalBDeathsU) %>% 
+# per_war <- network_l %>%  
+#   group_by(Initiator_side, Recipient_side) %>%
+#   mutate(weight = TotalBDeathsU) %>% 
+#   ungroup()
+
+ per_war <- network_l %>%  
+   group_by(Initiator_side, Recipient_side) %>%
+   mutate(weight = RelDiffDeathsImp) %>% 
   ungroup()
 per_war
 
@@ -43,7 +48,7 @@ edges <- edges %>%
   left_join(nodes, by = c("Recipient_side" = "label")) %>% 
   rename(to = id)
 
-edges2=select(edges, from, to, weight,Americas,Intnl,Initiator_force,Recipient_force)
+edges2=select(edges, from, to, weight,Americas,Intnl, WarTypeD, StartYR_Norm,InitiatorForces,RecipientForces,OutcomeC)
 
 #library(network)
 #war_network <- network(edges2, vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
