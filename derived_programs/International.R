@@ -40,6 +40,10 @@ IP$Phase4_en=ymd( paste(IP$EndYr4, IP$EndMo4, IP$EndDy4, sep="-"))
 IP$InitiatorDeaths=ifelse(IP$SideA==IP$Initiator,IP$`Deaths A`,IP$`Deaths B`)
 IP$RecipientDeaths=ifelse(IP$SideA!=IP$Initiator,IP$`Deaths A`,IP$`Deaths B`)
 
+IP$InitiatorForces=ifelse(IP$SideA==IP$Initiator,IP$SideAPeakTotForces,IP$SideBPeakTotForces)
+IP$RecipientForces=ifelse(IP$SideA!=IP$Initiator,IP$SideAPeakTotForces,IP$SideBPeakTotForces)
+
+
 
 IP$AbsDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,IP$InitiatorDeaths-IP$RecipientDeaths,NaN)
 IP$RelDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,(IP$InitiatorDeaths-IP$RecipientDeaths)/IP$InitiatorDeaths,NaN)
@@ -49,12 +53,21 @@ IP$Americas=as.factor(IP$Americas)
 IP$WarTypeD=as.factor(IP$WarTypeD)
 
 
+IP$InitiatorDeaths2=ifelse(IP$InitiatorDeaths==-9,NaN,IP$InitiatorDeaths)
+IP$RecipientDeaths2=ifelse(IP$RecipientDeaths==-9,NaN,IP$RecipientDeaths)
+
+
 ImpDS<-IP%>%select(WarNum,StartYr1,InitiatorDeaths2,RecipientDeaths2,WarTypeD,Americas)
 
 ID=mice(ImpDS)
 anescomp <- mice::complete(ID, 1)%>% rename(InitiatorDeathsImp=InitiatorDeaths2,RecipientDeathsImp=RecipientDeaths2)%>%select(WarNum,InitiatorDeathsImp,RecipientDeathsImp)
 
 IP<-IP%>%left_join(.,anescomp)
+
+
+IP$AbsDiffDeathsImp=IP$InitiatorDeaths-IP$RecipientDeaths
+IP$RelDiffDeathsImp=(IP$InitiatorDeaths-IP$RecipientDeaths)/IP$InitiatorDeaths
+
 
 write_csv(IP,"derived_data/International.csv")
 

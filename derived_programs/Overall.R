@@ -61,5 +61,12 @@ anescomp <- mice::complete(ID, 1)%>% rename(InitiatorDeathsImp=InitiatorDeaths2,
 
 IP<-IP%>%left_join(.,anescomp)
 #End Derived program for overall data set
+
+
+IP$AbsDiffDeathsImp=IP$InitiatorDeaths-IP$RecipientDeaths
+IP$RelDiffDeathsImp=(IP$InitiatorDeaths-IP$RecipientDeaths)/IP$InitiatorDeaths
+
+
+
 write_csv(IP,"derived_data/Overall.csv")
 
