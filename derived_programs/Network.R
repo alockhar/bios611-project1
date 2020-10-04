@@ -2,7 +2,7 @@
 #Program to create initial network data structure for aim 3
 ######################
 
-
+library(igraph)
 
 network_l=read_csv("derived_data/International.csv");
 
@@ -11,8 +11,8 @@ network_l$Recipient_side=ifelse(network_l$SideB!=network_l$Initiator_side,networ
 network_l$Initiator_side=ifelse(network_l$Initiator_side=='-8','NA',network_l$Initiator_side)
 network_l$Recipient_side=ifelse(network_l$Recipient_side=='-8','NA',network_l$Recipient_side)
 
-network_l$Initiator_force=ifelse(network_l$SideA==network_l$Initiator,network_l$SideAPeakTotForces,network_l$SideBPeakTotForces)
-network_l$Recipient_force=ifelse(network_l$SideB!=network_l$Initiator_side,network_l$SideBPeakTotForces,network_l$SideAPeakTotForces)
+#network_l$Initiator_force=ifelse(network_l$SideA==network_l$Initiator,network_l$SideAPeakTotForces,network_l$SideBPeakTotForces)
+#network_l$Recipient_force=ifelse(network_l$SideB!=network_l$Initiator_side,network_l$SideBPeakTotForces,network_l$SideAPeakTotForces)
 
 
 sources <- network_l %>%
