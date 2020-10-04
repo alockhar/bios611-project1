@@ -85,6 +85,10 @@ p3 <- ggplot(IP,
 p3
 
 
+
+
+
+
 # p1 <- ggplot(IP, 
 #              aes(x = StartYr1, y = TotalBDeathsU)) +
 #   geom_line()+facet_grid(~Americas)
@@ -124,12 +128,38 @@ Fanothewar%>%summarize(count=n())
 
 
 
-#Initiator deaths Repeated above
+#Initiator deaths Repeated above (KEEP BELOW) (One with exceptions removed)
 
 
-ggplot(IP2,aes(y=deaths,x=Americas))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')+facet_grid(~ Init)
+p3 <- ggplot(IP, 
+             aes(x = StartYr1, y =AbsDiffDeaths ,group=WarTypeD,color=WarTypeD)) +
+  geom_point()+facet_grid(~Americas)
+
+p3
+
+
+p3 <- ggplot(IP, 
+             aes(x = StartYr1, y =RelDiffDeaths ,group=WarTypeD,color=WarTypeD)) +
+  geom_point()+facet_grid(~Americas)
+
+p3
 
 
 
+p3 <- ggplot(IP, 
+             aes(x = StartYr1, y =AbsDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
+  geom_point()+facet_grid(~Americas)
+
+p3
+
+
+p3 <- ggplot(IP, 
+             aes(x = StartYr1, y =RelDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
+  geom_point()+facet_grid(~Americas)
+
+p3
+
+
+#Output .png files here
 
 
