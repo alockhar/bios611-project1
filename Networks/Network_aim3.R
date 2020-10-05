@@ -2,41 +2,41 @@ library(igraph)
 library(RColorBrewer)
 
 war_igraph <- readRDS('derived_data/network.rds')
-
 war_igraph2=as.undirected(war_igraph)
+
+ceb <- cluster_edge_betweenness(war_igraph2)
+
+dendPlot(ceb, mode="hclust")
+plot(ceb, war_igraph2)
+
+
 #End network construction
 
-FG=walktrap.community(war_igraph2)
+FG=walktrap.community(war_igraph)
+dendPlot(FG, mode="hclust")
+
+plot(FG,war_igraph,layout=layout.fruchterman.reingold, main="Overall walktrap community detection network\n based on relative difference of initiator and recipient deaths", vertex.label=NA)
 
 
-plot.igraph(FG)
+#Sort by decreasing membership
+meb_tab=sort(table(FG$membership), decreasing=TRUE) 
+plot(meb_tab,ylab='Frequency of community membership',xlab='Community')
 
-#Fast greedy algorithm detection
-walktrap.Alg=walktrap.community(war_igraph)
 
-weight.community=function(row,membership,weigth.within,weight.between){
-  if(as.numeric(membership[which(names(membership)==row[1])])==as.numeric(membership[which(names(membership)==row[2])])){
-    weight=weigth.within
-  }else{
-    weight=weight.between
-  }
-  return(weight)
-}
+#Re-color based on top 3 groups and then remaining
+FG$membership_cons=ifelse(FG$membership==7,1,ifelse(FG$membership==17,2,ifelse(FG$membership==16,3,4)))
+V(war_igraph)$community <- FG$membership_cons
+colrs <- adjustcolor( c("gray50", "tomato", "gold", "yellowgreen"), alpha=.6)
+plot(war_igraph , vertex.color=colrs[V(war_igraph)$community],layout=layout.fruchterman.reingold, main="Overall walktrap community detection network\n based on relative difference of initiator and recipient deaths\n colored by top 3 membership groups", vertex.label=NA)
 
-E(walktrap.Alg)$weight=apply(get.edgelist(walktrap.Alg),1,weight.community,membership,10,1)
+legend(x=-1.5, y=-1.1, c("1st","2nd", "3rd","Other"), pch=21,
+       col=c("gray50", "tomato", "gold", "yellowgreen"), pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
 
 
 
-plot(war_igraph, edge.arrow.size = 0.2)
-
-colrs <- c("gray50", "tomato")
-V(war_igraph)$color <- colrs[V(war_igraph)$Americas]
-plot(war_igraph, edge.arrow.size = 0.2)
 
 
-plot(war_igraph)
+#What are the attributes of the colored nodes?
+#Top=delete_vertices(war_igraph, V(war_igraph)$membership != 4)
+#V(Top)$label
 
-
-pal <- brewer.pal(length(unique(V(war_igraph)$Americas)), "Dark2")
-
-plot(war_igraph, vertex.color = pal[as.numeric(as.factor(vertex_attr(war_igraph, "group")))], layout=layout_randomly)
