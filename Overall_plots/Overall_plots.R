@@ -81,30 +81,30 @@ dev.off()
 
 
 #Take a look at number of wars that transferred to another war (maybe show)
-Toanothewar=subset(IP,TransTo!=-8)
-Toanothewar%>%summarize(count=n())
-
-#Take a look at numer of wars transferred from another war
-Fanothewar=subset(IP,TransFrom!=-8)
-Fanothewar%>%summarize(count=n())
+# Toanothewar=subset(IP,TransTo!=-8)
+# Toanothewar%>%summarize(count=n())
+# 
+# #Take a look at numer of wars transferred from another war
+# Fanothewar=subset(IP,TransFrom!=-8)
+# Fanothewar%>%summarize(count=n())
 
 
 
 #Initiator deaths Repeated above (KEEP BELOW) (One with exceptions removed)
 
-
-p3 <- ggplot(IP, 
-             aes(x = StartYr1, y =AbsDiffDeaths ,group=WarTypeD,color=WarTypeD)) +
-  geom_point()+facet_grid(~Americas)
-
-p3
-
-
-p3 <- ggplot(IP, 
-             aes(x = StartYr1, y =RelDiffDeaths ,group=WarTypeD,color=WarTypeD)) +
-  geom_point()+facet_grid(~Americas)
-
-p3
+# 
+# p3 <- ggplot(IP, 
+#              aes(x = StartYr1, y =AbsDiffDeaths ,group=WarTypeD,color=WarTypeD)) +
+#   geom_point()+facet_grid(~Americas)
+# 
+# p3
+# 
+# 
+# p3 <- ggplot(IP, 
+#              aes(x = StartYr1, y =RelDiffDeaths ,group=WarTypeD,color=WarTypeD)) +
+#   geom_point()+facet_grid(~Americas)
+# 
+# p3
 
 
 
