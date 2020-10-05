@@ -7,7 +7,7 @@ war_igraph <- readRDS('derived_data/network.rds')
 #End network construction
 
 FG=walktrap.community(war_igraph)
-dendPlot(FG, mode="hclust")
+#dendPlot(FG, mode="hclust")
 
 
 png(file="Networks/Ov.png")
@@ -21,7 +21,7 @@ plot(meb_tab,ylab='Frequency of community membership',xlab='Community')
 dev.off()
 
 #Re-color based on top 3 groups and then remaining
-FG$membership_cons=ifelse(FG$membership==7,1,ifelse(FG$membership==17,2,ifelse(FG$membership==16,3,4)))
+FG$membership_cons=ifelse(FG$membership==72,1,ifelse(FG$membership==36,2,ifelse(FG$membership==34,3,4)))
 V(war_igraph)$community <- FG$membership_cons
 colrs <- adjustcolor( c("gray50", "tomato", "gold", "yellowgreen"), alpha=.6)
 
