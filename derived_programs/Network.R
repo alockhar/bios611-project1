@@ -36,7 +36,7 @@ nodes <- nodes %>% rowid_to_column("id")
 
  per_war <- network_l %>%  
    group_by(Initiator_side, Recipient_side) %>%
-   mutate(weight = RelDiffDeathsImp) %>% 
+   mutate(weight = abs(RelDiffDeathsImp)+1) %>% 
   ungroup()
 per_war
 
