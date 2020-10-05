@@ -1,0 +1,57 @@
+---
+title: "Project 1 Report"
+author: "Alexandre Lockhart"
+date: "10/4/2020"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overall objectives
+
+The war of correlates projects curates war data from 1814 globally through 2014 from all around the world.  Variables such as deaths, outcome status, perceived initiator, periods of exposure, forces involved, whether the war was internationalized and spread and many other variables have been collected.  Additional datasets such as economic factors, etc. have also been collected and tabulated with multiple datasets but the previously mentioned variables were of main interest.  </br>
+
+
+</br>
+Due to the time period of curation (1814-2014), and the onset of the Monroe Doctrine in 1823, the central interest in this project was to look at the role of Americas (or the US and South America) versus the rest of the world in initiator-based outcomes. This was historic in that in set a role of the United States in dictating colonial policy within the hemisphere up as north of Canada through the southern tip of Latin America in order to mandate control and keep international powers at bay cementing a power structure that has lasted until modern 21st century.  The word initiator is used a lot in this project and is defined as the perceived initial war aggressor. Recipient is the perceived country who is the recipient of the initiator's attack. 
+</br>
+
+</br>
+Aim 1 of the project involved looking at initial descriptive relationships of the Americas versus non-Americas conflict via tables and graphs.
+</br>
+Aim 2 of the project involved looking at Americas versus non-Americas in initiator determined outcomes such as: absolute difference in initiator versus recipient deaths, relative difference in initiator versus recipient deaths, and outcome (initiator won, recipient won, other).  Initial basic glm models would be assessed while including war type, start year, and number of days of exposure.  This would be repeated for the absolute and relative difference outcomes and then repeated using prediction methods (gaussian family). GBM models would also be implemented to assess relative importance.  The sensitivity of prediction would be assessed via imputation of deaths and handling of missing data.  The entire process would be repeated on an internationalized dataset, or one which adds forces available in conflict
+
+
+</br>
+
+
+
+```{r cars}
+library(rmarkdown)
+
+
+
+```
+
+
+#Preprocessing
+
+```{r cars}
+library(rmarkdown)
+
+
+
+```
+
+
+## Including Plots
+
+
+
+```{r pressure, echo=FALSE}
+
+```
