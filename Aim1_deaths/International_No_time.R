@@ -12,7 +12,7 @@ library(caret)
 library(gbm)
 library(geepack)
 library(data.table)
-
+library(e1071)
 
 IP=read_csv("derived_data/International.csv");
 IP$Americas=as.factor(IP$Americas)
@@ -31,10 +31,14 @@ IP_Mod2<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,RelD
 
 #Create partition with seed
 
-df3=IP_Mod1 %>% dplyr::distinct(as.factor(WarNum), .keep_all = TRUE)
-df3b=IP_Mod2 %>% dplyr::distinct(as.factor(WarNum), .keep_all = TRUE)
 
 
+
+#df3=IP_Mod1 %>% dplyr::distinct(as.factor(WarNum), .keep_all = TRUE)
+#df3b=IP_Mod2 %>% dplyr::distinct(as.factor(WarNum), .keep_all = TRUE)
+
+df3=IP_Mod1%>%dplyr::filter(seqid==1)
+df3b=IP_Mod2%>%dplyr::filter(seqid==1)
 
 
 set.seed(280)
@@ -56,8 +60,8 @@ default_idx2=sample(1:nrow(df3b), .5*nrow(df3b))
 
 mod2_tr <- IP_Mod2[ default_idx2, ]
 mod2_te <- IP_Mod2[-default_idx2, ]
-#dupe2=subset(IP_Mod2,seqid!=1)
-#mod2_te=rbind(mod2_te,dupe2)
+dupe2=subset(IP_Mod2,seqid!=1)
+mod2_te=rbind(mod2_te,dupe2)
 
 
 
@@ -120,7 +124,7 @@ rpartFit1 <- train(RelDiffDeaths ~ Americas+StartYR_Norm+WDuratDays+WarTypeD+Ini
 
 mod2_pred <- predict(rpartFit1, mod2_te)
 postResample(pred = mod2_pred, obs = mod2_te$RelDiffDeaths)
-
+summary(rpartFit1)
 
 
 
@@ -154,15 +158,12 @@ IP_Mod2<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,RelD
 
 #Create partition with seed
 
-df3=IP_Mod1 %>% dplyr::distinct(as.factor(WarNum), .keep_all = TRUE)
-df3b=IP_Mod2 %>% dplyr::distinct(as.factor(WarNum), .keep_all = TRUE)
-
-
 
 
 set.seed(280)
 
-
+df3=IP_Mod1%>%dplyr::filter(seqid==1)
+df3b=IP_Mod2%>%dplyr::filter(seqid==1)
 
 
 default_idx=sample(1:nrow(df3), .5*nrow(df3))
@@ -179,8 +180,8 @@ default_idx2=sample(1:nrow(df3b), .5*nrow(df3b))
 
 mod2_tr <- IP_Mod2[ default_idx2, ]
 mod2_te <- IP_Mod2[-default_idx2, ]
-#dupe2=subset(IP_Mod2,seqid!=1)
-#mod2_te=rbind(mod2_te,dupe2)
+dupe2=subset(IP_Mod2,seqid!=1)
+mod2_te=rbind(mod2_te,dupe2)
 
 
 
@@ -221,7 +222,20 @@ print(sum((mod1_te$AbsDiffDeathsImp - Yhat)^2))
 
 
 
+set.seed(7279)
 
+
+cv_5 = trainControl(method = "cv", number = 5)
+
+
+rpartFit1 <- train(RelDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD+InitiatorForces+RecipientForces, 
+                   trControl=cv_5, 
+                   method = "glm", 
+                   data=mod2_tr,family="gaussian")
+
+mod2_pred <- predict(rpartFit1, mod2_te)
+postResample(pred = mod2_pred, obs = mod2_te$RelDiffDeaths)
+summary(rpartFit1)
 
 
 

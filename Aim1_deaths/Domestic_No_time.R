@@ -10,6 +10,8 @@
 library(caret)
 library(gbm)
 IP=read_csv("derived_data/Overall.csv");
+IP$Americas=as.factor(IP$Americas)
+IP$WarTypeD=as.factor(IP$WarTypeD)
 
 
 IP_Mod1<-IP%>%select(WarNum,Americas,StartYR_Norm,WarTypeD,WDuratDays,AbsDiffDeaths,AbsDiffDeathsImp)%>%filter(!is.na(AbsDiffDeaths))
@@ -93,7 +95,7 @@ rpartFit1 <- train(RelDiffDeaths ~ Americas+StartYR_Norm+WDuratDays+WarTypeD,
 
 mod2_pred <- predict(rpartFit1, mod2_te)
 postResample(pred = mod1_pred, obs = mod2_te$RelDiffDeaths)
-
+summary(rpartFit1)
 
 
 
@@ -187,7 +189,22 @@ Yhat <- predict(model.gbm, newdata = mod1_te, n.trees = best.iter, type = "link"
 print(sum((mod1_te$AbsDiffDeathsImp - Yhat)^2))
 
 
+#rel
 
+set.seed(7279)
+
+
+cv_5 = trainControl(method = "cv", number = 5)
+
+
+rpartFit1 <- train(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD, 
+                   trControl=cv_5, 
+                   method = "glm", 
+                   data=mod2_tr,family="gaussian")
+
+mod2_pred <- predict(rpartFit1, mod2_te)
+postResample(pred = mod2_pred, obs = mod2_te$AbsDiffDeaths)
+summary(rpartFit1)
 
 
 
