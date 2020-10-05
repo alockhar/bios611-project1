@@ -46,7 +46,7 @@ IP$RecipientForces=ifelse(IP$SideA!=IP$Initiator,IP$SideAPeakTotForces,IP$SideBP
 
 
 IP$AbsDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,IP$InitiatorDeaths-IP$RecipientDeaths,NaN)
-IP$RelDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,(IP$InitiatorDeaths-IP$RecipientDeaths)/IP$InitiatorDeaths,NaN)
+IP$RelDiffDeaths=ifelse(IP$InitiatorDeaths!=-9 |IP$RecipientDeaths!=-9,abs(IP$InitiatorDeaths-IP$RecipientDeaths)/max(abs(IP$RecipientDeaths),abs(IP$InitiatorDeaths)),NaN)
 
 IP$StartYR_Norm=IP$StartYr1-min(IP$StartYr1) 
 IP$Americas=as.factor(IP$Americas)
@@ -65,8 +65,9 @@ anescomp <- mice::complete(ID, 1)%>% rename(InitiatorDeathsImp=InitiatorDeaths2,
 IP<-IP%>%left_join(.,anescomp)
 
 
-IP$AbsDiffDeathsImp=IP$InitiatorDeaths-IP$RecipientDeaths
-IP$RelDiffDeathsImp=(IP$InitiatorDeaths-IP$RecipientDeaths)/IP$InitiatorDeaths
+IP$AbsDiffDeathsImp=IP$InitiatorDeathsImp-IP$RecipientDeathsImp
+IP$RelDiffDeathsImp=abs(IP$InitiatorDeathsImp-IP$RecipientDeathsImp)/max(abs(IP$RecipientDeathsImp),abs(IP$InitiatorDeathsImp))
+
 
 IP$OutcomeE=ifelse(IP$SideA==IP$Initiator & IP$OutcomeD=='Side A' ,'Initiator Won',ifelse(IP$SideB==IP$Initiator & IP$OutcomeD=='Side B' ,'Recipient Won','Other'))
 
