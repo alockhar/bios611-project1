@@ -35,7 +35,6 @@ dev.off()
 
 
 
-#What are the attributes of the colored nodes?
-#Top=delete_vertices(war_igraph, V(war_igraph)$membership != 4)
-#V(Top)$label
+#What are the attributes of the community membership
+
 
