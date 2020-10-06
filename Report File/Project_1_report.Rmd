@@ -13,26 +13,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Overall objectives
 
-The war of correlates projects curates war data from 1814 globally through 2014 from all around the world.  Variables such as deaths, outcome status, perceived initiator, periods of exposure, forces involved, whether the war was internationalized and spread and many other variables have been collected.  Additional datasets such as economic factors, etc. have also been collected and tabulated with multiple datasets but the previously mentioned variables were of main interest.  </br>
+The war of correlates projects curates war data from 1814 globally through 2014 from all around the world.  Variables such as deaths, outcome status, perceived initiator, periods of exposure, forces involved, whether the war was internationalized and spread and many other variables have been collected.  Additional datasets such as economic factors, etc. have also been collected and tabulated with multiple datasets but the previously mentioned variables were of main interest for this project.  </br>
 
 
 </br>
-Due to the time period of curation (1814-2014), and the onset of the Monroe Doctrine in 1823, the central interest in this project was to look at the role of Americas (or the US and South America) versus the rest of the world in initiator-based outcomes. This was historic in that in set a role of the United States in dictating colonial policy within the hemisphere up as north of Canada through the southern tip of Latin America in order to mandate control and keep international powers at bay cementing a power structure that has lasted until modern 21st century.  The word initiator is used a lot in this project and is defined as the perceived initial war aggressor. Recipient is the perceived country who is the recipient of the initiator's attack. 
+Due to the time period of curation (1814-2014), and the onset of the Monroe Doctrine in 1823, the central interest in this project was to look at the role of Americas (or the US and South America) versus the rest of the world in initiator-defined outcomes. This was historic in that in set a role of the United States in dictating colonial policy within the hemisphere up as north of Canada through the southern tip of Latin America in order to mandate control and keep international powers at bay cementing a power structure that has lasted until modern 21st century.  The word initiator is used a lot in this project and is defined as the perceived initial war aggressor. Recipient is the perceived country who is the recipient of the initiator's attack. 
 </br>
 
 </br>
-Aim 1 of the project involved looking at initial descriptive relationships of the Americas versus non-Americas conflict via tables and graphs.
+Aim 1 of the project involved looking at initial descriptive relationships of the Americas versus non-Americas conflict via tables and graphs in the domestic wars only dataset.  Variables such as deaths, type of conflict, internationalization of conflict, the Americas indicator of interest, exposure time of given conflict, and initiator created variables such as the absolute difference in initiator versus recipient deaths, and relative difference in the initiator to recipient deaths were visually examined. 
+
 </br>
-Aim 2 of the project involved looking at Americas versus non-Americas in initiator determined outcomes such as: absolute difference in initiator versus recipient deaths, relative difference in initiator versus recipient deaths, and outcome (initiator won, recipient won, other).  Initial basic glm models would be assessed while including war type, start year, and number of days of exposure.  This would be repeated for the absolute and relative difference outcomes and then repeated using prediction methods (gaussian family). GBM models would also be implemented to assess relative importance.  The sensitivity of prediction would be assessed via imputation of deaths and handling of missing data.  The entire process would be repeated on an internationalized dataset, or one which adds forces available in conflict.
+Aim 2 of the project involved looking at Americas versus non-Americas in initiator determined outcomes such as: absolute difference in initiator versus recipient deaths and relative difference in initiator versus recipient deaths, .  Initial basic glm models would be assessed while including war type, start year, and number of days of exposure.  This would be repeated for the absolute and relative difference outcomes and then repeated using a training and testing set to assess prediction.   The sensitivity of prediction would be assessed via imputation of deaths where missing, recomputing absolute and relative initiator variables of interest, and re-doing the prediction models..  The entire process would be repeated on an internationalized dataset, or one which adds forces available to those in conflict as well as adds additional wars perceived to be linked to the initial model set on an international scale.
 </br>
 
 
 </br>
-Aim 3 would look at regression trees for initiator outcome of: initiator won, recipient won, or other outcome. Goal to establish subgroups of interest.
+Aim 3 was multi-fold: to cluster wartype, the Americas indicator variable, time since war started since 1814 basically, whether the war was internationalized, duration of exposure (days), initiator deaths, recipient deaths, and relative difference in deaths via a distance metric for mixed data types.  Besides cluster assessment and performance evaluation, the clusters were then descriptively assessed with clustering variables as well as the conflict outcome for pattern assessment.   
 </br>
 
 </br>
-Network community detection based on weighting relative difference in deaths.  A network data structure was made utilizing these weights.  The goal was to descriptively assign membership and look at potentially separating attributes for a given community membership.
+The final aim 4 was to look at network community detection based on weighting relative difference in deaths.  A network data structure was made utilizing these weights.  The goal was to descriptively assign membership and look at potentially separating attributes for a given community membership.
 </br>
 
 
@@ -59,17 +60,9 @@ createTable(T1)
 ## Initial plots
 
 
-#Exposure time on study
-
-```{r pressure, echo=FALSE}
-T1=readRDS('/home/rstudio/Overall_plots/plot_files/Table1.RDS')
-
-```
-
-
 
 #Exposure time on study
-The below plots show the proportion of total wars that originated in Americas and Not in the Americas. Not surprisingly the total N (for both plots) shows an imbalance in distribution in the days of the wars.
+The below plots show the proportion of total wars that originated in Americas and Not in the Americas. Not surprisingly the total N (for both plots) shows an imbalance in distribution in the days of the wars.  Accounting for this imbalance would be a future consideration in modeling but for now was left unaccounted.
 
 ```{r pressure, echo=FALSE}
 img<-readPNG('/home/rstudio/Overall_plots/plot_files/Exposure time2.png')
@@ -80,7 +73,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Exposure time2.p
 ```
 
 #Battle deaths by the Americas
-The below shows the distribution of deaths in the number of deaths by war type and Americas status.  For the most part they look balanced.
+The below shows the distribution of deaths in the number of deaths by war type and Americas status.  For the most part they look balanced.  It should be noted that an upper limit of 50000 deaths was created in order to account for plot interpretability and to account for several wars with total deaths far greater than 50000.
 
 ```{r pressure, echo=FALSE}
 
@@ -90,7 +83,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Battle deaths Bo
 
 
 #War type deaths Americas
-Adding the component of total war exposure time but no clusters pop out.
+Adding the component of total war exposure it was also not surprising to see large proportion of wars with lower deaths having lower exposure time.  For war type, no particular conflict type stood-out.
 
 ```{r pressure, echo=FALSE}
 
@@ -100,7 +93,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/War type deaths 
 
 
 #Start year 
-From 1900s onwards: civil war fo central control seemed to be most prevalent in the Americas while diversity of war type was prevalent across the 200 year period in the other group.
+A plot looking at deaths based on war start year.  From 1900s onwards the civil war for central control seemed to be most prevalent in the Americas while diversity of war type was prevalent across the 200 year period in the non-Americas group. There does not appear to be a linearly increasing or decreasing trend in deaths based on time of war and war conflict in either group.
 ```{r pressure, echo=FALSE}
 
 knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Start year 5.png")
@@ -108,8 +101,8 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Start year 5.png
 ```
 
 
-#Abs deaths 
-Defined as the initiator deaths-recipient deaths, once several influential points (not outliers were removed) You can see a large proportion of initiator deaths more in the negatives from the 1900s onwards. Why?
+#Absolute difference in deaths 
+Defined as the initiator deaths-recipient deaths, once several influential points (not outliers) were removed one can see a large proportion of initiator deaths more in the negatives from the 1900s onwards in the not in Americas group. Maybe this relates to some sort of potential increased ability in war recipients being able to foresee or address conflict.  Maybe it could be greater familiarity with a 'home' area in response somehow.
 ```{r pressure, echo=FALSE}
 
 knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Abs 6.png")
@@ -117,17 +110,17 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Abs 6.png")
 ```
 
 
-#Relative deaths 
-Defined as the initiator deaths-recipient deaths, once several influential points (not outliers were removed) You can see a large proportion of initiator deaths more in the negatives from the 1900s onwards. Why?
+#Relative difference in deaths 
+This metric was more complicated defined as:abs(InitiatorDeaths-RecipientDeaths)/max(abs(RecipientDeaths),abs(InitiatorDeaths)) the initiator deaths-recipient deaths, once several influential points (not outliers) were removed visually show a larger proportion of deaths among the initiators from the 1900s onwards.
 ```{r pressure, echo=FALSE}
 
-knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Abs 6.png")
+knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Rel 7.png")
 
 ```
 
 
-#Models deaths here
-Simple models
+#Domestic simple model
+Generalized linear models showing modeled the outcome of absolute difference in deaths and then relative difference in deaths by the Americas variable, starting year, days of exposure, and war type.  In both model sets only an association was seen with days of exposure and relative increase in initiator deaths.
 ```{r pressure, echo=FALSE}
 
 T1=readRDS('/home/rstudio/Aim1_deaths/nonImpSimp1.rds')
@@ -138,8 +131,8 @@ T2
 ```
 
 
-#Models deaths here
-trained
+#Domestic prediction non-imputed model
+A training and testing set (evenly split) using 5 fold cross-validation was done.   Generalized linear models showing modeled the outcome of absolute difference in deaths and then relative difference in deaths by the Americas variable, starting year, days of exposure, and war type.  In both model sets only the Americas versus non-Americas showed an association in the number of initiator deaths relative to the recipient.  The prediction in the given test set, however, R2=.008, was very low. Also an association was seen with days of exposure and relative increase in initiator deaths.  
 ```{r pressure, echo=FALSE}
 
 T1=readRDS('/home/rstudio/Aim1_deaths/nonImpTr1.rds')
@@ -150,7 +143,7 @@ T2
 ```
 
 #Models deaths here
-Imputed trained
+The common theme across models was prediction was very low between training and test sets.  An association, however, was seen in the war type ('local issues').  Date was re-checked and while certainty of curation seems reasonable (some wars simply were relatively more brutal than others), a prediction check of the imputed deaths while removing the most extreme war (375000 death difference), showed a slight gain in prediction (not shown but R2=.013 in comparison to .002)
 ```{r pressure, echo=FALSE}
 
 T1=readRDS('/home/rstudio/Aim1_deaths/ImpTr1.rds')
@@ -187,11 +180,17 @@ T2
 
 
 #Overall clustering
+Aim 3 was multi-fold: to cluster wartype, the Americas indicator variable, time since war started since 1814 basically, whether the war was internationalized, duration of exposure (days), initiator deaths, recipient deaths, and relative difference in deaths. A distance metric for mixed data types (Gower) was used and clustering via KMeans.  tSNE plots showed the segmentation of the variability of the gower's distance metric, and the clusters were visually plotted.</br>
+
+Below shows the top 2 TSNE dimensions by cluster and showing distinct separation throughout.
 ```{r pressure, echo=FALSE}
+knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Gap stat.png")
 knitr::include_graphics("/home/rstudio/Aim2_out_clustering/Aim2 TSNE.png")
 ```
 
 #Overall clustering
+
+As described above the four clusters showed a distince pattern across the variables in their construction. Clearly defined Americas (cluster 1), and non-Americas clusters were shown (2 through 4) which looked very interesting albeit a little fishy.  The largest proportion of those where the recipient won was in the Americas cluster.  Otherwise stalemates, compromises, etc. were the largest in all three of the specific clusters.  Cluster 3 could be established as the highest difference in deaths for the initiator for some reason.  Cluster 3 could also be seen to have the most modern (time since curation of 1814) conflict cluster with an average starting time of conflicts ranging from the late 1950s.</br>
 ```{r pressure, echo=FALSE}
 T1=readRDS('/home/rstudio/Aim2_out_clustering/Aim2_out_clustering.RDS')
 
@@ -199,8 +198,12 @@ createTable(T1)
 ```
 
 
-#Networks here
-Network
+#Aim 4 network composition
+While not much was shown, several network plots were constructed. A walk trap community search algorithm was implemented and is generally a solid approach when not much is known about the given network structure.  Weights between conflicts were normalized differences in conflicts and directed graph structure was created representing initiator to recipient relationships.  </br>
+
+</br>
+The first overall network plot shows all the wars together and their post memberships.  Roughly a 100 communities were found, and rather than pruning, the second plot shows the distribution of community membership by wars representing the largest communities.  The third plot shows the communities consolidated by the first three most prevalent communities and the fourth determined as 'other'.  Edge attributes explaining these 3 particular communities will be evaluated as a next-to-do.  
+</br>
 ```{r pressure, echo=FALSE}
 
 knitr::include_graphics("/home/rstudio/Networks/Ov.png")
@@ -209,4 +212,10 @@ knitr::include_graphics("/home/rstudio/Networks/Membership_consolidated.png")
 
 
 ```
+
+#Conclusions
+
+</br>
+The most interesting part of the project turned out to be the initial clustering and descriptive representation with the key war variables and in particular the Americas variable.  Prediction modeling initially wanted to look at sub groups or tree based models after the GLMs. But such low performance and variability in the differences in initiator and recipient deaths probably contributed to the poor performance. Rather than exploring the tree models, a mixed data clustering approach was the most interesting result as of now.  Another initial aim to look at data-driven eras or model-based clustering as well as waves of a given war. Unfortunately the date curation for many waves beyond the first wave was more sparse than originally thought, and looking at time based eras did not have the same interest. Finally, the network community structure work is still in process and other approaches could be considered that also try to look at the relationships in a flow of relationships.
+</br>
 
