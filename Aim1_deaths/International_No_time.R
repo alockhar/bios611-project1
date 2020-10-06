@@ -21,9 +21,9 @@ IP=IP %>%
   group_by(WarNum) %>%
   mutate(seqid = dplyr::row_number())
 
-IP_Mod1<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,AbsDiffDeaths,AbsDiffDeathsImp,InitiatorForces,RecipientForces)%>%filter(!is.na(AbsDiffDeaths))
+IP_Mod1<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,AbsDiffDeaths,AbsDiffDeathsImp,InitiatorForces,RecipientForces)%>% drop_na
 
-IP_Mod2<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,RelDiffDeaths,RelDiffDeathsImp,InitiatorForces,RecipientForces)%>%filter(!is.na(RelDiffDeaths))
+IP_Mod2<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,RelDiffDeaths,RelDiffDeathsImp,InitiatorForces,RecipientForces)%>% drop_na
 
 
 #Create partition with seed
@@ -73,7 +73,7 @@ cv_5 = trainControl(method = "cv", number = 5)
 rpartFit1 <- train(AbsDiffDeaths ~ Americas+StartYR_Norm+WDuratDays+WarTypeD+InitiatorForces+RecipientForces, 
                    trControl=cv_5, 
                    method = "glm", 
-                   data=mod1_tr,family="gaussian")
+                   data=mod1_tr,family="gaussian",na.action = na.pass)
 
 mod1_pred <- predict(rpartFit1, mod1_te)
 ps1=postResample(pred = mod1_pred, obs = mod1_te$AbsDiffDeaths)
@@ -108,8 +108,8 @@ df2=data.frame(cbind('','',round(tab2$coefficients[,1],3),round(tab2$coefficient
 
 df1[1,1]='Intl Absolute difference in deaths non-imputed'
 df2[1,1]='Intl Relative difference in deaths non-imputed'
-df1[1,2]=ps1[2]
-df2[1,2]=ps2[2]
+df1[1,2]=round(ps1[2],3)
+df2[1,2]=round(ps2[2],3)
 colnames(df1)=c('Description','R2','Estimate','Std err','p-val')
 colnames(df2)=c('Description','R2','Estimate','Std err','p-val')
 
@@ -209,8 +209,8 @@ df2=data.frame(cbind('','',round(tab2$coefficients[,1],3),round(tab2$coefficient
 
 df1[1,1]='Intl Absolute difference in deaths imputed'
 df2[1,1]='Intl Relative difference in deaths imputed'
-df1[1,2]=ps1[2]
-df2[1,2]=ps2[2]
+df1[1,2]=round(ps1[2],3)
+df2[1,2]=round(ps2[2],3)
 colnames(df1)=c('Description','R2','Estimate','Std err','p-val')
 colnames(df2)=c('Description','R2','Estimate','Std err','p-val')
 
