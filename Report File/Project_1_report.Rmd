@@ -3,6 +3,7 @@ title: "Project 1 Report"
 author: "Alexandre Lockhart"
 date: "10/4/2020"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -50,6 +51,7 @@ Initiator/recipient deaths and then the final outcome ('outcome E') was created 
 ```{r cars}
 library(rmarkdown)
 library(png)
+library(compareGroups)
 
 T1=readRDS('/home/rstudio/Overall_plots/plot_files/Table1.RDS')
 
@@ -64,7 +66,7 @@ createTable(T1)
 #Exposure time on study
 The below plots show the proportion of total wars that originated in Americas and Not in the Americas. Not surprisingly the total N (for both plots) shows an imbalance in distribution in the days of the wars.  Accounting for this imbalance would be a future consideration in modeling but for now was left unaccounted.
 
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 img<-readPNG('/home/rstudio/Overall_plots/plot_files/Exposure time2.png')
 
 
@@ -75,7 +77,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Exposure time2.p
 #Battle deaths by the Americas
 The below shows the distribution of deaths in the number of deaths by war type and Americas status.  For the most part they look balanced.  It should be noted that an upper limit of 50000 deaths was created in order to account for plot interpretability and to account for several wars with total deaths far greater than 50000.
 
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 
 knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Battle deaths Both3.png")
 
@@ -85,7 +87,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Battle deaths Bo
 #War type deaths Americas
 Adding the component of total war exposure it was also not surprising to see large proportion of wars with lower deaths having lower exposure time.  For war type, no particular conflict type stood-out.
 
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 
 knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/War type deaths Americas 4.png")
 
@@ -94,7 +96,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/War type deaths 
 
 #Start year 
 A plot looking at deaths based on war start year.  From 1900s onwards the civil war for central control seemed to be most prevalent in the Americas while diversity of war type was prevalent across the 200 year period in the non-Americas group. There does not appear to be a linearly increasing or decreasing trend in deaths based on time of war and war conflict in either group.
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 
 knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Start year 5.png")
 
@@ -103,7 +105,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Start year 5.png
 
 #Absolute difference in deaths 
 Defined as the initiator deaths-recipient deaths, once several influential points (not outliers) were removed one can see a large proportion of initiator deaths more in the negatives from the 1900s onwards in the not in Americas group. Maybe this relates to some sort of potential increased ability in war recipients being able to foresee or address conflict.  Maybe it could be greater familiarity with a 'home' area in response somehow.
-```{r pressure, echo=FALSE}
+```{r, echo=FALSE}
 
 knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Abs 6.png")
 
@@ -112,7 +114,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Abs 6.png")
 
 #Relative difference in deaths 
 This metric was more complicated defined as:abs(InitiatorDeaths-RecipientDeaths)/max(abs(RecipientDeaths),abs(InitiatorDeaths)) the initiator deaths-recipient deaths, once several influential points (not outliers) were removed visually show a larger proportion of deaths among the initiators from the 1900s onwards.
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 
 knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Rel 7.png")
 
@@ -121,7 +123,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Rel 7.png")
 
 #Domestic simple model
 Generalized linear models showing modeled the outcome of absolute difference in deaths and then relative difference in deaths by the Americas variable, starting year, days of exposure, and war type.  In both model sets only an association was seen with days of exposure and relative increase in initiator deaths.
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 
 T1=readRDS('/home/rstudio/Aim1_deaths/nonImpSimp1.rds')
 T2=readRDS('/home/rstudio/Aim1_deaths/nonImpSimp2.rds')
@@ -133,7 +135,7 @@ T2
 
 #Domestic prediction non-imputed model
 A training and testing set (evenly split) using 5 fold cross-validation was done.   Generalized linear models showing modeled the outcome of absolute difference in deaths and then relative difference in deaths by the Americas variable, starting year, days of exposure, and war type.  In both model sets only the Americas versus non-Americas showed an association in the number of initiator deaths relative to the recipient.  The prediction in the given test set, however, R2=.008, was very low. Also an association was seen with days of exposure and relative increase in initiator deaths.  
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 
 T1=readRDS('/home/rstudio/Aim1_deaths/nonImpTr1.rds')
 T2=readRDS('/home/rstudio/Aim1_deaths/nonImpTr2.rds')
@@ -144,7 +146,7 @@ T2
 
 #Models deaths here
 The common theme across models was prediction was very low between training and test sets.  An association, however, was seen in the war type ('local issues').  Date was re-checked and while certainty of curation seems reasonable (some wars simply were relatively more brutal than others), a prediction check of the imputed deaths while removing the most extreme war (375000 death difference), showed a slight gain in prediction (not shown but R2=.013 in comparison to .002)
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 
 T1=readRDS('/home/rstudio/Aim1_deaths/ImpTr1.rds')
 T2=readRDS('/home/rstudio/Aim1_deaths/ImpTr2.rds')
@@ -157,7 +159,7 @@ T2
 Non-imputed
 
 Network
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 T1=readRDS('/home/rstudio/Aim1_deaths/IntlnonImpTr1.rds')
 T2=readRDS('/home/rstudio/Aim1_deaths/IntlnonImpTr2.rds')
 
@@ -168,7 +170,7 @@ T2
 #Internationalized
 Imputed
 Network
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 T1=readRDS('/home/rstudio/Aim1_deaths/IntlnonImpTr1.rds')
 T2=readRDS('/home/rstudio/Aim1_deaths/IntlnonImpTr2.rds')
 
@@ -179,19 +181,19 @@ T2
 
 
 
-#Overall clustering
+#Overall clustering 
 Aim 3 was multi-fold: to cluster wartype, the Americas indicator variable, time since war started since 1814 basically, whether the war was internationalized, duration of exposure (days), initiator deaths, recipient deaths, and relative difference in deaths. A distance metric for mixed data types (Gower) was used and clustering via KMeans.  tSNE plots showed the segmentation of the variability of the gower's distance metric, and the clusters were visually plotted.</br>
 
 Below shows the top 2 TSNE dimensions by cluster and showing distinct separation throughout.
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Gap stat.png")
 knitr::include_graphics("/home/rstudio/Aim2_out_clustering/Aim2 TSNE.png")
 ```
 
-#Overall clustering
+#Overall clustering by variables
 
 As described above the four clusters showed a distince pattern across the variables in their construction. Clearly defined Americas (cluster 1), and non-Americas clusters were shown (2 through 4) which looked very interesting albeit a little fishy.  The largest proportion of those where the recipient won was in the Americas cluster.  Otherwise stalemates, compromises, etc. were the largest in all three of the specific clusters.  Cluster 3 could be established as the highest difference in deaths for the initiator for some reason.  Cluster 3 could also be seen to have the most modern (time since curation of 1814) conflict cluster with an average starting time of conflicts ranging from the late 1950s.</br>
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 T1=readRDS('/home/rstudio/Aim2_out_clustering/Aim2_out_clustering.RDS')
 
 createTable(T1)
@@ -204,7 +206,7 @@ While not much was shown, several network plots were constructed. A walk trap co
 </br>
 The first overall network plot shows all the wars together and their post memberships.  Roughly a 100 communities were found, and rather than pruning, the second plot shows the distribution of community membership by wars representing the largest communities.  The third plot shows the communities consolidated by the first three most prevalent communities and the fourth determined as 'other'.  Edge attributes explaining these 3 particular communities will be evaluated as a next-to-do.  
 </br>
-```{r pressure, echo=FALSE}
+```{r , echo=FALSE}
 
 knitr::include_graphics("/home/rstudio/Networks/Ov.png")
 knitr::include_graphics("/home/rstudio/Networks/Membership.png")
