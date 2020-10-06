@@ -92,19 +92,6 @@ dev.off()
 
 #Initiator deaths Repeated above (KEEP BELOW) (One with exceptions removed)
 
-# 
-# p3 <- ggplot(IP, 
-#              aes(x = StartYr1, y =AbsDiffDeaths ,group=WarTypeD,color=WarTypeD)) +
-#   geom_point()+facet_grid(~Americas)
-# 
-# p3
-# 
-# 
-# p3 <- ggplot(IP, 
-#              aes(x = StartYr1, y =RelDiffDeaths ,group=WarTypeD,color=WarTypeD)) +
-#   geom_point()+facet_grid(~Americas)
-# 
-# p3
 
 
 
@@ -114,27 +101,26 @@ p1= ggplot(IP,
 
 
 
-p2= IP2 %>% filter(AbsDiffDeaths!=-374775)%>%{ggplot(.,aes(x = StartYr1, y =AbsDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
+p2= IP %>% filter(AbsDiffDeaths!=-374775)%>%{ggplot(.,aes(x = StartYr1, y =AbsDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
    geom_point()+facet_grid(~Americas)+ylab('Absolute Difference in initiator deaths')+xlab('Start year 1')}
  
  
- 
+png(file="Overall_plots/plot_files/Abs 6.png")
+grid.arrange(p1, p2, nrow = 2)
+dev.off()
  
 p3 =ggplot(IP, 
              aes(x = StartYr1, y =RelDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
   geom_point()+facet_grid(~Americas)+ylab('Relative Difference in initiator deaths')+xlab('Start year 1')
 
-p4=IP2 %>% filter(RelDiffDeaths<100)%>%{ggplot(.,aes(x = StartYr1, y =RelDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
+p4=IP %>% filter(RelDiffDeaths<.4)%>%{ggplot(.,aes(x = StartYr1, y =RelDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
     geom_point()+facet_grid(~Americas)+ylab('Relative Difference in initiator deaths')+xlab('Start year 1')}
 
-png(file="Overall_plots/plot_files/Abs 6.png")
-grid.arrange(p1, p2, nrow = 2)
-dev.off()
+
 png(file="Overall_plots/plot_files/Rel 7.png")
 grid.arrange(p3, p4, nrow = 2)
 dev.off()
 
 
-#Output .png files here
 
 
