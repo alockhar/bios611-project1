@@ -14,6 +14,11 @@ derived_data/Overall.csv:\
  derived_programs/Overall.R
 	Rscript Overall.R
 	
+derived_data/gower_dist.rds:\
+ source_data/INTRA-STATE WARS v5.1 CSV.csv\
+ derived_programs/Overall.R
+	Rscript Overall.R	
+	
 derived_data/Overall_Long.csv:\
  derived_data/Overall.csv\
  derived_programs/Overall_Long.R
@@ -28,6 +33,9 @@ derived_data/International_Long.csv:\
  derived_data/International.csv\
  derived_programs/International_Long.R
 	Rscript International_Long.R
+	
+
+	
 	
 derived_data/network.rds:\
  derived_data/International.csv\
