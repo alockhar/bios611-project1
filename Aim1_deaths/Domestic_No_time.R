@@ -23,13 +23,34 @@ IP_Mod2<-IP%>%select(WarNum,Americas,StartYR_Norm,WarTypeD,WDuratDays,RelDiffDea
 lm_fit=glm(AbsDiffDeaths ~Americas+StartYR_Norm+WDuratDays+WarTypeD,
            data = IP_Mod1, family='gaussian')
 
-summary(lm_fit)
+tab1=summary(lm_fit)
 
 lm_fit2=glm(RelDiffDeaths ~Americas+StartYR_Norm+WDuratDays+WarTypeD,
            data = IP_Mod2, family='gaussian')
 
-summary(lm_fit2)
+tab2=summary(lm_fit2)
 
+
+df1=data.frame(cbind('',round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),round(tab1$coefficients[,4],2)))
+df2=data.frame(cbind('',round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),round(tab2$coefficients[,4],2)))
+
+df1[1,1]='Absolute difference in deaths non-imputed'
+df2[1,1]='Relative difference in deaths non-imputed'
+
+colnames(df1)=c('Description','Estimate','Std err','p-val')
+colnames(df2)=c('Description','Estimate','Std err','p-val')
+
+
+
+df1=df1 %>%
+  mutate_all(as.character)
+
+df2=df2%>%
+  mutate_all(as.character)
+
+
+saveRDS(df1,"Aim1_deaths/nonImpSimp1.rds")
+saveRDS(df2,"Aim1_deaths/nonImpSimp2.rds")
 
 #Create partition with seed
 
@@ -59,26 +80,8 @@ rpartFit1 <- train(AbsDiffDeaths ~ Americas+StartYR_Norm+WDuratDays+WarTypeD,
                    data=mod1_tr,family="gaussian")
 
 mod1_pred <- predict(rpartFit1, mod1_te)
-postResample(pred = mod1_pred, obs = mod1_te$AbsDiffDeaths)
-summary(rpartFit1)
-#
-
-
-model.gbm <- gbm(AbsDiffDeaths ~ Americas+StartYR_Norm+WDuratDays+WarTypeD,
-                 distribution="gaussian",
-                 data=mod1_tr,
-                 n.trees = 200,
-                 interaction.depth = 5,cv.folds = 5, 
-                 shrinkage=0.1);
-summary(model.gbm,plot=FALSE)
-
-best.iter <- gbm.perf(model.gbm, method = "cv")
-print(best.iter)
-
-Yhat <- predict(model.gbm, newdata = mod1_te, n.trees = best.iter, type = "link")
-
-# least squares error
-print(sum((mod1_te$AbsDiffDeaths - Yhat)^2))
+ps1=postResample(pred = mod1_pred, obs = mod1_te$AbsDiffDeaths)
+tab1=summary(rpartFit1)
 
 
 
@@ -88,35 +91,39 @@ set.seed(280)
 cv_5 = trainControl(method = "cv", number = 5)
 
 
-rpartFit1 <- train(RelDiffDeaths ~ Americas+StartYR_Norm+WDuratDays+WarTypeD, 
+rpartFit2 <- train(RelDiffDeaths ~ Americas+StartYR_Norm+WDuratDays+WarTypeD, 
                    trControl=cv_5, 
                    method = "glm", 
                    data=mod2_tr,family="gaussian")
 
-mod2_pred <- predict(rpartFit1, mod2_te)
-postResample(pred = mod1_pred, obs = mod2_te$RelDiffDeaths)
-summary(rpartFit1)
+mod2_pred <- predict(rpartFit2, mod2_te)
+ps2=postResample(pred = mod2_pred, obs = mod2_te$RelDiffDeaths)
+tab2=summary(rpartFit2)
 
 
 
-model.gbm2 <- gbm(RelDiffDeaths ~ Americas+StartYR_Norm+WDuratDays+WarTypeD,
-                 distribution="gaussian",
-                 data=mod2_tr,
-                 n.trees = 200,
-                 interaction.depth = 5,cv.folds = 5, 
-                 shrinkage=0.1);
-summary(model.gbm,plot=FALSE)
 
-best.iter <- gbm.perf(model.gbm, method = "cv")
-print(best.iter)
+df1=data.frame(cbind('','',round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),round(tab1$coefficients[,4],2)))
+df2=data.frame(cbind('','',round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),round(tab2$coefficients[,4],2)))
 
-Yhat <- predict(model.gbm, newdata = mod2_te, n.trees = best.iter, type = "link")
-
-# least squares error
-print(sum((mod2_te$RelDiffDeaths - Yhat)^2))
+df1[1,1]='Absolute difference in deaths non-imputed'
+df2[1,1]='Relative difference in deaths non-imputed'
+df1[1,2]=ps1[2]
+df2[1,2]=ps2[2]
+colnames(df1)=c('Description','R2','Estimate','Std err','p-val')
+colnames(df2)=c('Description','R2','Estimate','Std err','p-val')
 
 
 
+df1=df1 %>%
+  mutate_all(as.character)
+
+df2=df2%>%
+  mutate_all(as.character)
+
+
+saveRDS(df1,"Aim1_deaths/nonImpTr1.rds")
+saveRDS(df2,"Aim1_deaths/nonImpTr2.rds")
 
 
 
@@ -167,26 +174,8 @@ rpartFit1 <- train(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD,
                    data=mod1_tr,family="gaussian")
 
 mod1_pred <- predict(rpartFit1, mod1_te)
-postResample(pred = mod1_pred, obs = mod1_te$AbsDiffDeaths)
-summary(rpartFit1)
-#
-
-
-model.gbm <- gbm(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD,
-                 distribution="gaussian",
-                 data=mod1_tr,
-                 n.trees = 200,
-                 interaction.depth = 5,cv.folds = 5, 
-                 shrinkage=0.1);
-summary(model.gbm,plot=FALSE)
-
-best.iter <- gbm.perf(model.gbm, method = "cv")
-print(best.iter)
-
-Yhat <- predict(model.gbm, newdata = mod1_te, n.trees = best.iter, type = "link")
-
-# least squares error
-print(sum((mod1_te$AbsDiffDeathsImp - Yhat)^2))
+ps1=postResample(pred = mod1_pred, obs = mod1_te$AbsDiffDeaths)
+tab1=summary(rpartFit1)
 
 
 #rel
@@ -197,16 +186,37 @@ set.seed(7279)
 cv_5 = trainControl(method = "cv", number = 5)
 
 
-rpartFit1 <- train(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD, 
+rpartFit2 <- train(RelDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD, 
                    trControl=cv_5, 
                    method = "glm", 
                    data=mod2_tr,family="gaussian")
 
-mod2_pred <- predict(rpartFit1, mod2_te)
-postResample(pred = mod2_pred, obs = mod2_te$AbsDiffDeaths)
-summary(rpartFit1)
+mod2_pred <- predict(rpartFit2, mod2_te)
+ps2=postResample(pred = mod2_pred, obs = mod2_te$RelDiffDeathsImp)
+tab2=summary(rpartFit2)
 
 
+df1=data.frame(cbind('','',round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),round(tab1$coefficients[,4],2)))
+df2=data.frame(cbind('','',round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),round(tab2$coefficients[,4],2)))
+
+df1[1,1]='Absolute difference in deaths imputed'
+df2[1,1]='Relative difference in deaths imputed'
+df1[1,2]=ps1[2]
+df2[1,2]=ps2[2]
+colnames(df1)=c('Description','R2','Estimate','Std err','p-val')
+colnames(df2)=c('Description','R2','Estimate','Std err','p-val')
+
+
+
+df1=df1 %>%
+  mutate_all(as.character)
+
+df2=df2%>%
+  mutate_all(as.character)
+
+
+saveRDS(df1,"Aim1_deaths/ImpTr1.rds")
+saveRDS(df2,"Aim1_deaths/ImpTr2.rds")
 
 
 
