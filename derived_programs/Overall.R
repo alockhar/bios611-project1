@@ -1,6 +1,7 @@
 library(dplyr)
 library(mice)
-
+library(cluster)
+library(Rtsne)
 #R script to generate additional derived variables from Overall dataset
 
 ##################
@@ -70,6 +71,47 @@ IP$RelDiffDeathsImp=abs(IP$InitiatorDeathsImp-IP$RecipientDeathsImp)/max(abs(IP$
 IP$OutcomeE=ifelse(IP$SideA==IP$Initiator & IP$OutcomeD=='Side A' ,'Initiator Won',ifelse(IP$SideB==IP$Initiator & IP$OutcomeD=='Side B' ,'Recipient Won','Other'))
 
 
+#Look at clustering and append to final DS
+ForClust<-IP%>%select(WarTypeD,Americas,StartYR_Norm,Intnl,WDuratDays,InitiatorDeathsImp,RecipientDeathsImp,RelDiffDeathsImp)
+
+
+gower_dist <- daisy(ForClust, metric = "gower")
+gower_mat <- as.matrix(gower_dist)
+
+gapper=clusGap(gower_mat, FUNcluster="gower")
+
+
+
+#Most similar (put in output)
+IP[which(gower_mat == min(gower_mat[gower_mat != min(gower_mat)]), arr.ind = TRUE)[1, ], ]
+
+#Most dissimilar
+IP[which(gower_mat == max(gower_mat[gower_mat != max(gower_mat)]), arr.ind = TRUE)[1, ], ]
+
+#Cluster determination
+results <- clusGap(gower_mat, kmeans,K.max = 5, B = 50)
+
+ggplot(results$Tab %>% as_tibble() %>% mutate(k=seq(nrow(.))), aes(k,gap)) + geom_line()
+
+#Go with 4
+k <- 4
+km_fit <- kmeans(gower_dist, k)
+cluster=km_fit$cluster
+
+
+IP<-cbind(IP,cluster)
+
 
 write_csv(IP,"derived_data/Overall.csv")
+saveRDS(gower_dist,"derived_data/gower_dist.rds")
+
+
+
+
+
+
+
+
+
+
 
