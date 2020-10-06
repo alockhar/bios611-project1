@@ -126,6 +126,77 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Abs 6.png")
 ```
 
 
+#Models deaths here
+Simple models
+```{r pressure, echo=FALSE}
+
+T1=readRDS('/home/rstudio/Aim1_deaths/nonImpSimp1.rds')
+T2=readRDS('/home/rstudio/Aim1_deaths/nonImpSimp2.rds')
+
+T1
+T2
+```
+
+
+#Models deaths here
+trained
+```{r pressure, echo=FALSE}
+
+T1=readRDS('/home/rstudio/Aim1_deaths/nonImpTr1.rds')
+T2=readRDS('/home/rstudio/Aim1_deaths/nonImpTr2.rds')
+
+T1
+T2
+```
+
+#Models deaths here
+Imputed trained
+```{r pressure, echo=FALSE}
+
+T1=readRDS('/home/rstudio/Aim1_deaths/ImpTr1.rds')
+T2=readRDS('/home/rstudio/Aim1_deaths/ImpTr2.rds')
+
+T1
+T2
+```
+
+#Internationalized
+Non-imputed
+
+Network
+```{r pressure, echo=FALSE}
+T1=readRDS('/home/rstudio/Aim1_deaths/IntlnonImpTr1.rds')
+T2=readRDS('/home/rstudio/Aim1_deaths/IntlnonImpTr2.rds')
+
+T1
+T2
+```
+
+#Internationalized
+Imputed
+Network
+```{r pressure, echo=FALSE}
+T1=readRDS('/home/rstudio/Aim1_deaths/IntlnonImpTr1.rds')
+T2=readRDS('/home/rstudio/Aim1_deaths/IntlnonImpTr2.rds')
+
+T1
+T2
+
+```
+
+
+
+#Overall clustering
+```{r pressure, echo=FALSE}
+knitr::include_graphics("/home/rstudio/Aim2_out_clustering/Aim2 TSNE.png")
+```
+
+#Overall clustering
+```{r pressure, echo=FALSE}
+T1=readRDS('/home/rstudio/Aim2_out_clustering/Aim2_out_clustering.RDS')
+
+createTable(T1)
+```
 
 
 #Networks here
