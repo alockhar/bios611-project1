@@ -89,9 +89,12 @@ IP[which(gower_mat == min(gower_mat[gower_mat != min(gower_mat)]), arr.ind = TRU
 IP[which(gower_mat == max(gower_mat[gower_mat != max(gower_mat)]), arr.ind = TRUE)[1, ], ]
 
 #Cluster determination
+set.seed(1492)
 results <- clusGap(gower_mat, kmeans,K.max = 5, B = 50)
 
+png(file="Overall_plots/plot_files/Gap stat.png")
 ggplot(results$Tab %>% as_tibble() %>% mutate(k=seq(nrow(.))), aes(k,gap)) + geom_line()
+dev.off()
 
 #Go with 4
 k <- 4
