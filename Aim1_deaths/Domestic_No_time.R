@@ -8,7 +8,7 @@
 
 
 library(caret)
-library(gbm)
+
 IP=read_csv("derived_data/Overall.csv");
 IP$Americas=as.factor(IP$Americas)
 IP$WarTypeD=as.factor(IP$WarTypeD)
@@ -31,14 +31,14 @@ lm_fit2=glm(RelDiffDeaths ~Americas+StartYR_Norm+WDuratDays+WarTypeD,
 tab2=summary(lm_fit2)
 
 
-df1=data.frame(cbind('',round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),round(tab1$coefficients[,4],2)))
-df2=data.frame(cbind('',round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),round(tab2$coefficients[,4],2)))
+df1=data.frame(cbind('',row.names(tab1$coefficients),round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),format.pval(tab1$coefficients[,4], eps = .001, digits = 2)))
+df2=data.frame(cbind('',row.names(tab2$coefficients),round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),format.pval(tab2$coefficients[,4], eps = .001, digits = 2)))
 
 df1[1,1]='Absolute difference in deaths non-imputed'
 df2[1,1]='Relative difference in deaths non-imputed'
 
-colnames(df1)=c('Description','Estimate','Std err','p-val')
-colnames(df2)=c('Description','Estimate','Std err','p-val')
+colnames(df1)=c('Description','Variables','Estimate','Std err','p-val')
+colnames(df2)=c('Description','Variables','Estimate','Std err','p-val')
 
 
 
@@ -103,15 +103,15 @@ tab2=summary(rpartFit2)
 
 
 
-df1=data.frame(cbind('','',round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),round(tab1$coefficients[,4],2)))
-df2=data.frame(cbind('','',round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),round(tab2$coefficients[,4],2)))
+df1=data.frame(cbind('','',row.names(tab1$coefficients),round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),format.pval(tab1$coefficients[,4], eps = .001, digits = 2)))
+df2=data.frame(cbind('','',row.names(tab2$coefficients),round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),format.pval(tab2$coefficients[,4], eps = .001, digits = 2)))
 
 df1[1,1]='Absolute difference in deaths non-imputed'
 df2[1,1]='Relative difference in deaths non-imputed'
-df1[1,2]=ps1[2]
-df2[1,2]=ps2[2]
-colnames(df1)=c('Description','R2','Estimate','Std err','p-val')
-colnames(df2)=c('Description','R2','Estimate','Std err','p-val')
+df1[1,2]=round(ps1[2],3)
+df2[1,2]=round(ps2[2],3)
+colnames(df1)=c('Description','R2','Variables','Estimate','Std err','p-val')
+colnames(df2)=c('Description','R2','Variables','Estimate','Std err','p-val')
 
 
 
@@ -178,6 +178,21 @@ ps1=postResample(pred = mod1_pred, obs = mod1_te$AbsDiffDeaths)
 tab1=summary(rpartFit1)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #rel
 
 set.seed(7279)
@@ -196,15 +211,15 @@ ps2=postResample(pred = mod2_pred, obs = mod2_te$RelDiffDeathsImp)
 tab2=summary(rpartFit2)
 
 
-df1=data.frame(cbind('','',round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),round(tab1$coefficients[,4],2)))
-df2=data.frame(cbind('','',round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),round(tab2$coefficients[,4],2)))
+df1=data.frame(cbind('','',row.names(tab1$coefficients),round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),format.pval(tab1$coefficients[,4], eps = .001, digits = 2)))
+df2=data.frame(cbind('','',row.names(tab2$coefficients),round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),format.pval(tab2$coefficients[,4], eps = .001, digits = 2)))
 
 df1[1,1]='Absolute difference in deaths imputed'
 df2[1,1]='Relative difference in deaths imputed'
-df1[1,2]=ps1[2]
-df2[1,2]=ps2[2]
-colnames(df1)=c('Description','R2','Estimate','Std err','p-val')
-colnames(df2)=c('Description','R2','Estimate','Std err','p-val')
+df1[1,2]=round(ps1[2],3)
+df2[1,2]=round(ps2[2],3)
+colnames(df1)=c('Description','R2','Variables','Estimate','Std err','p-val')
+colnames(df2)=c('Description','R2','Variables','Estimate','Std err','p-val')
 
 
 
@@ -225,6 +240,22 @@ saveRDS(df2,"Aim1_deaths/ImpTr2.rds")
 
 
 
+#Absolute deaths with extreme test case removed
+
+set.seed(7279)
+
+mod1b_te=subset(mod1_te,AbsDiffDeathsImp>min(mod1_te$AbsDiffDeaths,na.rm = 'TRUE'))
+cv_5 = trainControl(method = "cv", number = 5)
+
+
+rpartFit1 <- train(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD, 
+                   trControl=cv_5, 
+                   method = "glm", 
+                   data=mod1_tr,family="gaussian")
+
+mod1_pred <- predict(rpartFit1, mod1b_te)
+ps1=postResample(pred = mod1_pred, obs = mod1b_te$AbsDiffDeaths)
+tab1=summary(rpartFit1)
 
 
 
