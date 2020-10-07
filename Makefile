@@ -122,11 +122,7 @@ Networks/Membership_consolidated.png:\
 	Rscript Network_aim3.R
 	
 	
-Networks/Membership_consolidated.png:\
- derived_data/International.csv\
- derived_programs/Network_aim3.R
-	Rscript Network_aim3.R
-	
+
 Aim2_out_clustering/Aim2 TSNE.png:\
  derived_data/Overall.csv\
  derived_programs/Outcome_Clustering.R

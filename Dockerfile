@@ -1,7 +1,6 @@
 FROM rocker/verse
 MAINTAINER Alexandre Lockhart <alexandre_georges@hotmail.com>
 
-
 RUN R -e "install.packages('dplyr')"
 RUN R -e "install.packages('tidyverse')"
 RUN R -e "install.packages('mice')"
@@ -19,5 +18,5 @@ RUN R -e "install.packages('e1071')"
 RUN R -e "install.packages('igraph')"
 RUN R -e "install.packages('RColorBrewer')"
 
-
 docker build . -t project1-env
+docker run -v `pwd`:/home/rstudio -p 8787:8787 -e PASSWORD=mypwd -i project1-env
