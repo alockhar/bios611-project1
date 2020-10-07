@@ -2,12 +2,40 @@
 
 clean:
 	rm derived_data/*
-  
+        rm Overall_plots/plot_files/*
+       
+Report File/Project_1_report.pdf: Project_1_report.Rmd\
+ Overall_plots/plot_files/Table1.RDS\
+ Overall_plots/plot_files/Exposure time2.png\
+ Overall_plots/plot_files/Battle deaths Both3.png\
+ Overall_plots/plot_files/War type deaths Americas 4.png\
+ Overall_plots/plot_files/Start year 5.png\
+ Overall_plots/plot_files/Abs 6.png\
+ Overall_plots/plot_files/Rel 7.png\
+ Aim1_deaths/nonImpSimp1.rds\
+ Aim1_deaths/nonImpSimp2.rds\
+ Aim1_deaths/nonImpTr1.rds\
+ Aim1_deaths/nonImpTr2.rds\
+ Aim1_deaths/ImpTr1.rds\
+ Aim1_deaths/ImpTr2.rds\
+ Aim1_deaths/IntlnonImpTr1.rds\
+ Aim1_deaths/IntlnonImpTr2.rds\
+ Aim1_deaths/IntlnonImpTr1.rds\
+ Aim1_deaths/IntlnonImpTr2.rds\
+ Overall_plots/plot_files/Gap stat.png\
+ Aim2_out_clustering/Aim2 TSNE.png\
+ Aim2_out_clustering/Aim2_out_clustering.RDS\
+ Networks/Ov.png\
+ Networks/Membership.png\
+ Networks/Membership_consolidated.png\
+  R -e "rmarkdown::render('Project_1_report.Rmd')"
+ 
+
 derived_data/IntraParticipants.csv derived_data/OverallT.csv:\
-  source_data/INTRA-STATE_State_participants v5.1 CSV.csv\
-	source_data/INTRA-STATE WARS v5.1 CSV.csv\
-	tidy_data.R
-  Rscript tidy_data.R
+ source_data/INTRA-STATE_State_participants v5.1 CSV.csv\
+ source_data/INTRA-STATE WARS v5.1 CSV.csv\
+ tidy_data.R
+        Rscript tidy_data.R
 	
 derived_data/Overall.csv:\
  source_data/INTRA-STATE WARS v5.1 CSV.csv\
