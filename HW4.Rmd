@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 IP=read_csv("HW4_data/500_Person_Gender_Height_Weight_Index.csv")
 library(gbm)
 library(MLmetrics)
+library(pROC)
 ```
 
 
@@ -52,6 +53,8 @@ test <- IP2 %>% filter(exp_group=="test");
 model <- glm(Gender2 ~ Height+Weight ,family=binomial(link='logit'),data=train)
 pred <- predict(model, newdata=validate, type="response")
 
+
+
 sum((pred>0.5) == validate$Gender2)/nrow(validate)
 
 
@@ -62,6 +65,9 @@ sum((pred>0.5) == validate$Gender2)/nrow(validate)
                                  #visit_binary = 1*(Gender == "Female") + 0)
 #validate2 <- validate %>% mutate(accurate = 1*(pred == Gender))
 #sum(validate2$accurate)/nrow(validate2)
+
+
+
 
 ```
 
@@ -80,21 +86,21 @@ sum((pred>0.5))/nrow(validate)
 ```
 
 
-Train on 50 Males and then modeled the height and weight with the outcome of index (since the model choice seemed open). I collpased for 0 to be 0-5, and 1 to be index=5. Accuracy=.47 among the males
+Train on 50 Males and then modeled the height with the outcome of index (since the model choice seemed open). I collpased for 0 to be 0-5, and 1 to be index=5. F1 was=.72 among the males with a .5 training split.  The ROC curve shows the true versus false positive rate.  The higher the curve, the closer one's prediction is to the true positive rate. Typically an AUC= .5 means prediction is totally by chance, and 1 represents (at least) on the surface a perfect prediction.
 ```{r , echo=FALSE}
 set.seed(44345)
 Male=subset(IP2,Gender=='Male')
- Male2=Male[sample(nrow(Male), 150), ]
+ Male2=Male[sample(nrow(Male), 50), ]
 
  
- Male2<-Male2%>%mutate(index2=ifelse(Index==0|Index==1|Index==2,0,1)) 
+ Male2<-Male2%>%mutate(index2=ifelse(Index==0|Index==1|Index==2|Index==3|Index==4,0,1)) 
  
  
  
  
  #Split.
-Male3 <- rbind(model_split(Male2 %>% filter(index2==1), 2/3,1/3),
-           model_split(Male2 %>% filter(index2==0), 2/3,1/3))
+Male3 <- rbind(model_split(Male2 %>% filter(index2==1), 1/2,1/2),
+           model_split(Male2 %>% filter(index2==0), 1/2,1/2))
 Male3 %>% group_by(index2, exp_group) %>% tally()
 
 
@@ -102,15 +108,51 @@ Male3 %>% group_by(index2, exp_group) %>% tally()
 train <- Male3 %>% filter(exp_group=="train");
 validate <- Male3 %>% filter(exp_group=="validate");
 #test <- Male3 %>% filter(exp_group=="test");
-model <- glm(index2 ~ Height+Weight ,family=binomial(link='logit'),data=train)
+model <- glm(index2 ~ Height ,family=binomial(link='logit'),data=train)
 pred <- predict(model, newdata=validate, type="response")
 
 
 f1 <- MLmetrics::F1_Score
 
-f1(validate$index2, pred > 0.5)
+p1=ifelse(pred>0.5,1,0)
+
+f1(validate$index2, p1)
 
 
 
- 
+
+pROC_obj <- roc(validate$index2,p1)
+plot(pROC_obj)
+```
+KNN
+
+Trained on height, for the classifier of my index2 variable (0 or 1).  The highest accuracy through 20 iterations appeared to be 6 clusters.  When testing the prediction I got .67.  Maybe just okay prediction.
+
+```{r , echo=FALSE}
+library(class)
+
+
+
+tr <- matrix(train$Height, nrow=nrow(train))
+tt <- matrix(validate$Height, nrow=nrow(validate))
+
+results <- do.call(rbind, Map(function(n){
+    predictions <- knn(train = tr,
+                       test = tt,
+                       cl = train$index2,
+                       k = n);
+    acc <- sum(predictions == validate$index2)/length(predictions);
+    tibble(k=n,acc=acc);   
+}, seq(1,20))) %>% arrange(desc(acc),k)
+
+
+plot(results)
+
+
+pred <- knn(train = tr,
+            test = matrix(validate$Height, nrow=nrow(validate)),
+            cl = train$index2,
+            k = 6);
+sum(pred==validate$index2)/nrow(validate)
+
 ```
