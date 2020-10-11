@@ -18,4 +18,6 @@ RUN R -e "install.packages('e1071')"
 RUN R -e "install.packages('igraph')"
 RUN R -e "install.packages('RColorBrewer')"
 
+RUN R -e "install.packages('gbm')"
+RUN R -e "install.packages('MLmetrics')"
 
