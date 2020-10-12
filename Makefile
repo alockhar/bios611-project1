@@ -22,7 +22,7 @@ Report\ File/Project_1_report.pdf: Project_1_report.Rmd\
  Aim1_deaths/IntlnonImpTr2.rds\
  Aim1_deaths/IntlnonImpTr1.rds\
  Aim1_deaths/IntlnonImpTr2.rds\
- Overall_plots/plot_files/Gap stat.png\
+ Overall_plots/plot_files/Gap\ stat.png\
  Aim2_out_clustering/Aim2\ TSNE.png\
  Aim2_out_clustering/Aim2_out_clustering.RDS\
  Networks/Ov.png\
@@ -53,7 +53,7 @@ derived_data/Overall_Long.csv:\
 	Rscript Overall_Long.R	
 	
 derived_data/International.csv:\
- source_data/INTRA-STATE_State_participants v5.1 CSV.csv\
+ source_data/INTRA-STATE_State_participants\ v5.1 CSV.csv\
  derived_programs/International.R
 	Rscript International.R
 
