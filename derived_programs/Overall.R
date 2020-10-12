@@ -78,8 +78,6 @@ ForClust<-IP%>%select(WarTypeD,Americas,StartYR_Norm,Intnl,WDuratDays,InitiatorD
 gower_dist <- daisy(ForClust, metric = "gower")
 gower_mat <- as.matrix(gower_dist)
 
-gapper=clusGap(gower_mat, FUNcluster="gower")
-
 
 
 #Most similar (put in output)
