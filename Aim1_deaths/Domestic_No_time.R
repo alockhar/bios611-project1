@@ -55,7 +55,7 @@ saveRDS(df2,"Aim1_deaths/nonImpSimp2.rds")
 #Create partition with seed
 
 set.seed(280)
-default_idx=sample(1:nrow(IP_Mod1), .5*nrow(IP_Mod1))
+default_idx=sample(1:nrow(IP_Mod1), .66*nrow(IP_Mod1))
 
 
 mod1_tr <- IP_Mod1[ default_idx, ]
@@ -104,7 +104,7 @@ tab2=summary(rpartFit2)
 
 
 df1=data.frame(cbind('','',row.names(tab1$coefficients),round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),format.pval(tab1$coefficients[,4], eps = .001, digits = 2)))
-df2=data.frame(cbind('','',row.names(tab2$coefficients),round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),format.pval(tab2$coefficients[,4], eps = .001, digits = 2)))
+df2=data.frame(cbind('','',row.names(tab2$coefficients),signif(tab2$coefficients[,1],2),signif(tab2$coefficients[,2],2),format.pval(tab2$coefficients[,4], eps = .001, digits = 2)))
 
 df1[1,1]='Absolute difference in deaths non-imputed'
 df2[1,1]='Relative difference in deaths non-imputed'
@@ -121,6 +121,13 @@ df1=df1 %>%
 df2=df2%>%
   mutate_all(as.character)
 
+#plot1DF=data.frame(rbind(df1,df2))
+
+
+
+
+
+ggplot(plot1DF,aes(y=))
 
 saveRDS(df1,"Aim1_deaths/nonImpTr1.rds")
 saveRDS(df2,"Aim1_deaths/nonImpTr2.rds")
@@ -212,7 +219,7 @@ tab2=summary(rpartFit2)
 
 
 df1=data.frame(cbind('','',row.names(tab1$coefficients),round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),format.pval(tab1$coefficients[,4], eps = .001, digits = 2)))
-df2=data.frame(cbind('','',row.names(tab2$coefficients),round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),format.pval(tab2$coefficients[,4], eps = .001, digits = 2)))
+df2=data.frame(cbind('','',row.names(tab2$coefficients),signif(tab2$coefficients[,1],2),signif(tab2$coefficients[,2],2),format.pval(tab2$coefficients[,4], eps = .001, digits = 2)))
 
 df1[1,1]='Absolute difference in deaths imputed'
 df2[1,1]='Relative difference in deaths imputed'

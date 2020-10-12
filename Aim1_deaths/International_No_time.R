@@ -43,7 +43,7 @@ set.seed(280)
 
 
 
-default_idx=sample(1:nrow(df3), .5*nrow(df3))
+default_idx=sample(1:nrow(df3), .66*nrow(df3))
 
 
 mod1_tr <- df3[ default_idx, ]
@@ -103,15 +103,15 @@ tab2=summary(rpartFit2)
 
 
 
-df1=data.frame(cbind('','',round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),round(tab1$coefficients[,4],2)))
-df2=data.frame(cbind('','',round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),round(tab2$coefficients[,4],2)))
+df1=data.frame(cbind('','',row.names(tab1$coefficients),round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),format.pval(tab1$coefficients[,4], eps = .001, digits = 2)))
+df2=data.frame(cbind('','',row.names(tab2$coefficients),signif(tab2$coefficients[,1],2),signif(tab2$coefficients[,2],2),format.pval(tab2$coefficients[,4], eps = .001, digits = 2)))
 
 df1[1,1]='Intl Absolute difference in deaths non-imputed'
 df2[1,1]='Intl Relative difference in deaths non-imputed'
 df1[1,2]=round(ps1[2],3)
 df2[1,2]=round(ps2[2],3)
-colnames(df1)=c('Description','R2','Estimate','Std err','p-val')
-colnames(df2)=c('Description','R2','Estimate','Std err','p-val')
+colnames(df1)=c('Description','Covariates','R2','Estimate','Std err','p-val')
+colnames(df2)=c('Description','Covariates','R2','Estimate','Std err','p-val')
 
 
 
@@ -204,15 +204,15 @@ postResample(pred = mod2_pred, obs = mod2_te$RelDiffDeaths)
 summary(rpartFit1)
 
 
-df1=data.frame(cbind('','',round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),round(tab1$coefficients[,4],2)))
-df2=data.frame(cbind('','',round(tab2$coefficients[,1],3),round(tab2$coefficients[,2],3),round(tab2$coefficients[,4],2)))
+df1=data.frame(cbind('','',row.names(tab1$coefficients),round(tab1$coefficients[,1],2),round(tab1$coefficients[,2],2),format.pval(tab1$coefficients[,4], eps = .001, digits = 2)))
+df2=data.frame(cbind('','',row.names(tab2$coefficients),signif(tab2$coefficients[,1],2),signif(tab2$coefficients[,2],2),format.pval(tab2$coefficients[,4], eps = .001, digits = 2)))
 
 df1[1,1]='Intl Absolute difference in deaths imputed'
 df2[1,1]='Intl Relative difference in deaths imputed'
 df1[1,2]=round(ps1[2],3)
 df2[1,2]=round(ps2[2],3)
-colnames(df1)=c('Description','R2','Estimate','Std err','p-val')
-colnames(df2)=c('Description','R2','Estimate','Std err','p-val')
+colnames(df1)=c('Description','Covariates','R2','Estimate','Std err','p-val')
+colnames(df2)=c('Description','Covariates','R2','Estimate','Std err','p-val')
 
 
 
