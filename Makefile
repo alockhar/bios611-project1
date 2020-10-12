@@ -38,12 +38,12 @@ derived_data/IntraParticipants.csv\ derived_data/OverallT.csv:\
 	Rscript tidy_data.R
 	
 derived_data/Overall.csv:\
- source_data/INTRA-STATE WARS v5.1 CSV.csv\
+ source_data/INTRA-STATE\ WARS\ v5.1\ CSV.csv\
  derived_programs/Overall.R
 	Rscript Overall.R
 	
 derived_data/gower_dist.rds:\
- source_data/INTRA-STATE WARS v5.1 CSV.csv\
+ source_data/INTRA-STATE\ WARS\ v5.1\ CSV.csv\
  derived_programs/Overall.R
 	Rscript Overall.R	
 	
@@ -76,32 +76,32 @@ Overall_plots/plot_files/Table1.rds:\
  derived_programs/Overall_plots.R
 	Rscript Overall_plots.R
 	
-Overall_plots/plot_files/Exposure time2.png:\
+Overall_plots/plot_files/Exposure\ time2.png:\
  derived_data/Overall.csv\
  derived_programs/Overall_plots.R
 	Rscript Overall_plots.R	
 	
-Overall_plots/plot_files/Battle deaths Both3.png:\
+Overall_plots/plot_files/Battle\ deaths\ Both3.png:\
  derived_data/Overall.csv\
  derived_programs/Overall_plots.R
 	Rscript Overall_plots.R		
 	
-Overall_plots/plot_files/War type deaths Americas 4.png:\
+Overall_plots/plot_files/War\ type\ deaths\ Americas\ 4.png:\
  derived_data/Overall.csv\
  derived_programs/Overall_plots.R
 	Rscript Overall_plots.R	
 	
-Overall_plots/plot_files/Start year 5.png:\
+Overall_plots/plot_files/Start\ year\ 5.png:\
  derived_data/Overall.csv\
  derived_programs/Overall_plots.R
 	Rscript Overall_plots.R	
 	
-Overall_plots/plot_files/Abs 6.png:\
+Overall_plots/plot_files/Abs\ 6.png:\
  derived_data/Overall.csv\
  derived_programs/Overall_plots.R
 	Rscript Overall_plots.R	
 	
-Overall_plots/plot_files/Rel 7.png:\
+Overall_plots/plot_files/Rel\ 7.png:\
  derived_data/Overall.csv\
  derived_programs/Overall_plots.R
 	Rscript Overall_plots.R	
@@ -123,7 +123,7 @@ Networks/Membership_consolidated.png:\
 	
 	
 
-Aim2_out_clustering/Aim2 TSNE.png:\
+Aim2_out_clustering/Aim2\ TSNE.png:\
  derived_data/Overall.csv\
  derived_programs/Outcome_Clustering.R
 	Rscript Outcome_Clustering.R	
