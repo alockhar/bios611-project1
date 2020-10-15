@@ -115,7 +115,7 @@ Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS:\
 	
 Aim1_deaths/model_outputs/nonImpSimp1.rds:\
  derived_data/Overall.csv\
- Aim1_deaths/Domestic_No_time
+ Aim1_deaths/Domestic_No_time.R
 	Rscript Domestic_No_time.R
 	
 Aim1_deaths/model_outputs/nonImpSimp2.rds:\
