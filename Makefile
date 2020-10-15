@@ -6,7 +6,7 @@ clean:
 	rm Aim1_deaths/model_outputs/*       
 
 Report\ File/Project_1_report.pdf:\
- Project_1_report.Rmd\
+ Report\ File/Project_1_report.Rmd\
  Overall_plots/plot_files/Table1.RDS\
  Overall_plots/plot_files/Exposure\ time2.png\
  Overall_plots/plot_files/Battle\ deaths\ Both3.png\
