@@ -53,7 +53,7 @@ dupe=subset(IP_Mod1,seqid!=1)
 mod1_te=rbind(mod1_te,dupe)
 
 
-default_idx2=sample(1:nrow(df3b), .5*nrow(df3b))
+default_idx2=sample(1:nrow(df3b), .66*nrow(df3b))
 
 mod2_tr <- IP_Mod2[ default_idx2, ]
 mod2_te <- IP_Mod2[-default_idx2, ]
@@ -110,8 +110,8 @@ df1[1,1]='Intl Absolute difference in deaths non-imputed'
 df2[1,1]='Intl Relative difference in deaths non-imputed'
 df1[1,2]=round(ps1[2],3)
 df2[1,2]=round(ps2[2],3)
-colnames(df1)=c('Description','Covariates','R2','Estimate','Std err','p-val')
-colnames(df2)=c('Description','Covariates','R2','Estimate','Std err','p-val')
+colnames(df1)=c('Description','R2','Covariates','Estimate','Std err','p-val')
+colnames(df2)=c('Description','R2','Covariates','Estimate','Std err','p-val')
 
 
 
@@ -136,9 +136,9 @@ saveRDS(df2,"Aim1_deaths/IntlnonImpTr2.rds")
 
 #Repeat on imputed
 
-IP_Mod1<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,AbsDiffDeaths,AbsDiffDeathsImp,InitiatorForces,RecipientForces)
+IP_Mod1<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,AbsDiffDeaths,AbsDiffDeathsImp,InitiatorForces,RecipientForces)%>% drop_na
 
-IP_Mod2<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,RelDiffDeaths,RelDiffDeathsImp,InitiatorForces,RecipientForces)
+IP_Mod2<-IP%>%select(WarNum,seqid,Americas,StartYR_Norm,WarTypeD,WDuratDays,RelDiffDeaths,RelDiffDeathsImp,InitiatorForces,RecipientForces)%>% drop_na
 
 
 #Create partition with seed
@@ -151,7 +151,7 @@ df3=IP_Mod1%>%dplyr::filter(seqid==1)
 df3b=IP_Mod2%>%dplyr::filter(seqid==1)
 
 
-default_idx=sample(1:nrow(df3), .5*nrow(df3))
+default_idx=sample(1:nrow(df3), .66*nrow(df3))
 
 
 mod1_tr <- df3[ default_idx, ]
@@ -161,7 +161,7 @@ dupe=subset(IP_Mod1,seqid!=1)
 mod1_te=rbind(mod1_te,dupe)
 
 
-default_idx2=sample(1:nrow(df3b), .5*nrow(df3b))
+default_idx2=sample(1:nrow(df3b), .66*nrow(df3b))
 
 mod2_tr <- IP_Mod2[ default_idx2, ]
 mod2_te <- IP_Mod2[-default_idx2, ]
@@ -184,7 +184,7 @@ rpartFit1 <- train(AbsDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD+
                    data=mod1_tr,family="gaussian")
 
 mod1_pred <- predict(rpartFit1, mod1_te)
-postResample(pred = mod1_pred, obs = mod1_te$AbsDiffDeaths)
+postResample(pred = mod1_pred, obs = mod1_te$AbsDiffDeathsImp)
 summary(rpartFit1)
 
 
@@ -200,7 +200,7 @@ rpartFit1 <- train(RelDiffDeathsImp ~ Americas+StartYR_Norm+WDuratDays+WarTypeD+
                    data=mod2_tr,family="gaussian")
 
 mod2_pred <- predict(rpartFit1, mod2_te)
-postResample(pred = mod2_pred, obs = mod2_te$RelDiffDeaths)
+postResample(pred = mod2_pred, obs = mod2_te$RelDiffDeathsImp)
 summary(rpartFit1)
 
 
@@ -211,8 +211,8 @@ df1[1,1]='Intl Absolute difference in deaths imputed'
 df2[1,1]='Intl Relative difference in deaths imputed'
 df1[1,2]=round(ps1[2],3)
 df2[1,2]=round(ps2[2],3)
-colnames(df1)=c('Description','Covariates','R2','Estimate','Std err','p-val')
-colnames(df2)=c('Description','Covariates','R2','Estimate','Std err','p-val')
+colnames(df1)=c('Description','R2','Covariates','Estimate','Std err','p-val')
+colnames(df2)=c('Description','R2','Covariates','Estimate','Std err','p-val')
 
 
 
