@@ -38,7 +38,7 @@ saveRDS(resu2,'Overall_plots/plot_files/Table1.RDS')
 
 
 #Total exposure time (days) 
-png(file="Overall_plots/plot_files/Exposure time2.png")
+png(file="Overall_plots/plot_files/Exposure_time2.png")
 grp_plots <- by(IP, IP$Americas, function(sub){
   ggplot(sub, aes(WDuratDays)) + 
     geom_histogram(aes(y = (..count..)/sum(..count..))) + ggtitle(sub$Americas[[1]]) +
@@ -60,7 +60,7 @@ dev.off()
 
 
 #Total deaths by Americas facet grid (Keep and explain why)
-png(file="Overall_plots/plot_files/Battle deaths Both3.png")
+png(file="Overall_plots/plot_files/Battle_deaths_Both3.png")
 ggplot(IP,aes(y=TotalBDeathsU,x=Americas))+geom_boxplot()+labs(title = "Number of deaths by wartype and Americas indicator",
        caption = "Any wars greater than 50000 deaths set to 50000")+
   theme(plot.title = element_text(hjust = 0.5))+facet_grid(~WarTypeD)+ylab('Number of deaths')
@@ -68,7 +68,7 @@ dev.off()
 
 
 #Total deaths and exposure time (months) by war type (Keep and explain why)
-png(file="Overall_plots/plot_files/War type deaths Americas 4.png")
+png(file="Overall_plots/plot_files/War_type_deaths_Americas_4.png")
 ggplot(IP, aes(TotalBDeathsU,WDuratDays,color=WarTypeD)) + geom_point()+facet_grid(~ Americas)+xlab('Total deaths (thousands)')+ylab('Total days of war')+scale_x_continuous(labels = seq(0, 50, 10))+ labs(color='War Type')
 dev.off()
 
@@ -83,7 +83,7 @@ dev.off()
 
 #Temporal plots
 
-png(file="Overall_plots/plot_files/Start year 5.png")
+png(file="Overall_plots/plot_files/Start_year_5.png")
  ggplot(IP, 
              aes(x = StartYr1, y = TotalBDeathsU,group=WarTypeD,color=WarTypeD)) +
   geom_point()+facet_grid(~Americas)+ylab('Total deaths')+xlab('Start year')+ labs(color='War Type')
@@ -115,7 +115,7 @@ p2= IP %>% filter(AbsDiffDeaths!=-374775)%>%{ggplot(.,aes(x = StartYr1, y =AbsDi
    geom_point()+facet_grid(~Americas)+ylab('Absolute Difference in initiator deaths')+xlab('Start year 1')+labs(color='War Type',caption = "Extreme values removed")}
  
  
-png(file="Overall_plots/plot_files/Abs 6.png")
+png(file="Overall_plots/plot_files/Abs_6.png")
 grid.arrange(p1, p2, nrow = 2)
 dev.off()
  
@@ -127,7 +127,7 @@ p4=IP %>% filter(RelDiffDeaths<.4)%>%{ggplot(.,aes(x = StartYr1, y =RelDiffDeath
     geom_point()+facet_grid(~Americas)+ylab('Relative Difference in initiator deaths')+xlab('Start year 1')+labs(color='War Type',caption = "Extreme values removed")}
 
 
-png(file="Overall_plots/plot_files/Rel 7.png")
+png(file="Overall_plots/plot_files/Rel_7.png")
 grid.arrange(p3, p4, nrow = 2)
 dev.off()
 
