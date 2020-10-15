@@ -3,7 +3,8 @@
 clean:
 	rm derived_data/*
 	rm Overall_plots/plot_files/*
-	rm Aim1_deaths/model_outputs/*       
+	rm Aim1_deaths/model_outputs/*
+	rm Aim2_out_clustering/Cluster_Files*       
 
 Report\ File/Project_1_report.pdf:\
  Report\ File/Project_1_report.Rmd\
@@ -25,8 +26,8 @@ Report\ File/Project_1_report.pdf:\
  Aim1_deaths/model_outputs/IntlnonImpTr1.rds\
  Aim1_deaths/model_outputs/IntlnonImpTr2.rds\
  Overall_plots/plot_files/Gap\ stat.png\
- Aim2_out_clustering/Aim2\ TSNE.png\
- Aim2_out_clustering/Aim2_out_clustering.RDS\
+ Aim2_out_clustering/Cluster_Files/Aim2\ TSNE.png\
+ Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS\
  Networks/Ov.png\
  Networks/Membership.png\
  Networks/Membership_consolidated.png
@@ -36,7 +37,7 @@ Report\ File/Project_1_report.pdf:\
 derived_data/Overall.csv:\
  source_data/INTRA-STATE\ WARS\ v5.1\ CSV.csv\
  derived_programs/Overall.R
-	Rscript Overall.R
+	Rscript derived_programs/Overall.R
 	
 derived_data/gower_dist.rds:\
  source_data/INTRA-STATE\ WARS\ v5.1\ CSV.csv\
@@ -69,65 +70,65 @@ derived_data/network.rds:\
 	
 Overall_plots/plot_files/Table1.rds:\
  derived_data/Overall.csv\
- derived_programs/Overall_plots.R
+ Overall_plots/Overall_plots.R
 	Rscript Overall_plots.R
 	
 Overall_plots/plot_files/Exposure\ time2.png:\
  derived_data/Overall.csv\
- derived_programs/Overall_plots.R
+ Overall_plots/Overall_plots.R
 	Rscript Overall_plots.R	
 	
 Overall_plots/plot_files/Battle\ deaths\ Both3.png:\
  derived_data/Overall.csv\
- derived_programs/Overall_plots.R
+ Overall_plots/Overall_plots.R
 	Rscript Overall_plots.R		
 	
 Overall_plots/plot_files/War\ type\ deaths\ Americas\ 4.png:\
  derived_data/Overall.csv\
- derived_programs/Overall_plots.R
+ Overall_plots/Overall_plots.R
 	Rscript Overall_plots.R	
 	
 Overall_plots/plot_files/Start\ year\ 5.png:\
  derived_data/Overall.csv\
- derived_programs/Overall_plots.R
+ Overall_plots/Overall_plots.R
 	Rscript Overall_plots.R	
 	
 Overall_plots/plot_files/Abs\ 6.png:\
  derived_data/Overall.csv\
- derived_programs/Overall_plots.R
+ Overall_plots/Overall_plots.R
 	Rscript Overall_plots.R	
 	
 Overall_plots/plot_files/Rel\ 7.png:\
  derived_data/Overall.csv\
- derived_programs/Overall_plots.R
+ Overall_plots/Overall_plots.R
 	Rscript Overall_plots.R	
 	
 Networks/Ov.png:\
  derived_data/International.csv\
- derived_programs/Network_aim3.R
+ Networks/Network_aim3.R
 	Rscript Network_aim3.R
 	
 Networks/Membership.png:\
  derived_data/International.csv\
- derived_programs/Network_aim3.R
+ Networks/Network_aim3.R
 	Rscript Network_aim3.R	
 	
 Networks/Membership_consolidated.png:\
  derived_data/International.csv\
- derived_programs/Network_aim3.R
+ Networks/Network_aim3.R
 	Rscript Network_aim3.R
 	
 	
 
-Aim2_out_clustering/Aim2\ TSNE.png:\
+Aim2_out_clustering/Cluster_Files/Aim2\ TSNE.png:\
  derived_data/Overall.csv\
- derived_programs/Outcome_Clustering.R
+ Aim2_out_clustering/Outcome_Clustering.R
 	Rscript Outcome_Clustering.R	
 	
 	
-Aim2_out_clustering/Aim2_out_clustering.RDS:\
+Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS:\
  derived_data/Overall.csv\
- derived_programs/Outcome_Clustering.R
+ Aim2_out_clustering/Outcome_Clustering.R
 	Rscript Outcome_Clustering.R
 	
 Aim1_deaths/model_outputs/nonImpSimp1.rds:\
