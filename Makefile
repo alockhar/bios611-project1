@@ -37,6 +37,8 @@ clean:
 	rm -f Aim2_out_clustering/Cluster_Files/*.png
 	rm -f Aim2_out_clustering/Cluster_Files/*.RDS
 	rm -f Networks/Network_Files/*.png
+	rm -f Report\ File/*.pdf
+	rm -f Report\ File/*.tex
 
 derived_data/Overall.csv\
  derived_data/gower_dist.rds\
