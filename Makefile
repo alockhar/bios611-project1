@@ -3,7 +3,8 @@
 clean:
 	rm derived_data/*
 	rm Overall_plots/plot_files/*
-       
+	rm Aim1_deaths/model_outputs/*       
+
 Report\ File/Project_1_report.pdf: Project_1_report.Rmd\
  Overall_plots/plot_files/Table1.RDS\
  Overall_plots/plot_files/Exposure\ time2.png\
@@ -12,16 +13,16 @@ Report\ File/Project_1_report.pdf: Project_1_report.Rmd\
  Overall_plots/plot_files/Start\ year\ 5.png\
  Overall_plots/plot_files/Abs\ 6.png\
  Overall_plots/plot_files/Rel\ 7.png\
- Aim1_deaths/nonImpSimp1.rds\
- Aim1_deaths/nonImpSimp2.rds\
- Aim1_deaths/nonImpTr1.rds\
- Aim1_deaths/nonImpTr2.rds\
- Aim1_deaths/ImpTr1.rds\
- Aim1_deaths/ImpTr2.rds\
- Aim1_deaths/IntlnonImpTr1.rds\
- Aim1_deaths/IntlnonImpTr2.rds\
- Aim1_deaths/IntlnonImpTr1.rds\
- Aim1_deaths/IntlnonImpTr2.rds\
+ Aim1_deaths/model_outputs/nonImpSimp1.rds\
+ Aim1_deaths/model_outputs/nonImpSimp2.rds\
+ Aim1_deaths/model_outputs/nonImpTr1.rds\
+ Aim1_deaths/model_outputs/nonImpTr2.rds\
+ Aim1_deaths/model1_outputs/ImpTr1.rds\
+ Aim1_deaths/model1_outputs/ImpTr2.rds\
+ Aim1_deaths/model1_outputs/IntlnonImpTr1.rds\
+ Aim1_deaths/model1_outputs/IntlnonImpTr2.rds\
+ Aim1_deaths/model1_outputs/IntlnonImpTr1.rds\
+ Aim1_deaths/model1_outputs/IntlnonImpTr2.rds\
  Overall_plots/plot_files/Gap\ stat.png\
  Aim2_out_clustering/Aim2\ TSNE.png\
  Aim2_out_clustering/Aim2_out_clustering.RDS\
@@ -128,57 +129,57 @@ Aim2_out_clustering/Aim2_out_clustering.RDS:\
  derived_programs/Outcome_Clustering.R
 	Rscript Outcome_Clustering.R
 	
-Aim1_deaths/nonImpSimp1.rds:\
+Aim1_deaths/model_outputs/nonImpSimp1.rds:\
  derived_data/Overall.csv\
  Aim1_deaths/Domestic_No_time
 	Rscript Domestic_No_time.R
 	
-Aim1_deaths/nonImpSimp2.rds:\
+Aim1_deaths/model_outputs/nonImpSimp2.rds:\
  derived_data/Overall.csv\
  Aim1_deaths/Domestic_No_time.R
 	Rscript Domestic_No_time.R	
 	
-Aim1_deaths/nonImpTr1.rds:\
+Aim1_deaths/model_outputs/nonImpTr1.rds:\
  derived_data/Overall.csv\
  Aim1_deaths/Domestic_No_time.R
 	Rscript Domestic_No_time.R
 	
-Aim1_deaths/nonImpTr2.rds:\
+Aim1_deaths/model_outputs/nonImpTr2.rds:\
  derived_data/Overall.csv\
  Aim1_deaths/Domestic_No_time.R
 	Rscript Domestic_No_time.R
 	
-Aim1_deaths/ImpTr1.rds:\
+Aim1_deaths/model_outputs/ImpTr1.rds:\
  derived_data/Overall.csv\
  Aim1_deaths/Domestic_No_time.R
 	Rscript Domestic_No_time.R	
 	
-Aim1_deaths/ImpTr2.rds:\
+Aim1_deaths/model_outputs/ImpTr2.rds:\
  derived_data/Overall.csv\
  Aim1_deaths/Domestic_No_time.R
 	Rscript Domestic_No_time.R
 	
-Aim1_deaths/ImpTr1.rds:\
+Aim1_deaths/model_outputs/ImpTr1.rds:\
  derived_data/Overall.csv\
  Aim1_deaths/Domestic_No_time.R
 	Rscript Domestic_No_time.R	
 	
-Aim1_deaths/IntlnonImpTr1.rds:\
+Aim1_deaths/model_outputs/IntlnonImpTr1.rds:\
  derived_data/International.csv\
  Aim1_deaths/International_No_time.R
 	Rscript International_No_time.R
 
-Aim1_deaths/IntlnonImpTr2.rds:\
+Aim1_deaths/model_outputs/IntlnonImpTr2.rds:\
  derived_data/International.csv\
  Aim1_deaths/International_No_time.R
 	Rscript International_No_time.R
 	
-Aim1_deaths/IntlImpTr1.rds:\
+Aim1_deaths/model_outputs/IntlImpTr1.rds:\
  derived_data/International.csv\
  Aim1_deaths/International_No_time.R
 	Rscript International_No_time.R
 
-Aim1_deaths/IntlImpTr2.rds:\
+Aim1_deaths/model_outputs/IntlImpTr2.rds:\
  derived_data/International.csv\
  Aim1_deaths/International_No_time.R
 	Rscript International_No_time.R
