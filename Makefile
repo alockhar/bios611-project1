@@ -65,15 +65,12 @@ derived_data/International_Long.csv:\
  derived_programs/International_Long.R
 	Rscript International_Long.R
 	
-
-	
-	
 derived_data/network.rds:\
  derived_data/International.csv\
  derived_programs/Network.R
 	Rscript Network.R
 	
-	
+
 Overall_plots/plot_files/Table1.rds\
  Overall_plots/plot_files/Exposure_time2.png\
  Overall_plots/plot_files/Battle_deaths_Both3.png\
@@ -115,10 +112,10 @@ Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS:\
 	
 Aim1_deaths/model_outputs/nonImpSimp1.rds\
  Aim1_deaths/model_outputs/nonImpSimp2.rds\
-Aim1_deaths/model_outputs/nonImpTr1.rds\ 
-Aim1_deaths/model_outputs/nonImpTr2.rds\
-Aim1_deaths/model_outputs/ImpTr1.rds\
-Aim1_deaths/model_outputs/ImpTr2.rds:\
+ Aim1_deaths/model_outputs/nonImpTr1.rds\ 
+ Aim1_deaths/model_outputs/nonImpTr2.rds\
+ Aim1_deaths/model_outputs/ImpTr1.rds\
+ Aim1_deaths/model_outputs/ImpTr2.rds:\
  derived_data/Overall.csv\
  Aim1_deaths/Domestic_No_time.R
 	Rscript Aim1_deaths/Domestic_No_time.R
