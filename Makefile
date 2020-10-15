@@ -83,7 +83,7 @@ Overall_plots/plot_files/Table1.rds\
  Overall_plots/plot_files/Rel_7.png:\
  derived_data/Overall.csv\
  Overall_plots/Overall_plots.R
-	Rscript Overall_plots.R
+	Rscript Overall_plots/Overall_plots.R
 	
 Networks/Network_Files/Ov.png:\
  derived_data/International.csv\
