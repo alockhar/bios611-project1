@@ -13,7 +13,7 @@ tsne_data <- tsne_obj$Y %>%
   setNames(c("X", "Y")) %>%
   mutate(cluster = factor(IP$cluster))
 
-png(file="Aim2_out_clustering/Cluster_Files/Aim2 TSNE.png")
+png(file="Aim2_out_clustering/Cluster_Files/Aim2_TSNE.png")
 ggplot(aes(x = X, y = Y), data = tsne_data) +
   geom_point(aes(color = cluster))
 dev.off()
