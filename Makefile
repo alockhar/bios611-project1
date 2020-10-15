@@ -113,41 +113,16 @@ Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS:\
  Aim2_out_clustering/Outcome_Clustering.R
 	Rscript Outcome_Clustering.R
 	
-Aim1_deaths/model_outputs/nonImpSimp1.rds:\
- derived_data/Overall.csv\
- Aim1_deaths/Domestic_No_time.R
-	Rscript Domestic_No_time.R
-	
-Aim1_deaths/model_outputs/nonImpSimp2.rds:\
- derived_data/Overall.csv\
- Aim1_deaths/Domestic_No_time.R
-	Rscript Domestic_No_time.R	
-	
-Aim1_deaths/model_outputs/nonImpTr1.rds:\
- derived_data/Overall.csv\
- Aim1_deaths/Domestic_No_time.R
-	Rscript Domestic_No_time.R
-	
-Aim1_deaths/model_outputs/nonImpTr2.rds:\
- derived_data/Overall.csv\
- Aim1_deaths/Domestic_No_time.R
-	Rscript Domestic_No_time.R
-	
-Aim1_deaths/model_outputs/ImpTr1.rds:\
- derived_data/Overall.csv\
- Aim1_deaths/Domestic_No_time.R
-	Rscript Domestic_No_time.R	
-	
+Aim1_deaths/model_outputs/nonImpSimp1.rds\
+ Aim1_deaths/model_outputs/nonImpSimp2.rds\
+Aim1_deaths/model_outputs/nonImpTr1.rds\ 
+Aim1_deaths/model_outputs/nonImpTr2.rds\
+Aim1_deaths/model_outputs/ImpTr1.rds\
 Aim1_deaths/model_outputs/ImpTr2.rds:\
  derived_data/Overall.csv\
  Aim1_deaths/Domestic_No_time.R
-	Rscript Domestic_No_time.R
-	
-Aim1_deaths/model_outputs/ImpTr1.rds:\
- derived_data/Overall.csv\
- Aim1_deaths/Domestic_No_time.R
-	Rscript Domestic_No_time.R	
-	
+	Rscript Aim1_deaths/Domestic_No_time.R
+
 Aim1_deaths/model_outputs/IntlnonImpTr1.rds:\
  derived_data/International.csv\
  Aim1_deaths/International_No_time.R
