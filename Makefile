@@ -5,6 +5,7 @@ clean:
 	rm Overall_plots/plot_files/*
 	rm Aim1_deaths/model_outputs/*
 	rm Aim2_out_clustering/Cluster_Files*       
+	rm Networks/Network_Files/*
 
 Report\ File/Project_1_report.pdf:\
  Report\ File/Project_1_report.Rmd\
@@ -28,9 +29,9 @@ Report\ File/Project_1_report.pdf:\
  Overall_plots/plot_files/Gap\ stat.png\
  Aim2_out_clustering/Cluster_Files/Aim2\ TSNE.png\
  Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS\
- Networks/Ov.png\
- Networks/Membership.png\
- Networks/Membership_consolidated.png
+ Networks/Network_Files/Ov.png\
+ Networks/Network_Files/Membership.png\
+ Networks/Network_Files/Membership_consolidated.png
 	R -e "rmarkdown::render('Project_1_report.Rmd')"
  
 
@@ -103,17 +104,17 @@ Overall_plots/plot_files/Rel\ 7.png:\
  Overall_plots/Overall_plots.R
 	Rscript Overall_plots.R	
 	
-Networks/Ov.png:\
+Networks/Network_Files/Ov.png:\
  derived_data/International.csv\
  Networks/Network_aim3.R
 	Rscript Network_aim3.R
 	
-Networks/Membership.png:\
+Networks/Network_Files/Membership.png:\
  derived_data/International.csv\
  Networks/Network_aim3.R
 	Rscript Network_aim3.R	
 	
-Networks/Membership_consolidated.png:\
+Networks/Network_Files/Membership_consolidated.png:\
  derived_data/International.csv\
  Networks/Network_aim3.R
 	Rscript Network_aim3.R
