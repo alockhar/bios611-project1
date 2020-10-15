@@ -118,9 +118,9 @@ Aim1_deaths/model_outputs/nonImpSimp1.rds\
 	Rscript Aim1_deaths/Domestic_No_time.R
 
 Aim1_deaths/model_outputs/IntlnonImpTr1.rds\
-Aim1_deaths/model_outputs/IntlnonImpTr2.rds\
-Aim1_deaths/model_outputs/IntlImpTr1.rds\
-Aim1_deaths/model_outputs/IntlImpTr2.rds:\ 
+ Aim1_deaths/model_outputs/IntlnonImpTr2.rds\
+ Aim1_deaths/model_outputs/IntlImpTr1.rds\
+ Aim1_deaths/model_outputs/IntlImpTr2.rds:\ 
  derived_data/International.csv\
  Aim1_deaths/International_No_time.R
 	Rscript International_No_time.R
