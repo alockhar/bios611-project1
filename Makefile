@@ -26,7 +26,7 @@ Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS\
 Networks/Network_Files/Ov.png\
 Networks/Network_Files/Membership.png\
 Networks/Network_Files/Membership_consolidated.png
-	R -e "rmarkdown::render('Project_1_report.Rmd')"
+	R -e "rmarkdown::render('Report\ File/Project_1_report.Rmd')"
 
 clean:
 	rm -f derived_data/*.rds
