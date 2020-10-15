@@ -107,12 +107,12 @@ dev.off()
 
 p1= ggplot(IP, 
              aes(x = StartYr1, y =AbsDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
-  geom_point()+facet_grid(~Americas)+ylab('Absolute Difference in initiator deaths')+xlab('Start year 1')
+  geom_point()+facet_grid(~Americas)+ylab('Absolute Difference in initiator deaths')+xlab('Start year 1')+labs(color='War Type')
 
 
 
 p2= IP %>% filter(AbsDiffDeaths!=-374775)%>%{ggplot(.,aes(x = StartYr1, y =AbsDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
-   geom_point()+facet_grid(~Americas)+ylab('Absolute Difference in initiator deaths')+xlab('Start year 1')+labs(caption = "Extreme values removed"))}
+   geom_point()+facet_grid(~Americas)+ylab('Absolute Difference in initiator deaths')+xlab('Start year 1')+labs(color='War Type',caption = "Extreme values removed")}
  
  
 png(file="Overall_plots/plot_files/Abs 6.png")
@@ -121,10 +121,10 @@ dev.off()
  
 p3 =ggplot(IP, 
              aes(x = StartYr1, y =RelDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
-  geom_point()+facet_grid(~Americas)+ylab('Relative Difference in initiator deaths')+xlab('Start year 1')
+  geom_point()+facet_grid(~Americas)+ylab('Relative Difference in initiator deaths')+xlab('Start year 1')+labs(color='War Type')
 
 p4=IP %>% filter(RelDiffDeaths<.4)%>%{ggplot(.,aes(x = StartYr1, y =RelDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
-    geom_point()+facet_grid(~Americas)+ylab('Relative Difference in initiator deaths')+xlab('Start year 1')}
+    geom_point()+facet_grid(~Americas)+ylab('Relative Difference in initiator deaths')+xlab('Start year 1')+labs(color='War Type',caption = "Extreme values removed")}
 
 
 png(file="Overall_plots/plot_files/Rel 7.png")
