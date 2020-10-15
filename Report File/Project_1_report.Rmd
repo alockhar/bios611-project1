@@ -72,10 +72,10 @@ createTable(T1,show.p.overall=FALSE)
 The below plots show the proportion of total wars that originated in Americas and Not in the Americas. Not surprisingly the total N (for both plots) is much greater (table 1 above) for the not in Americas wars, the distributions of war exposure and duration are roughly very similar in the past 200 years.
 
 ```{r , echo=FALSE}
-img<-readPNG('/home/rstudio/Overall_plots/plot_files/Exposure time2.png')
+img<-readPNG('/home/rstudio/Overall_plots/plot_files/Exposure_time2.png')
 
 
-knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Exposure time2.png")
+knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Exposure_time2.png")
 
 ```
 
@@ -84,7 +84,7 @@ The below shows the distribution of deaths in the number of deaths by war type a
 
 ```{r , echo=FALSE}
 
-knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Battle deaths Both3.png")
+knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Battle_deaths_Both3.png")
 
 ```
 
@@ -94,7 +94,7 @@ Adding the component of total war exposure it was also not surprising to see lar
 
 ```{r , echo=FALSE}
 
-knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/War type deaths Americas 4.png")
+knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/War_type_deaths_Americas_4.png")
 
 ```
 
@@ -103,7 +103,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/War type deaths 
 A plot looking at deaths based on war start year.  From 1900s onwards the civil war for central control seemed to be most prevalent in the Americas while diversity of war type was prevalent across the 200 year period in the non-Americas group.  As mentioned in the time to curation in table 1, the not in americas conflicts appear to have a considerable more set of curated conflicts in the latter half of the 20th century relative to conflicts in the Americas.  Maybe one opinion is the military hegemony in this hemisphere by the United States to sort of dominate a lot of conflict for this hemisphere post WW-II in comparison to the rest of the world. There does not appear to be a linearly increasing or decreasing trend in deaths based on time of war and war conflict in either group.
 ```{r , echo=FALSE}
 
-knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Start year 5.png")
+knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Start_year_5.png")
 
 ```
 
@@ -112,7 +112,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Start year 5.png
 Defined as the initiator deaths-recipient deaths, once several influential points (not outliers) were removed one can see a large proportion of initiator deaths more in the negatives from the 1900s onwards in the not in Americas group. Maybe this relates to some sort of potential increased ability in war recipients being able to foresee or address conflict.  Maybe it could be greater familiarity with a 'home' area in response somehow.
 ```{r, echo=FALSE}
 
-knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Abs 6.png")
+knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Abs_6.png")
 
 ```
 
@@ -121,7 +121,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Abs 6.png")
 This metric was more complicated defined as:abs(InitiatorDeaths-RecipientDeaths)/max(abs(RecipientDeaths),abs(InitiatorDeaths)) the initiator deaths-recipient deaths, once several influential points (not outliers) were removed visually show a larger proportion of deaths among the initiators from the 1900s onwards.
 ```{r , echo=FALSE}
 
-knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Rel 7.png")
+knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Rel_7.png")
 
 ```
 
@@ -191,15 +191,15 @@ Aim 3 was multi-fold: to cluster wartype, the Americas indicator variable, time 
 
 Below shows the top 2 TSNE dimensions by cluster and showing distinct separation throughout.
 ```{r , echo=FALSE}
-knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Gap stat.png")
-knitr::include_graphics("/home/rstudio/Aim2_out_clustering/Aim2 TSNE.png")
+knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Gap_stat.png")
+knitr::include_graphics("/home/rstudio/Aim2_out_clustering/Cluster_Files/Aim2_TSNE.png")
 ```
 
 #Overall clustering by variables
 
 As described above the four clusters showed a distince pattern across the variables in their construction. Clearly defined Americas (cluster 1), and non-Americas clusters were shown (2 through 4) which looked very interesting albeit a little fishy.  The largest proportion of those where the recipient won was in the Americas cluster.  Otherwise stalemates, compromises, etc. were the largest in all three of the specific clusters.  Cluster 3 could be established as the highest difference in deaths for the initiator for some reason.  Cluster 3 could also be seen to have the most modern (time since curation of 1814) conflict cluster with an average starting time of conflicts ranging from the late 1950s.</br>
 ```{r , echo=FALSE}
-T1=readRDS('/home/rstudio/Aim2_out_clustering/Aim2_out_clustering.RDS')
+T1=readRDS('/home/rstudio/Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS')
 
 createTable(T1,show.p.overall=FALSE)
 ```
@@ -213,9 +213,9 @@ The first overall network plot shows all the wars together and their post member
 </br>
 ```{r , echo=FALSE}
 
-knitr::include_graphics("/home/rstudio/Networks/Ov.png")
-knitr::include_graphics("/home/rstudio/Networks/Membership.png")
-knitr::include_graphics("/home/rstudio/Networks/Membership_consolidated.png")
+knitr::include_graphics("/home/rstudio/Networks/Network_Files/Ov.png")
+knitr::include_graphics("/home/rstudio/Networks/Network_Files/Membership.png")
+knitr::include_graphics("/home/rstudio/Networks/Network_Files/Membership_consolidated.png")
 
 
 ```
