@@ -55,8 +55,8 @@ df2=df2%>%
   mutate_all(as.character)
 
 
-saveRDS(df1,"Aim1_deaths/nonImpSimp1.rds")
-saveRDS(df2,"Aim1_deaths/nonImpSimp2.rds")
+saveRDS(df1,"Aim1_deaths/model_outputs/nonImpSimp1.rds")
+saveRDS(df2,"Aim1_deaths/model_outputs/nonImpSimp2.rds")
 
 #Create partition with seed
 
@@ -135,8 +135,8 @@ df2=df2%>%
 
 
 
-saveRDS(df1,"Aim1_deaths/nonImpTr1.rds")
-saveRDS(df2,"Aim1_deaths/nonImpTr2.rds")
+saveRDS(df1,"Aim1_deaths/model_outputs/nonImpTr1.rds")
+saveRDS(df2,"Aim1_deaths/model_outputs/nonImpTr2.rds")
 
 
 
@@ -227,8 +227,8 @@ df2=df2%>%
   mutate_all(as.character)
 
 
-saveRDS(df1,"Aim1_deaths/ImpTr1.rds")
-saveRDS(df2,"Aim1_deaths/ImpTr2.rds")
+saveRDS(df1,"Aim1_deaths/model_outputs/ImpTr1.rds")
+saveRDS(df2,"Aim1_deaths/model_outputs/ImpTr2.rds")
 
 
 

@@ -122,8 +122,8 @@ df2=df2%>%
   mutate_all(as.character)
 
 
-saveRDS(df1,"Aim1_deaths/IntlnonImpTr1.rds")
-saveRDS(df2,"Aim1_deaths/IntlnonImpTr2.rds")
+saveRDS(df1,"Aim1_deaths/model_outputs/IntlnonImpTr1.rds")
+saveRDS(df2,"Aim1_deaths/model_outputs/IntlnonImpTr2.rds")
 
 
 
@@ -223,8 +223,8 @@ df2=df2%>%
   mutate_all(as.character)
 
 
-saveRDS(df1,"Aim1_deaths/IntlImpTr1.rds")
-saveRDS(df2,"Aim1_deaths/IntlImpTr2.rds")
+saveRDS(df1,"Aim1_deaths/model_outputs/IntlImpTr1.rds")
+saveRDS(df2,"Aim1_deaths/model_outputs/IntlImpTr2.rds")
 
 
 
