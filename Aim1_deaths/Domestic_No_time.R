@@ -5,8 +5,14 @@
 
 #Discuss missingness and potential imputation
 ######################################################################
-
-
+library(dplyr)
+library(mice)
+library(cluster)
+library(Rtsne)
+library(tidyverse)
+library(lubridate)
+library(igraph)
+library(RColorBrewer)
 library(caret)
 
 IP=read_csv("derived_data/Overall.csv");
@@ -127,7 +133,7 @@ df2=df2%>%
 
 
 
-ggplot(plot1DF,aes(y=))
+
 
 saveRDS(df1,"Aim1_deaths/nonImpTr1.rds")
 saveRDS(df2,"Aim1_deaths/nonImpTr2.rds")
@@ -185,22 +191,6 @@ ps1=postResample(pred = mod1_pred, obs = mod1_te$AbsDiffDeaths)
 tab1=summary(rpartFit1)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#rel
 
 set.seed(7279)
 
