@@ -96,14 +96,11 @@ Networks/Network_Files/Membership_consolidated.png:\
  derived_data/International.csv\
  Networks/Network_aim3.R
 	Rscript Network_aim3.R
-	
-	
 
 Aim2_out_clustering/Cluster_Files/Aim2\ TSNE.png:\
  derived_data/Overall.csv\
  Aim2_out_clustering/Outcome_Clustering.R
 	Rscript Outcome_Clustering.R	
-	
 	
 Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS:\
  derived_data/Overall.csv\
@@ -120,25 +117,14 @@ Aim1_deaths/model_outputs/nonImpSimp1.rds\
  Aim1_deaths/Domestic_No_time.R
 	Rscript Aim1_deaths/Domestic_No_time.R
 
-Aim1_deaths/model_outputs/IntlnonImpTr1.rds:\
+Aim1_deaths/model_outputs/IntlnonImpTr1.rds\
+Aim1_deaths/model_outputs/IntlnonImpTr2.rds\
+Aim1_deaths/model_outputs/IntlImpTr1.rds\
+Aim1_deaths/model_outputs/IntlImpTr2.rds:\ 
  derived_data/International.csv\
  Aim1_deaths/International_No_time.R
 	Rscript International_No_time.R
 
-Aim1_deaths/model_outputs/IntlnonImpTr2.rds:\
- derived_data/International.csv\
- Aim1_deaths/International_No_time.R
-	Rscript International_No_time.R
-	
-Aim1_deaths/model_outputs/IntlImpTr1.rds:\
- derived_data/International.csv\
- Aim1_deaths/International_No_time.R
-	Rscript International_No_time.R
-
-Aim1_deaths/model_outputs/IntlImpTr2.rds:\
- derived_data/International.csv\
- Aim1_deaths/International_No_time.R
-	Rscript International_No_time.R
 			
 		
 	
