@@ -74,40 +74,16 @@ derived_data/network.rds:\
 	Rscript Network.R
 	
 	
-Overall_plots/plot_files/Table1.rds:\
+Overall_plots/plot_files/Table1.rds\
+ Overall_plots/plot_files/Exposure_time2.png\
+ Overall_plots/plot_files/Battle_deaths_Both3.png\
+ Overall_plots/plot_files/War_type_deaths_Americas_4.png\
+ Overall_plots/plot_files/Start_year_5.png\
+ Overall_plots/plot_files/Abs_6.png\
+ Overall_plots/plot_files/Rel_7.png:\
  derived_data/Overall.csv\
  Overall_plots/Overall_plots.R
 	Rscript Overall_plots.R
-	
-Overall_plots/plot_files/Exposure_time2.png:\
- derived_data/Overall.csv\
- Overall_plots/Overall_plots.R
-	Rscript Overall_plots.R	
-	
-Overall_plots/plot_files/Battle_deaths_Both3.png:\
- derived_data/Overall.csv\
- Overall_plots/Overall_plots.R
-	Rscript Overall_plots.R		
-	
-Overall_plots/plot_files/War_type_deaths_Americas_4.png:\
- derived_data/Overall.csv\
- Overall_plots/Overall_plots.R
-	Rscript Overall_plots.R	
-	
-Overall_plots/plot_files/Start_year_5.png:\
- derived_data/Overall.csv\
- Overall_plots/Overall_plots.R
-	Rscript Overall_plots.R	
-	
-Overall_plots/plot_files/Abs_6.png:\
- derived_data/Overall.csv\
- Overall_plots/Overall_plots.R
-	Rscript Overall_plots.R	
-	
-Overall_plots/plot_files/Rel_7.png:\
- derived_data/Overall.csv\
- Overall_plots/Overall_plots.R
-	Rscript Overall_plots.R	
 	
 Networks/Network_Files/Ov.png:\
  derived_data/International.csv\
