@@ -26,7 +26,7 @@ Report\ File/Project_1_report.pdf:\
  Networks/Network_Files/Ov.png\
  Networks/Network_Files/Membership.png\
  Networks/Network_Files/Membership_consolidated.png
-	R -e "rmarkdown::render('Report\ File/Project_1_report.Rmd')"
+	Rscript -e "rmarkdown::render('Report\ File/Project_1_report.Rmd')"
 
 clean:
 	rm -f derived_data/*.rds
@@ -39,6 +39,7 @@ clean:
 	rm -f Networks/Network_Files/*.png
 	rm -f Report\ File/*.pdf
 	rm -f Report\ File/*.tex
+
 
 derived_data/Overall.csv\
  derived_data/gower_dist.rds\
