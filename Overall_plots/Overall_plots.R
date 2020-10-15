@@ -4,6 +4,16 @@ IP2=read_csv("derived_data/Overall_Long.csv");
 library(compareGroups)
 library(Hmisc)
 library(gridExtra)
+library(dplyr)
+library(mice)
+library(cluster)
+library(Rtsne)
+library(tidyverse)
+library(lubridate)
+library(igraph)
+library(RColorBrewer)
+library(caret)
+library(scales)
 #Look at overall attributes by Americas indicator in table
 #Table 1 object
 
@@ -21,7 +31,7 @@ label(IP$StartYR_Norm)="Time since first curation  (years)"
 
 resu2 <- compareGroups(Americas ~ WarTypeC +WDuratDays+InitiatorDeaths+RecipientDeaths+RelDiffDeaths+AbsDiffDeaths+StartYR_Norm+OutcomeC+TotalBDeaths+Intnl+OutcomeE , data = IP, 
                        method=c(WarTypeC=3,OutcomeC=3,OutcomeE=3), Q1 = 0.025, Q3 = 0.975)
-createTable(resu2)
+createTable(resu2,show.p.overall=FALSE)
 saveRDS(resu2,'Overall_plots/plot_files/Table1.RDS')
 
 
@@ -29,9 +39,17 @@ saveRDS(resu2,'Overall_plots/plot_files/Table1.RDS')
 
 #Total exposure time (days) 
 png(file="Overall_plots/plot_files/Exposure time2.png")
-ggplot(IP, aes(x = WDuratDays)) +  
-  geom_histogram(aes(y = (..count..)/sum(..count..))) + ylab('Proportion of wars')+xlab('Duration of war (days)')+facet_grid(~ Americas)
+grp_plots <- by(IP, IP$Americas, function(sub){
+  ggplot(sub, aes(WDuratDays)) + 
+    geom_histogram(aes(y = (..count..)/sum(..count..))) + ggtitle(sub$Americas[[1]]) +
+    theme(plot.title = element_text(hjust = 0.5))+xlab('Total days of war')+ylab('Proportion of total wars by Americas group')
+})
+grid.arrange(grobs = grp_plots, ncol=2)
 dev.off()
+
+
+#ggplot(IP, aes(x = WDuratDays)) +  
+ # geom_histogram(aes(y = (..count..)/sum(..count..))) + ylab('Proportion of wars')+xlab('Duration of war (days)')+facet_grid(~ Americas)+theme_bw()
 
 #Total number of battle-related deaths both sides (Keep and explain why)
 #png(file="Overall_plots/plot_files/Battle deaths Both.png")
@@ -43,13 +61,15 @@ dev.off()
 
 #Total deaths by Americas facet grid (Keep and explain why)
 png(file="Overall_plots/plot_files/Battle deaths Both3.png")
-ggplot(IP,aes(y=TotalBDeathsU,x=Americas))+geom_boxplot()+ylab('Upper limit greater than 50000 set to 50000 deaths')+facet_grid(~ WarTypeD)
+ggplot(IP,aes(y=TotalBDeathsU,x=Americas))+geom_boxplot()+labs(title = "Number of deaths by wartype and Americas indicator",
+       caption = "Any wars greater than 50000 deaths set to 50000")+
+  theme(plot.title = element_text(hjust = 0.5))+facet_grid(~WarTypeD)+ylab('Number of deaths')
 dev.off()
 
 
 #Total deaths and exposure time (months) by war type (Keep and explain why)
 png(file="Overall_plots/plot_files/War type deaths Americas 4.png")
-ggplot(IP, aes(TotalBDeathsU,WDuratDays)) + geom_point(aes(color=WarTypeD))+facet_grid(~ Americas)+xlab('Total deaths')+ylab('Total days of war')
+ggplot(IP, aes(TotalBDeathsU,WDuratDays,color=WarTypeD)) + geom_point()+facet_grid(~ Americas)+xlab('Total deaths (thousands)')+ylab('Total days of war')+scale_x_continuous(labels = seq(0, 50, 10))+ labs(color='War Type')
 dev.off()
 
 
@@ -66,18 +86,8 @@ dev.off()
 png(file="Overall_plots/plot_files/Start year 5.png")
  ggplot(IP, 
              aes(x = StartYr1, y = TotalBDeathsU,group=WarTypeD,color=WarTypeD)) +
-  geom_point()+facet_grid(~Americas)
+  geom_point()+facet_grid(~Americas)+ylab('Total deaths')+xlab('Start year')+ labs(color='War Type')
 dev.off()
-
-# p3 <- ggplot(IP, 
-#              aes(x = StartYR_Norm, y = TotalBDeathsU,group=WarTypeD,color=WarTypeD)) +
-#   geom_point()+facet_grid(~Americas)
-# 
-# p3
-
-
-
-
 
 
 #Take a look at number of wars that transferred to another war (maybe show)
@@ -102,7 +112,7 @@ p1= ggplot(IP,
 
 
 p2= IP %>% filter(AbsDiffDeaths!=-374775)%>%{ggplot(.,aes(x = StartYr1, y =AbsDiffDeaths ,group=OutcomeD,color=WarTypeD)) +
-   geom_point()+facet_grid(~Americas)+ylab('Absolute Difference in initiator deaths')+xlab('Start year 1')}
+   geom_point()+facet_grid(~Americas)+ylab('Absolute Difference in initiator deaths')+xlab('Start year 1')+labs(caption = "Extreme values removed"))}
  
  
 png(file="Overall_plots/plot_files/Abs 6.png")
