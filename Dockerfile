@@ -6,6 +6,7 @@ RUN R -e "install.packages('tidyverse')"
 RUN R -e "install.packages('mice')"
 RUN R -e "install.packages('cluster')"
 RUN R -e "install.packages('Rtsne')"
+RUN R -e "install.packages('lubridate')"
 
 
 RUN R -e "install.packages('compareGroups')"
