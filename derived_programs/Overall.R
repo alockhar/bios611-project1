@@ -93,7 +93,7 @@ IP[which(gower_mat == max(gower_mat[gower_mat != max(gower_mat)]), arr.ind = TRU
 set.seed(1492)
 results <- clusGap(gower_mat, kmeans,K.max = 5, B = 50)
 
-png(file="Overall_plots/plot_files/Gap stat.png")
+png(file="Overall_plots/plot_files/Gap_stat.png")
 ggplot(results$Tab %>% as_tibble() %>% mutate(k=seq(nrow(.))), aes(k,gap)) + geom_line()
 dev.off()
 
