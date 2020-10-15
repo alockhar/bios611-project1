@@ -2,7 +2,7 @@
 
 clean:
 	rm derived_data/*
-        rm Overall_plots/plot_files/*
+	rm Overall_plots/plot_files/*
        
 Report\ File/Project_1_report.pdf: Project_1_report.Rmd\
  Overall_plots/plot_files/Table1.RDS\
