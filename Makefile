@@ -17,12 +17,12 @@ Report\ File/Project_1_report.pdf: Project_1_report.Rmd\
  Aim1_deaths/model_outputs/nonImpSimp2.rds\
  Aim1_deaths/model_outputs/nonImpTr1.rds\
  Aim1_deaths/model_outputs/nonImpTr2.rds\
- Aim1_deaths/model1_outputs/ImpTr1.rds\
- Aim1_deaths/model1_outputs/ImpTr2.rds\
- Aim1_deaths/model1_outputs/IntlnonImpTr1.rds\
- Aim1_deaths/model1_outputs/IntlnonImpTr2.rds\
- Aim1_deaths/model1_outputs/IntlnonImpTr1.rds\
- Aim1_deaths/model1_outputs/IntlnonImpTr2.rds\
+ Aim1_deaths/model_outputs/ImpTr1.rds\
+ Aim1_deaths/model_outputs/ImpTr2.rds\
+ Aim1_deaths/model_outputs/IntlnonImpTr1.rds\
+ Aim1_deaths/model_outputs/IntlnonImpTr2.rds\
+ Aim1_deaths/model_outputs/IntlnonImpTr1.rds\
+ Aim1_deaths/model_outputs/IntlnonImpTr2.rds\
  Overall_plots/plot_files/Gap\ stat.png\
  Aim2_out_clustering/Aim2\ TSNE.png\
  Aim2_out_clustering/Aim2_out_clustering.RDS\
