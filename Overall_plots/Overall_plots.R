@@ -1,5 +1,4 @@
-IP=read_csv("derived_data/Overall.csv");
-IP2=read_csv("derived_data/Overall_Long.csv");
+
 
 library(compareGroups)
 library(Hmisc)
@@ -14,6 +13,11 @@ library(igraph)
 library(RColorBrewer)
 library(caret)
 library(scales)
+
+
+
+IP=read_csv("derived_data/Overall.csv");
+IP2=read_csv("derived_data/Overall_Long.csv");
 #Look at overall attributes by Americas indicator in table
 #Table 1 object
 
