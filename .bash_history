@@ -40,3 +40,5 @@ make Overall_lots/plot_files/Gap_stat/png
 make Overall_plots/plot_files/Gap_stat/png
 make derived_data/gower_dist.rds
 make Report\ File/Project_1_report.pdf
+make clean all
+make Report\ File/Project_1_report.pdf
