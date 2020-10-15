@@ -2,7 +2,14 @@
 #Program to create initial network data structure for aim 3
 ######################
 
+library(dplyr)
+library(mice)
+library(cluster)
+library(Rtsne)
+library(tidyverse)
+library(lubridate)
 library(igraph)
+library(RColorBrewer)
 
 network_l=read_csv("derived_data/International.csv");
 
@@ -57,8 +64,7 @@ edges2=select(edges, from, to, weight,Americas,Intnl, WarTypeD, StartYR_Norm,Ini
 
 #detach(package:network)
 #rm(routes_network)
-library(igraph)
-library(RColorBrewer)
+
 
 war_igraph <- graph_from_data_frame(d = edges2, vertices = nodes, directed = TRUE)
 
