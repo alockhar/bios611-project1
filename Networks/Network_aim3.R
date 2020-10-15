@@ -10,13 +10,13 @@ FG=walktrap.community(war_igraph)
 #dendPlot(FG, mode="hclust")
 
 
-png(file="Networks/Ov.png")
+png(file="Networks/Network_Files/Ov.png")
 plot(FG,war_igraph,layout=layout.fruchterman.reingold, main="Overall walktrap community detection network\n based on relative difference of initiator and recipient deaths", vertex.label=NA)
 dev.off()
 
 #Sort by decreasing membership
 meb_tab=sort(table(FG$membership), decreasing=TRUE) 
-png(file="Networks/Membership.png")
+png(file="Networks/Network_Files/Membership.png")
 plot(meb_tab,ylab='Frequency of community membership',xlab='Community')
 dev.off()
 
@@ -25,7 +25,7 @@ FG$membership_cons=ifelse(FG$membership==72,1,ifelse(FG$membership==36,2,ifelse(
 V(war_igraph)$community <- FG$membership_cons
 colrs <- adjustcolor( c("gray50", "tomato", "gold", "yellowgreen"), alpha=.6)
 
-png(file="Networks/Membership_consolidated.png")
+png(file="Networks/Network_Files/Membership_consolidated.png")
 plot(war_igraph , vertex.color=colrs[V(war_igraph)$community],layout=layout.fruchterman.reingold, main="Overall walktrap community detection network\n based on relative difference of initiator and recipient deaths\n colored by top 3 membership groups", vertex.label=NA)
 
 legend(x=-1.5, y=-1.1, c("1st","2nd", "3rd","Other"), pch=21,
