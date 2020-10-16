@@ -17,7 +17,7 @@ library(scales)
 
 
 IP=read_csv("derived_data/Overall.csv");
-IP2=read_csv("derived_data/Overall_Long.csv");
+#IP2=read_csv("derived_data/Overall_Long.csv");
 #Look at overall attributes by Americas indicator in table
 #Table 1 object
 
@@ -36,7 +36,7 @@ label(IP$StartYR_Norm)="Time since first curation  (years)"
 resu2 <- compareGroups(Americas ~ WarTypeC +WDuratDays+InitiatorDeaths+RecipientDeaths+RelDiffDeaths+AbsDiffDeaths+StartYR_Norm+OutcomeC+TotalBDeaths+Intnl+OutcomeE , data = IP, 
                        method=c(WarTypeC=3,OutcomeC=3,OutcomeE=3), Q1 = 0.025, Q3 = 0.975)
 createTable(resu2,show.p.overall=FALSE)
-saveRDS(resu2,'Overall_plots/plot_files/Table1.RDS')
+saveRDS(resu2,'Overall_plots/plot_files/Table1.rds')
 
 
 
