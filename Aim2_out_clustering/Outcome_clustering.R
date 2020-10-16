@@ -2,6 +2,7 @@
 #Model outcome by clustering
 library(Rtsne)
 library(compareGroups)
+library(tidyverse)
 
 IP=read_csv("derived_data/Overall.csv")
 gower_dist=readRDS("derived_data/gower_dist.rds")
@@ -23,7 +24,7 @@ dev.off()
 resu2 <- compareGroups(cluster~Americas +OutcomeE+ WarTypeC +WDuratDays+InitiatorDeaths+RecipientDeaths+RelDiffDeaths+AbsDiffDeaths+StartYR_Norm+OutcomeC+TotalBDeaths+Intnl , data = IP, 
                        method=c(Americas=3,WarTypeC=3,OutcomeC=3,OutcomeE=3), Q1 = 0.025, Q3 = 0.975)
 createTable(resu2)
-saveRDS(resu2,'Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS')
+saveRDS(resu2,'Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.rds')
 
 
 
