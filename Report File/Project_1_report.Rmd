@@ -58,7 +58,7 @@ library(rmarkdown)
 library(png)
 library(compareGroups)
 
-T1=readRDS('/home/rstudio/Overall_plots/plot_files/Table1.RDS')
+T1=readRDS('/home/rstudio/Overall_plots/plot_files/Table1.rds')
 
 createTable(T1,show.p.overall=FALSE)
 ```
@@ -199,7 +199,7 @@ knitr::include_graphics("/home/rstudio/Aim2_out_clustering/Cluster_Files/Aim2_TS
 
 As described above the four clusters showed a distince pattern across the variables in their construction. Clearly defined Americas (cluster 1), and non-Americas clusters were shown (2 through 4) which looked very interesting albeit a little fishy.  The largest proportion of those where the recipient won was in the Americas cluster.  Otherwise stalemates, compromises, etc. were the largest in all three of the specific clusters.  Cluster 3 could be established as the highest difference in deaths for the initiator for some reason.  Cluster 3 could also be seen to have the most modern (time since curation of 1814) conflict cluster with an average starting time of conflicts ranging from the late 1950s.</br>
 ```{r , echo=FALSE}
-T1=readRDS('/home/rstudio/Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.RDS')
+T1=readRDS('/home/rstudio/Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.rds')
 
 createTable(T1,show.p.overall=FALSE)
 ```
