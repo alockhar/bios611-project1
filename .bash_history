@@ -42,3 +42,7 @@ make derived_data/gower_dist.rds
 make Report\ File/Project_1_report.pdf
 make clean all
 make Report\ File/Project_1_report.pdf
+
+make Report\ File/Project_1_report.pdf
+make Report\ File/Project_1_report.Rmd
+make Report\ File/Project_1_report.pdf
