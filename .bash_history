@@ -46,3 +46,35 @@ make Report\ File/Project_1_report.pdf
 make Report\ File/Project_1_report.pdf
 make Report\ File/Project_1_report.Rmd
 make Report\ File/Project_1_report.pdf
+make -f Makefile
+make Report\ File/Project_1_report.pdf
+ls Overall.R
+ls
+pwd
+make Report\ File/Project_1_report.pdf
+make derived_data/Overall_long.csv
+make derived_data/Overall_Long.csv
+make Report\ File/Project_1_report.pdf
+make Aim2_out_clustering/Cluster_Files/Aim2_TSNE.png
+make Report\ File/Project_1_report.pdf
+make derived_data/network.rds
+make Report\ File/Project_1_report.pdf
+make clean
+find . -type f -iname "*.R"
+find . -type f -iname "*.R" | xargs grep -i \.rds
+find . -type f -iname "*.R" | xargs grep \.RDS
+find . -type f -iname "*.R" | xargs grep \.csv
+find . -type f -iname "*.R" | xargs grep \.csv | grep write
+find . -type f -iname "*.R" | xargs grep -i \.rds
+make clean
+make Report\ File/Project_1_report.pdf
+make clean
+make Report\ File/Project_1_report.pdf
+make clean
+make Report\ File/Project_1_report.pdf
+make clean
+make Report\ File/Project_1_report.pdf
+make clean
+make Report\ File/Project_1_report.pdf
+make clean
+make Report\ File/Project_1_report.pdf
