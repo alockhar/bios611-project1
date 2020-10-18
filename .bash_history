@@ -78,3 +78,19 @@ make clean
 make Report\ File/Project_1_report.pdf
 make clean
 make Report\ File/Project_1_report.pdf
+make clean
+make derived_data/network.rds)
+make derived_data/network.rds
+make clean
+make Report\ File/Project_1_report.pdf
+make Networks/Network_Files/Ov.png
+make derived_data/Network.rds
+make clean
+make derived_data/Network.rds
+make derived_data/network.rds
+make clean
+make Report\ File/Project_1_report.pdf
+make clean
+make Report\ File/Project_1_report.pdf
+make clean
+make Report\ File/Project_1_report.pdf
