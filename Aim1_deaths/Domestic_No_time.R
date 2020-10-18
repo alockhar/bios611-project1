@@ -114,8 +114,8 @@ df2=data.frame(cbind('','',row.names(tab2$coefficients),signif(tab2$coefficients
 
 df1[1,1]='Absolute difference in deaths non-imputed'
 df2[1,1]='Relative difference in deaths non-imputed'
-df1[1,2]=round(ps1[2],3)
-df2[1,2]=round(ps2[2],3)
+df1[1,2]=signif(ps1[2],2)
+df2[1,2]=signif(ps2[2],2)
 colnames(df1)=c('Description','R2','Variables','Estimate','Std err','p-val')
 colnames(df2)=c('Description','R2','Variables','Estimate','Std err','p-val')
 
@@ -213,8 +213,8 @@ df2=data.frame(cbind('','',row.names(tab2$coefficients),signif(tab2$coefficients
 
 df1[1,1]='Absolute difference in deaths imputed'
 df2[1,1]='Relative difference in deaths imputed'
-df1[1,2]=round(ps1[2],3)
-df2[1,2]=round(ps2[2],3)
+df1[1,2]=signif(ps1[2],2)
+df2[1,2]=signif(ps2[2],2)
 colnames(df1)=c('Description','R2','Variables','Estimate','Std err','p-val')
 colnames(df2)=c('Description','R2','Variables','Estimate','Std err','p-val')
 
