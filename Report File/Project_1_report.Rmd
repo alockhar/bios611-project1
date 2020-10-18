@@ -1,7 +1,7 @@
 ---
 title: "Project 1 Report"
 author: "Alexandre Lockhart"
-date: "10/14/2020"
+date: "10/18/2020"
 output:
   pdf_document: default
   html_document:
@@ -173,7 +173,7 @@ T2
 ```
 
 # Internationalized Imputed
-Predictions remained weak, 
+In both models the recipient forces and days of exposure also showed an interesting result but nothing with Americas.   
 
 ```{r , echo=FALSE}
 T1=readRDS('/home/rstudio/Aim1_deaths/model_outputs/IntlImpTr1.rds')
@@ -197,7 +197,7 @@ knitr::include_graphics("/home/rstudio/Aim2_out_clustering/Cluster_Files/Aim2_TS
 
 #Overall clustering by variables
 
-As described above the four clusters showed a distince pattern across the variables in their construction. Clearly defined Americas (cluster 1), and non-Americas clusters were shown (2 through 4) which looked very interesting albeit a little fishy.  The largest proportion of those where the recipient won was in the Americas cluster.  Otherwise stalemates, compromises, etc. were the largest in all three of the specific clusters.  Cluster 3 could be established as the highest difference in deaths for the initiator for some reason.  Cluster 3 could also be seen to have the most modern (time since curation of 1814) conflict cluster with an average starting time of conflicts ranging from the late 1950s.</br>
+As described above the four clusters showed a distance pattern across the variables in their construction. Clearly defined Americas (cluster 1), and non-Americas clusters were shown (2 through 4) which looked very interesting albeit a little fishy.  The largest proportion of those where the recipient won was in the Americas cluster.  Otherwise stalemates, compromises, etc. were the largest in all three of the specific clusters.  Cluster 3 could be established as the highest difference in deaths for the initiator for some reason.  Cluster 3 could also be seen to have the most modern (time since curation of 1814) conflict cluster with an average starting time of conflicts ranging from the late 1950s onwards.</br>
 ```{r , echo=FALSE}
 T1=readRDS('/home/rstudio/Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.rds')
 
@@ -206,10 +206,10 @@ createTable(T1,show.p.overall=FALSE)
 
 
 #Aim 4 network composition
-While not much was shown, several network plots were constructed. A walk trap community search algorithm was implemented and is generally a solid approach when not much is known about the given network structure.  Weights between conflicts were normalized differences in conflicts and directed graph structure was created representing initiator to recipient relationships.  </br>
+Several network plots were constructed. A walk trap community search algorithm was implemented and is generally a solid approach when not much is known about the given network structure.  Weights between conflicts were normalized differences in conflicts and directed graph structure was created representing initiator to recipient relationships.  </br>
 
 </br>
-The first overall network plot shows all the wars together and their post memberships.  Roughly a 100 communities were found, and rather than pruning, the second plot shows the distribution of community membership by wars representing the largest communities.  The third plot shows the communities consolidated by the first three most prevalent communities and the fourth determined as 'other'.  Edge attributes explaining these 3 particular communities will be evaluated as a next-to-do.  
+The first overall network plot shows all the wars together and their post memberships.  Roughly a 100 communities were found, and rather than pruning, the second plot shows the distribution of community membership by wars representing the largest communities.  The third plot shows the communities consolidated by the first three most prevalent communities and the fourth determined as 'other'.  Edge attributes explaining these 3 particular communities and war characteristics which define them would be the next characteristic to find.
 </br>
 ```{r , echo=FALSE}
 
@@ -227,9 +227,17 @@ Descriptive plots showed some interesting patterns such as considerably less con
 </br>
 
 </br>
+While the main effect was the Americas indicator variable, and these were technically confounders in the relationship (mainly days in almost all models and occasionally one of the forces available variables), a future consideration would be to actually use days of exposure as a modifier in the Americas/outcome relationship of all models, rather than as a confounder.  
+
+</br>
+
+
+</br>
 The most interesting part of the project turned out to be the initial clustering and descriptive representation with the key war variables and in particular the Americas variable.  Prediction modeling initially wanted to look at sub groups or tree based models after the GLMs. But such low performance and variability in the differences in initiator and recipient deaths probably contributed to the poor performance. Rather than exploring the tree models, a mixed data clustering approach looked at the key war variables and generated some interesting results</br>  
 
-</br>Another initial aim to look at data-driven eras or model-based clustering as well as waves of a given war. Unfortunately the date curation for many waves beyond the first wave was more sparse than originally thought, and looking at time based eras did not have the same interest. Finally, the network community structure work found several clusters of communities but analysis is still in process. Other approaches could be considered that also try to look at the relationships in a flow of relationships.
+
+
+</br>Another initial aim to look at data-driven eras or model-based clustering as well as waves of a given war. Unfortunately the date curation for many waves beyond the first wave was more sparse than originally thought, and looking at time based eras did not have the same interest. Finally, the network community structure work found several clusters of communities but analysis is still in process as to glean interesting network properties from these communities.  For instance, what makes thee three highest memberships unique among themselves and in comparison to conflicts which were in other communities? This is still in process.    One difficulty in networks tends to be reproducibility so further methodology which takes this into account will be assessed.
 </br>
 
 

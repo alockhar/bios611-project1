@@ -115,7 +115,7 @@
 
 \title{Project 1 Report}
 \author{Alexandre Lockhart}
-\date{10/14/2020}
+\date{10/18/2020}
 
 \begin{document}
 \maketitle
@@ -251,14 +251,6 @@ to the not in Americas group.
 ## Relative difference in initiator deaths   0.01 (0.02)      0.01 (0.04)    
 ## Absolute difference in initiator deaths -2767.28 (14965) -1723.58 (30636) 
 ## Time since first curation  (years)        76.7 (44.0)       121 (58.3)    
-## OutcomeC:                                                                 
-##     Compromise                             3 (3.00%)        36 (11.2%)    
-##     Conflict continues below war level     3 (3.00%)        22 (6.88%)    
-##     Side A wins                            60 (60.0%)      152 (47.5%)    
-##     Side B wins                            32 (32.0%)       53 (16.6%)    
-##     Stalemate                              0 (0.00%)        23 (7.19%)    
-##     War ongoing as of end of 2014          1 (1.00%)        11 (3.44%)    
-##     War transformed into another War       1 (1.00%)        23 (7.19%)    
 ## Total deaths                             17013 (66326)    23452 (96210)   
 ## Internationalized                         0.05 (0.22)      0.28 (0.45)    
 ## OutcomeE:                                                                 
@@ -282,52 +274,69 @@ the past 200 years.
 
 \includegraphics[width=6.67in]{/home/rstudio/Overall_plots/plot_files/Exposure_time2}
 
-\#Battle deaths by the Americas The below shows the distribution of
-deaths in the number of deaths by war type and Americas status. For the
-most part they look balanced. It should be noted that an upper limit of
-50000 deaths was created in order to account for plot interpretability
-and to account for several wars with total deaths far greater than
-50000. In the Americas group there appears to be much higher variability
-in the number of deaths for wars over local issues in comparison to wars
-over central control.
+\hypertarget{battle-deaths-by-the-americas}{%
+\section{Battle deaths by the
+Americas}\label{battle-deaths-by-the-americas}}
+
+The below shows the distribution of deaths in the number of deaths by
+war type and Americas status. For the most part they look balanced. It
+should be noted that an upper limit of 50000 deaths was created in order
+to account for plot interpretability and to account for several wars
+with total deaths far greater than 50000. In the Americas group there
+appears to be much higher variability in the number of deaths for wars
+over local issues in comparison to wars over central control.
 
 \includegraphics[width=6.67in]{/home/rstudio/Overall_plots/plot_files/Battle_deaths_Both3}
 
-\#War type deaths Americas Adding the component of total war exposure it
-was also not surprising to see large proportion of wars with lower
-deaths having lower exposure time. For war type, no particular conflict
-type stood-out but proportionally, the not in Americas group has a
-larger variability in exposure time/deaths than wars in the the Americas
-which tended to cluster more on average in the lower quadrant.
+\hypertarget{war-type-deaths-americas}{%
+\section{War type deaths Americas}\label{war-type-deaths-americas}}
+
+Adding the component of total war exposure it was also not surprising to
+see large proportion of wars with lower deaths having lower exposure
+time. For war type, no particular conflict type stood-out but
+proportionally, the not in Americas group has a larger variability in
+exposure time/deaths than wars in the the Americas which tended to
+cluster more on average in the lower quadrant.
 
 \includegraphics[width=6.67in]{/home/rstudio/Overall_plots/plot_files/War_type_deaths_Americas_4}
 
-\#Start year A plot looking at deaths based on war start year. From
-1900s onwards the civil war for central control seemed to be most
-prevalent in the Americas while diversity of war type was prevalent
-across the 200 year period in the non-Americas group. As mentioned in
-the time to curation in table 1, the not in americas conflicts appear to
-have a considerable more set of curated conflicts in the latter half of
-the 20th century relative to conflicts in the Americas. Maybe one
-opinion is the military hegemony in this hemisphere by the United States
-to sort of dominate a lot of conflict for this hemisphere post WW-II in
-comparison to the rest of the world. There does not appear to be a
-linearly increasing or decreasing trend in deaths based on time of war
-and war conflict in either group.
+\hypertarget{start-year}{%
+\section{Start year}\label{start-year}}
+
+A plot looking at deaths based on war start year. From 1900s onwards the
+civil war for central control seemed to be most prevalent in the
+Americas while diversity of war type was prevalent across the 200 year
+period in the non-Americas group. As mentioned in the time to curation
+in table 1, the not in americas conflicts appear to have a considerable
+more set of curated conflicts in the latter half of the 20th century
+relative to conflicts in the Americas. Maybe one opinion is the military
+hegemony in this hemisphere by the United States to sort of dominate a
+lot of conflict for this hemisphere post WW-II in comparison to the rest
+of the world. There does not appear to be a linearly increasing or
+decreasing trend in deaths based on time of war and war conflict in
+either group.
 
 \includegraphics[width=6.67in]{/home/rstudio/Overall_plots/plot_files/Start_year_5}
 
-\#Absolute difference in deaths Defined as the initiator
-deaths-recipient deaths, once several influential points (not outliers)
-were removed one can see a large proportion of initiator deaths more in
-the negatives from the 1900s onwards in the not in Americas group. Maybe
-this relates to some sort of potential increased ability in war
-recipients being able to foresee or address conflict. Maybe it could be
-greater familiarity with a `home' area in response somehow.
+\hypertarget{absolute-difference-in-deaths}{%
+\section{Absolute difference in
+deaths}\label{absolute-difference-in-deaths}}
+
+Defined as the initiator deaths-recipient deaths, once several
+influential points (not outliers) were removed one can see a large
+proportion of initiator deaths more in the negatives from the 1900s
+onwards in the not in Americas group. Maybe this relates to some sort of
+potential increased ability in war recipients being able to foresee or
+address conflict. Maybe it could be greater familiarity with a `home'
+area in response somehow.
 
 \includegraphics[width=6.67in]{/home/rstudio/Overall_plots/plot_files/Abs_6}
 
-\#Relative difference in deaths This metric was more complicated defined
+\hypertarget{relative-difference-in-deaths}{%
+\section{Relative difference in
+deaths}\label{relative-difference-in-deaths}}
+
+This metric was more complicated defined
 as:abs(InitiatorDeaths-RecipientDeaths)/max(abs(RecipientDeaths),abs(InitiatorDeaths))
 the initiator deaths-recipient deaths, once several influential points
 (not outliers) were removed visually show a larger proportion of deaths
@@ -335,11 +344,14 @@ among the initiators from the 1900s onwards.
 
 \includegraphics[width=6.67in]{/home/rstudio/Overall_plots/plot_files/Rel_7}
 
-\#Domestic simple model Generalized linear models showing modeled the
-outcome of absolute difference in deaths and then relative difference in
-deaths by the Americas variable, starting year, days of exposure, and
-war type. In both model sets only an association was seen with days of
-exposure and relative increase in initiator deaths.
+\hypertarget{domestic-simple-model}{%
+\section{Domestic simple model}\label{domestic-simple-model}}
+
+Generalized linear models showing modeled the outcome of absolute
+difference in deaths and then relative difference in deaths by the
+Americas variable, starting year, days of exposure, and war type. In
+both model sets only an association was seen with days of exposure and
+relative increase in initiator deaths.
 
 \begin{verbatim}
 ##                                 Description                       Variables
@@ -375,24 +387,28 @@ exposure and relative increase in initiator deaths.
 ## 6   -0.009    0.01 0.3520
 \end{verbatim}
 
-\#Domestic prediction non-imputed model A training and testing set
-(evenly split) using 5 fold cross-validation was done. Generalized
-linear models showing modeled the outcome of absolute difference in
-deaths and then relative difference in deaths by the Americas variable,
-starting year, days of exposure, and war type. In both model sets only
-the Americas versus non-Americas showed an association in the number of
-initiator deaths relative to the recipient. The prediction in the given
-test set, however, R2=.008, was very low. Also an association was seen
-with days of exposure and relative increase in initiator deaths.
+\hypertarget{domestic-prediction-non-imputed-model}{%
+\section{Domestic prediction non-imputed
+model}\label{domestic-prediction-non-imputed-model}}
+
+A training and testing set (evenly split) using 5 fold cross-validation
+was done. Generalized linear models showing modeled the outcome of
+absolute difference in deaths and then relative difference in deaths by
+the Americas variable, starting year, days of exposure, and war type. In
+both model sets only the Americas versus non-Americas showed an
+association in the number of initiator deaths relative to the recipient.
+The prediction in the given test set, however, R2=.008, was very low.
+Also an association was seen with days of exposure and relative increase
+in initiator deaths.
 
 \begin{verbatim}
-##                                 Description    R2
-## 1 Absolute difference in deaths non-imputed 0.009
-## 2                                                
-## 3                                                
-## 4                                                
-## 5                                                
-## 6                                                
+##                                 Description     R2
+## 1 Absolute difference in deaths non-imputed 0.0093
+## 2                                                 
+## 3                                                 
+## 4                                                 
+## 5                                                 
+## 6                                                 
 ##                           Variables Estimate Std err p-val
 ## 1                       (Intercept) -4474.31 2944.33 0.131
 ## 2         `AmericasNot in Americas`  5415.25 2643.04 0.042
@@ -403,13 +419,13 @@ with days of exposure and relative increase in initiator deaths.
 \end{verbatim}
 
 \begin{verbatim}
-##                                 Description    R2
-## 1 Relative difference in deaths non-imputed 0.004
-## 2                                                
-## 3                                                
-## 4                                                
-## 5                                                
-## 6                                                
+##                                 Description     R2
+## 1 Relative difference in deaths non-imputed 0.0045
+## 2                                                 
+## 3                                                 
+## 4                                                 
+## 5                                                 
+## 6                                                 
 ##                           Variables Estimate Std err  p-val
 ## 1                       (Intercept)   0.0045  0.0034   0.20
 ## 2         `AmericasNot in Americas`  -0.0029  0.0031   0.34
@@ -419,51 +435,63 @@ with days of exposure and relative increase in initiator deaths.
 ## 6                     WarTypeDOther  -0.0019  0.0052   0.71
 \end{verbatim}
 
-\#Models deaths here The common theme across models was prediction was
-very low between training and test sets. An association, however, was
-seen in the war type (`local issues'). Date was re-checked and while
-certainty of curation seems reasonable (some wars simply were relatively
-more brutal than others), a prediction check of the imputed deaths while
-removing the most extreme war (375000 death difference), showed a slight
-gain in prediction (not shown but R2=.013 in comparison to .002)
+\hypertarget{domestic-prediction-imputed-models}{%
+\section{Domestic prediction imputed
+models}\label{domestic-prediction-imputed-models}}
+
+The common theme across models was prediction was very low between
+training and test sets. An association, however, was seen in days and
+Americas was very close in the relative difference in initiator deaths.
+Date was re-checked and while certainty of curation seems reasonable
+(some wars simply were relatively more brutal than others), a prediction
+check of the imputed deaths while removing the most extreme war (375000
+death difference), showed a slight gain in prediction (not shown but
+R2=.013 in comparison to .002)
 
 \begin{verbatim}
-##                             Description R2                         Variables
-## 1 Absolute difference in deaths imputed  0                       (Intercept)
-## 2                                                  `AmericasNot in Americas`
-## 3                                                               StartYR_Norm
-## 4                                                                 WDuratDays
-## 5                                          `WarTypeDCivil War: Local Issues`
-## 6                                                              WarTypeDOther
-##   Estimate Std err p-val
-## 1  -2430.5 1878.06  0.20
-## 2  1881.85 1945.16  0.33
-## 3    15.87   13.59  0.24
-## 4    -0.52    0.59  0.38
-## 5 -1685.96 1697.15  0.32
-## 6 -3231.45  2544.4  0.21
+##                             Description      R2
+## 1 Absolute difference in deaths imputed 5.4e-05
+## 2                                              
+## 3                                              
+## 4                                              
+## 5                                              
+## 6                                              
+##                           Variables Estimate Std err p-val
+## 1                       (Intercept) -3476.45 2009.68 0.085
+## 2         `AmericasNot in Americas`  2397.25 2081.48 0.251
+## 3                      StartYR_Norm    14.53   14.54 0.319
+## 4                        WDuratDays    -0.22    0.63 0.722
+## 5 `WarTypeDCivil War: Local Issues`  -1951.3  1816.1 0.284
+## 6                     WarTypeDOther  2045.98 2722.72 0.453
 \end{verbatim}
 
 \begin{verbatim}
 ##                             Description    R2                         Variables
-## 1 Relative difference in deaths imputed 0.012                       (Intercept)
+## 1 Relative difference in deaths imputed 0.007                       (Intercept)
 ## 2                                                     `AmericasNot in Americas`
 ## 3                                                                  StartYR_Norm
 ## 4                                                                    WDuratDays
 ## 5                                             `WarTypeDCivil War: Local Issues`
 ## 6                                                                 WarTypeDOther
 ##   Estimate Std err  p-val
-## 1   0.0051  0.0023 0.0259
-## 2   0.0046  0.0024 0.0556
-## 3 -1.1e-05 1.7e-05 0.4884
-## 4  2.1e-06 7.2e-07 0.0046
-## 5  -0.0023  0.0021 0.2725
-## 6  -0.0041  0.0031 0.1854
+## 1   0.0058  0.0024  0.019
+## 2   0.0014  0.0025  0.568
+## 3 -1.7e-05 1.8e-05  0.339
+## 4  2.8e-06 7.7e-07 <0.001
+## 5   0.0018  0.0022  0.415
+## 6    0.003  0.0033  0.369
 \end{verbatim}
 
-\#Internationalized Non-imputed
+\hypertarget{internationalized-non-imputed}{%
+\section{Internationalized
+Non-imputed}\label{internationalized-non-imputed}}
 
-Network
+In the internationalized models they took into account wars also linked
+to domestic wars and additional variables such as initiator forces and
+recipient forces were taken into account in models. While predictions
+remained weak, days of exposure popped out in models and recipient
+forces showed an association in relative difference in association
+models.
 
 \begin{verbatim}
 ##                                      Description    R2
@@ -507,18 +535,22 @@ Network
 ## 8                   RecipientForces  9.1e-09 2.8e-09 0.0013
 \end{verbatim}
 
-\#Internationalized Imputed Network
+\hypertarget{internationalized-imputed}{%
+\section{Internationalized Imputed}\label{internationalized-imputed}}
+
+In both models the recipient forces and days of exposure also showed an
+interesting result but nothing with Americas.
 
 \begin{verbatim}
-##                                      Description    R2
-## 1 Intl Absolute difference in deaths non-imputed 0.011
-## 2                                                     
-## 3                                                     
-## 4                                                     
-## 5                                                     
-## 6                                                     
-## 7                                                     
-## 8                                                     
+##                                  Description    R2
+## 1 Intl Absolute difference in deaths imputed 0.011
+## 2                                                 
+## 3                                                 
+## 4                                                 
+## 5                                                 
+## 6                                                 
+## 7                                                 
+## 8                                                 
 ##                          Covariates Estimate Std err p-val
 ## 1                       (Intercept)  -2875.7 2354.04 0.224
 ## 2         `AmericasNot in Americas`  3177.52 2265.41 0.163
@@ -531,15 +563,15 @@ Network
 \end{verbatim}
 
 \begin{verbatim}
-##                                      Description    R2
-## 1 Intl Relative difference in deaths non-imputed 0.033
-## 2                                                     
-## 3                                                     
-## 4                                                     
-## 5                                                     
-## 6                                                     
-## 7                                                     
-## 8                                                     
+##                                  Description    R2
+## 1 Intl Relative difference in deaths imputed 0.033
+## 2                                                 
+## 3                                                 
+## 4                                                 
+## 5                                                 
+## 6                                                 
+## 7                                                 
+## 8                                                 
 ##                          Covariates Estimate Std err  p-val
 ## 1                       (Intercept)   -0.011   0.016 0.4647
 ## 2         `AmericasNot in Americas`  0.00013   0.013 0.9915
@@ -568,7 +600,7 @@ separation throughout.
 
 \#Overall clustering by variables
 
-As described above the four clusters showed a distince pattern across
+As described above the four clusters showed a distance pattern across
 the variables in their construction. Clearly defined Americas (cluster
 1), and non-Americas clusters were shown (2 through 4) which looked very
 interesting albeit a little fishy. The largest proportion of those where
@@ -577,7 +609,8 @@ compromises, etc. were the largest in all three of the specific
 clusters. Cluster 3 could be established as the highest difference in
 deaths for the initiator for some reason. Cluster 3 could also be seen
 to have the most modern (time since curation of 1814) conflict cluster
-with an average starting time of conflicts ranging from the late 1950s.
+with an average starting time of conflicts ranging from the late 1950s
+onwards.
 
 \begin{verbatim}
 ## 
@@ -618,12 +651,12 @@ with an average starting time of conflicts ranging from the late 1950s.
 ## ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 \end{verbatim}
 
-\#Aim 4 network composition While not much was shown, several network
-plots were constructed. A walk trap community search algorithm was
-implemented and is generally a solid approach when not much is known
-about the given network structure. Weights between conflicts were
-normalized differences in conflicts and directed graph structure was
-created representing initiator to recipient relationships.
+\#Aim 4 network composition Several network plots were constructed. A
+walk trap community search algorithm was implemented and is generally a
+solid approach when not much is known about the given network structure.
+Weights between conflicts were normalized differences in conflicts and
+directed graph structure was created representing initiator to recipient
+relationships.
 
 The first overall network plot shows all the wars together and their
 post memberships. Roughly a 100 communities were found, and rather than
@@ -631,7 +664,8 @@ pruning, the second plot shows the distribution of community membership
 by wars representing the largest communities. The third plot shows the
 communities consolidated by the first three most prevalent communities
 and the fourth determined as `other'. Edge attributes explaining these 3
-particular communities will be evaluated as a next-to-do.\\
+particular communities and war characteristics which define them would
+be the next characteristic to find.
 
 \includegraphics[width=6.67in]{/home/rstudio/Networks/Network_Files/Ov}
 \includegraphics[width=6.67in]{/home/rstudio/Networks/Network_Files/Membership}
@@ -642,6 +676,13 @@ particular communities will be evaluated as a next-to-do.\\
 Descriptive plots showed some interesting patterns such as considerably
 less conflicts post WW-2 in the hemisphere occupied by North and South
 America relative to the rest of the world.\\
+
+While the main effect was the Americas indicator variable, and these
+were technically confounders in the relationship (mainly days in almost
+all models and occasionally one of the forces available variables), a
+future consideration would be to actually use days of exposure as a
+modifier in the Americas/outcome relationship of all models, rather than
+as a confounder.
 
 The most interesting part of the project turned out to be the initial
 clustering and descriptive representation with the key war variables and
@@ -657,8 +698,11 @@ clustering as well as waves of a given war. Unfortunately the date
 curation for many waves beyond the first wave was more sparse than
 originally thought, and looking at time based eras did not have the same
 interest. Finally, the network community structure work found several
-clusters of communities but analysis is still in process. Other
-approaches could be considered that also try to look at the
-relationships in a flow of relationships.
+clusters of communities but analysis is still in process as to glean
+interesting network properties from these communities. For instance,
+what makes thee three highest memberships unique among themselves and in
+comparison to conflicts which were in other communities? This is still
+in process. One difficulty in networks tends to be reproducibility so
+further methodology which takes this into account will be assessed.
 
 \end{document}
