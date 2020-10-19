@@ -449,37 +449,37 @@ death difference), showed a slight gain in prediction (not shown but
 R2=.013 in comparison to .002)
 
 \begin{verbatim}
-##                             Description      R2
-## 1 Absolute difference in deaths imputed 5.4e-05
-## 2                                              
-## 3                                              
-## 4                                              
-## 5                                              
-## 6                                              
+##                             Description     R2
+## 1 Absolute difference in deaths imputed 0.0025
+## 2                                             
+## 3                                             
+## 4                                             
+## 5                                             
+## 6                                             
 ##                           Variables Estimate Std err p-val
-## 1                       (Intercept) -3476.45 2009.68 0.085
-## 2         `AmericasNot in Americas`  2397.25 2081.48 0.251
-## 3                      StartYR_Norm    14.53   14.54 0.319
-## 4                        WDuratDays    -0.22    0.63 0.722
-## 5 `WarTypeDCivil War: Local Issues`  -1951.3  1816.1 0.284
-## 6                     WarTypeDOther  2045.98 2722.72 0.453
+## 1                       (Intercept)  1162.69 2039.07  0.57
+## 2         `AmericasNot in Americas`   842.34 2111.93  0.69
+## 3                      StartYR_Norm     4.02   14.75  0.79
+## 4                        WDuratDays    -0.67    0.64  0.30
+## 5 `WarTypeDCivil War: Local Issues` -2400.24 1842.66  0.19
+## 6                     WarTypeDOther -2522.78 2762.55  0.36
 \end{verbatim}
 
 \begin{verbatim}
 ##                             Description    R2                         Variables
-## 1 Relative difference in deaths imputed 0.007                       (Intercept)
+## 1 Relative difference in deaths imputed 0.014                       (Intercept)
 ## 2                                                     `AmericasNot in Americas`
 ## 3                                                                  StartYR_Norm
 ## 4                                                                    WDuratDays
 ## 5                                             `WarTypeDCivil War: Local Issues`
 ## 6                                                                 WarTypeDOther
 ##   Estimate Std err  p-val
-## 1   0.0058  0.0024  0.019
-## 2   0.0014  0.0025  0.568
-## 3 -1.7e-05 1.8e-05  0.339
-## 4  2.8e-06 7.7e-07 <0.001
-## 5   0.0018  0.0022  0.415
-## 6    0.003  0.0033  0.369
+## 1   0.0049  0.0023  0.039
+## 2   0.0033  0.0024  0.176
+## 3  8.6e-06 1.7e-05  0.612
+## 4  2.6e-06 7.3e-07 <0.001
+## 5  -0.0014  0.0021  0.500
+## 6  -0.0066  0.0032  0.040
 \end{verbatim}
 
 \hypertarget{internationalized-non-imputed}{%
@@ -583,14 +583,16 @@ interesting result but nothing with Americas.
 ## 8                   RecipientForces  9.1e-09 2.8e-09 0.0013
 \end{verbatim}
 
-\#Overall clustering Aim 3 was multi-fold: to cluster wartype, the
-Americas indicator variable, time since war started since 1814
-basically, whether the war was internationalized, duration of exposure
-(days), initiator deaths, recipient deaths, and relative difference in
-deaths. A distance metric for mixed data types (Gower) was used and
-clustering via KMeans. tSNE plots showed the segmentation of the
-variability of the gower's distance metric, and the clusters were
-visually plotted.
+\hypertarget{overall-clustering}{%
+\section{Overall clustering}\label{overall-clustering}}
+
+Aim 3 was multi-fold: to cluster wartype, the Americas indicator
+variable, time since war started since 1814 basically, whether the war
+was internationalized, duration of exposure (days), initiator deaths,
+recipient deaths, and relative difference in deaths. A distance metric
+for mixed data types (Gower) was used and clustering via KMeans. tSNE
+plots showed the segmentation of the variability of the gower's distance
+metric, and the clusters were visually plotted.
 
 Below shows the top 2 TSNE dimensions by cluster and showing distinct
 separation throughout.
@@ -598,7 +600,9 @@ separation throughout.
 \includegraphics[width=6.67in]{/home/rstudio/Overall_plots/plot_files/Gap_stat}
 \includegraphics[width=6.67in]{/home/rstudio/Aim2_out_clustering/Cluster_Files/Aim2_TSNE}
 
-\#Overall clustering by variables
+\hypertarget{overall-clustering-by-variables}{%
+\section{Overall clustering by
+variables}\label{overall-clustering-by-variables}}
 
 As described above the four clusters showed a distance pattern across
 the variables in their construction. Clearly defined Americas (cluster
@@ -651,12 +655,14 @@ onwards.
 ## ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 \end{verbatim}
 
-\#Aim 4 network composition Several network plots were constructed. A
-walk trap community search algorithm was implemented and is generally a
-solid approach when not much is known about the given network structure.
-Weights between conflicts were normalized differences in conflicts and
-directed graph structure was created representing initiator to recipient
-relationships.
+\hypertarget{aim-4-network-composition}{%
+\section{Aim 4 network composition}\label{aim-4-network-composition}}
+
+Several network plots were constructed. A walk trap community search
+algorithm was implemented and is generally a solid approach when not
+much is known about the given network structure. Weights between
+conflicts were normalized differences in conflicts and directed graph
+structure was created representing initiator to recipient relationships.
 
 The first overall network plot shows all the wars together and their
 post memberships. Roughly a 100 communities were found, and rather than
@@ -671,7 +677,8 @@ be the next characteristic to find.
 \includegraphics[width=6.67in]{/home/rstudio/Networks/Network_Files/Membership}
 \includegraphics[width=6.67in]{/home/rstudio/Networks/Network_Files/Membership_consolidated}
 
-\#Conclusions
+\hypertarget{conclusions}{%
+\section{Conclusions}\label{conclusions}}
 
 Descriptive plots showed some interesting patterns such as considerably
 less conflicts post WW-2 in the hemisphere occupied by North and South

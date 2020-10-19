@@ -186,7 +186,7 @@ T2
 
 
 
-#Overall clustering 
+# Overall clustering 
 Aim 3 was multi-fold: to cluster wartype, the Americas indicator variable, time since war started since 1814 basically, whether the war was internationalized, duration of exposure (days), initiator deaths, recipient deaths, and relative difference in deaths. A distance metric for mixed data types (Gower) was used and clustering via KMeans.  tSNE plots showed the segmentation of the variability of the gower's distance metric, and the clusters were visually plotted.</br>
 
 Below shows the top 2 TSNE dimensions by cluster and showing distinct separation throughout.
@@ -195,7 +195,7 @@ knitr::include_graphics("/home/rstudio/Overall_plots/plot_files/Gap_stat.png")
 knitr::include_graphics("/home/rstudio/Aim2_out_clustering/Cluster_Files/Aim2_TSNE.png")
 ```
 
-#Overall clustering by variables
+# Overall clustering by variables
 
 As described above the four clusters showed a distance pattern across the variables in their construction. Clearly defined Americas (cluster 1), and non-Americas clusters were shown (2 through 4) which looked very interesting albeit a little fishy.  The largest proportion of those where the recipient won was in the Americas cluster.  Otherwise stalemates, compromises, etc. were the largest in all three of the specific clusters.  Cluster 3 could be established as the highest difference in deaths for the initiator for some reason.  Cluster 3 could also be seen to have the most modern (time since curation of 1814) conflict cluster with an average starting time of conflicts ranging from the late 1950s onwards.</br>
 ```{r , echo=FALSE}
@@ -205,7 +205,7 @@ createTable(T1,show.p.overall=FALSE)
 ```
 
 
-#Aim 4 network composition
+# Aim 4 network composition
 Several network plots were constructed. A walk trap community search algorithm was implemented and is generally a solid approach when not much is known about the given network structure.  Weights between conflicts were normalized differences in conflicts and directed graph structure was created representing initiator to recipient relationships.  </br>
 
 </br>
@@ -220,7 +220,7 @@ knitr::include_graphics("/home/rstudio/Networks/Network_Files/Membership_consoli
 
 ```
 
-#Conclusions
+# Conclusions
 
 </br>
 Descriptive plots showed some interesting patterns such as considerably less conflicts post WW-2 in the hemisphere occupied by North and South America relative to the rest of the world.  
