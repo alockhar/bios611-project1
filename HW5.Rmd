@@ -1,0 +1,159 @@
+---
+title: "HW5 file"
+author: "Alexandre Lockhart"
+date: "10/24/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#Load data
+```{r }
+library(tidyverse)
+IP=read_csv("HW5_data/hw_height_weight.csv")
+library(gbm)
+library(MLmetrics)
+library(pROC)
+```
+
+
+#Part 1 GLM classifier
+
+Accuracy of .46
+```{r }
+
+IP=read_csv("HW4_data/500_Person_Gender_Height_Weight_Index.csv")
+IP<-IP%>%mutate(Gender2 = ifelse(Gender == 'Female', 1,0))
+
+set.seed(35467)
+model_split <- function(dfi, train_p, validate_p, test_p, col_name="exp_group"){
+    dfi <- sample_n(dfi, nrow(dfi),replace=FALSE);
+    p <- (seq(nrow(dfi))-1)/nrow(dfi);
+    train_dfi <- dfi %>% filter(p < train_p);
+    validate_dfi <- dfi %>% filter(p < train_p + validate_p & p >= train_p);
+    test_dfi <- dfi %>% filter(p >= train_p + validate_p);
+    train_dfi[[col_name]] <- "train";
+    validate_dfi[[col_name]] <- "validate";
+    test_dfi[[col_name]] <- "test";
+    rbind(train_dfi, validate_dfi, test_dfi);
+}
+
+
+
+#Decided to train on function
+IP2 <- rbind(model_split(IP %>% filter(Gender2==1), 1/3, 1/3, 1/3),
+           model_split(IP %>% filter(Gender2==0), 1/3, 1/3, 1/3))
+IP2 %>% group_by(Gender2, exp_group) %>% tally()
+
+train <- IP2 %>% filter(exp_group=="train");
+validate <- IP2 %>% filter(exp_group=="validate");
+test <- IP2 %>% filter(exp_group=="test");
+model <- glm(Gender2 ~ Height+Weight ,family=binomial(link='logit'),data=train)
+pred <- predict(model, newdata=validate, type="response")
+
+
+
+sum((pred>0.5) == validate$Gender2)/nrow(validate)
+
+
+
+#validate <- Test  %>% mutate(model_pred = 1*(model_prob > .53) + 0,                                  visit_binary = 1*(dental.visit == "Yes") + 0)
+
+#validate<- validate  %>% mutate(model_pred = 1*(pred> .5) + 0,
+                                 #visit_binary = 1*(Gender == "Female") + 0)
+#validate2 <- validate %>% mutate(accurate = 1*(pred == Gender))
+#sum(validate2$accurate)/nrow(validate2)
+
+
+
+
+```
+
+GBM
+accuracy .49
+```{r , echo=FALSE}
+
+model <- gbm(Gender2 ~ Height+Weight, distribution="bernoulli",
+             data=train,
+             n.trees = 100,
+             interaction.depth = 2,
+             shrinkage = 0.1)
+
+pred <- predict(model, validate, type="response")
+sum((pred>0.5))/nrow(validate)
+```
+
+
+Train on 50 Males and then modeled the height with the outcome of index (since the model choice seemed open). I collpased for 0 to be 0-5, and 1 to be index=5. F1 was=.72 among the males with a .5 training split.  The ROC curve shows the true versus false positive rate.  The higher the curve, the closer one's prediction is to the true positive rate. Typically an AUC= .5 means prediction is totally by chance, and 1 represents (at least) on the surface a perfect prediction.
+```{r , echo=FALSE}
+set.seed(44345)
+Male=subset(IP2,Gender=='Male')
+ Male2=Male[sample(nrow(Male), 50), ]
+
+ 
+ Male2<-Male2%>%mutate(index2=ifelse(Index==0|Index==1|Index==2|Index==3|Index==4,0,1)) 
+ 
+ 
+ 
+ 
+ #Split.
+Male3 <- rbind(model_split(Male2 %>% filter(index2==1), 1/2,1/2),
+           model_split(Male2 %>% filter(index2==0), 1/2,1/2))
+Male3 %>% group_by(index2, exp_group) %>% tally()
+
+
+
+train <- Male3 %>% filter(exp_group=="train");
+validate <- Male3 %>% filter(exp_group=="validate");
+#test <- Male3 %>% filter(exp_group=="test");
+model <- glm(index2 ~ Height ,family=binomial(link='logit'),data=train)
+pred <- predict(model, newdata=validate, type="response")
+
+
+f1 <- MLmetrics::F1_Score
+
+p1=ifelse(pred>0.5,1,0)
+
+f1(validate$index2, p1)
+
+
+
+
+pROC_obj <- roc(validate$index2,p1)
+plot(pROC_obj)
+```
+KNN
+
+Trained on height, for the classifier of my index2 variable (0 or 1).  The highest accuracy through 20 iterations appeared to be 6 clusters.  When testing the prediction I got .67.  Maybe just okay prediction.
+
+```{r , echo=FALSE}
+library(class)
+
+
+
+tr <- matrix(train$Height, nrow=nrow(train))
+tt <- matrix(validate$Height, nrow=nrow(validate))
+
+results <- do.call(rbind, Map(function(n){
+    predictions <- knn(train = tr,
+                       test = tt,
+                       cl = train$index2,
+                       k = n);
+    acc <- sum(predictions == validate$index2)/length(predictions);
+    tibble(k=n,acc=acc);   
+}, seq(1,20))) %>% arrange(desc(acc),k)
+
+
+plot(results)
+
+
+pred <- knn(train = tr,
+            test = matrix(validate$Height, nrow=nrow(validate)),
+            cl = train$index2,
+            k = 6);
+sum(pred==validate$index2)/nrow(validate)
+
+```
