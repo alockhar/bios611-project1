@@ -1,7 +1,7 @@
 ---
 title: "HW5 file"
 author: "Alexandre Lockhart"
-date: "10/24/2020"
+date: "10/26/2020"
 output: pdf_document
 ---
 
@@ -12,22 +12,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #Load data
 ```{r }
+
+rm(list = ls(all = TRUE))
+
+
 library(tidyverse)
-IP=read_csv("HW5_data/hw_height_weight.csv")
+IP=read_csv("hw_height_weight.csv")
 library(gbm)
 library(MLmetrics)
 library(pROC)
+library(ggplot2)
+library(caret)
 ```
+#GBM
 
+Accuracy a little higher .51 than prior exercise.
+```{r , echo=FALSE}
 
-#Part 1 GLM classifier
-
-Accuracy of .46
-```{r }
-
-IP=read_csv("HW4_data/500_Person_Gender_Height_Weight_Index.csv")
 IP<-IP%>%mutate(Gender2 = ifelse(Gender == 'Female', 1,0))
-
 set.seed(35467)
 model_split <- function(dfi, train_p, validate_p, test_p, col_name="exp_group"){
     dfi <- sample_n(dfi, nrow(dfi),replace=FALSE);
@@ -51,30 +53,6 @@ IP2 %>% group_by(Gender2, exp_group) %>% tally()
 train <- IP2 %>% filter(exp_group=="train");
 validate <- IP2 %>% filter(exp_group=="validate");
 test <- IP2 %>% filter(exp_group=="test");
-model <- glm(Gender2 ~ Height+Weight ,family=binomial(link='logit'),data=train)
-pred <- predict(model, newdata=validate, type="response")
-
-
-
-sum((pred>0.5) == validate$Gender2)/nrow(validate)
-
-
-
-#validate <- Test  %>% mutate(model_pred = 1*(model_prob > .53) + 0,                                  visit_binary = 1*(dental.visit == "Yes") + 0)
-
-#validate<- validate  %>% mutate(model_pred = 1*(pred> .5) + 0,
-                                 #visit_binary = 1*(Gender == "Female") + 0)
-#validate2 <- validate %>% mutate(accurate = 1*(pred == Gender))
-#sum(validate2$accurate)/nrow(validate2)
-
-
-
-
-```
-
-GBM
-accuracy .49
-```{r , echo=FALSE}
 
 model <- gbm(Gender2 ~ Height+Weight, distribution="bernoulli",
              data=train,
@@ -85,75 +63,97 @@ model <- gbm(Gender2 ~ Height+Weight, distribution="bernoulli",
 pred <- predict(model, validate, type="response")
 sum((pred>0.5))/nrow(validate)
 ```
-
-
-Train on 50 Males and then modeled the height with the outcome of index (since the model choice seemed open). I collpased for 0 to be 0-5, and 1 to be index=5. F1 was=.72 among the males with a .5 training split.  The ROC curve shows the true versus false positive rate.  The higher the curve, the closer one's prediction is to the true positive rate. Typically an AUC= .5 means prediction is totally by chance, and 1 represents (at least) on the surface a perfect prediction.
+For durability and combat I saw different ids with scores above 100.  I would rather remove these 5 observations as well as 3 observations with missing data as I think 602/611 won't really affect inference too much. 
 ```{r , echo=FALSE}
-set.seed(44345)
-Male=subset(IP2,Gender=='Male')
- Male2=Male[sample(nrow(Male), 50), ]
+CS=read_csv("C:/Users/alexa/OneDrive/Desktop/COURSES/BIOS611/HW5_characters_stats.csv")
 
- 
- Male2<-Male2%>%mutate(index2=ifelse(Index==0|Index==1|Index==2|Index==3|Index==4,0,1)) 
- 
- 
- 
- 
- #Split.
-Male3 <- rbind(model_split(Male2 %>% filter(index2==1), 1/2,1/2),
-           model_split(Male2 %>% filter(index2==0), 1/2,1/2))
-Male3 %>% group_by(index2, exp_group) %>% tally()
+table(CS$Alignment)
+hist(CS$Intelligence)
+hist(CS$Strength)
+hist(CS$Speed)
+hist(CS$Durability)
+hist(CS$Power)
+hist(CS$Combat)
+hist(CS$Total)
 
 
-
-train <- Male3 %>% filter(exp_group=="train");
-validate <- Male3 %>% filter(exp_group=="validate");
-#test <- Male3 %>% filter(exp_group=="test");
-model <- glm(index2 ~ Height ,family=binomial(link='logit'),data=train)
-pred <- predict(model, newdata=validate, type="response")
-
-
-f1 <- MLmetrics::F1_Score
-
-p1=ifelse(pred>0.5,1,0)
-
-f1(validate$index2, p1)
+table(is.na(CS$Intelligence))
+table(is.na(CS$Strength))
+table(is.na(CS$Speed))
+table(is.na(CS$Durability))
+table(is.na(CS$Power))
+table(is.na(CS$Combat))
+table(is.na(CS$Total))
 
 
+CS2<-CS%>%filter(Intelligence<=100 & Strength<=100 & Speed<=100 & Durability<=100 & Power<=100 & Combat<=100 )%>% drop_na()
 
 
-pROC_obj <- roc(validate$index2,p1)
-plot(pROC_obj)
 ```
-KNN
 
-Trained on height, for the classifier of my index2 variable (0 or 1).  The highest accuracy through 20 iterations appeared to be 6 clusters.  When testing the prediction I got .67.  Maybe just okay prediction.
+
+PCA
+Based on including all the numeric columns (including total) in the PCA, one component 95% variance is enough.  When total is removed, however, three pcs are needed to explain at least 85% of the total variance.  I think normalization is needed when all numeric columns are present as with 1 column the total variance is over-explained by one component. Scaling the date in the pCA then distroubted the data more to having 2-3 PCS rather than 1 for all 6 numeric columns.  Creating a pesudo total variable as the summation of all non-total numeric variables and checking the absolute value of the difference with it and the original total, all values were 0 indicating yes Total is the sum of the remaining numeric variables.  As discussed above, I would not have included total since it represents all the other numeric variables, anyways, and that is why nearly all the variability is in the first PC prior to scaling.  Two plots of the two largest PCS were done: one with the scale PCA with total included and one scaled PCA with total not included below. There alsmost looks to be a linear decreasing trend downard in the plot showing higher loadings in PC2 are matching with lower loadings in PC2 and vice-versa.  There appears to be a strong split between the first two PCS despite a lot of the variability being carried by PC1 (even with post- scaling.)
+
 
 ```{r , echo=FALSE}
-library(class)
+
+pcs<-prcomp(CS2%>%select(Intelligence,Strength,Speed,Durability,Power,Combat,Total))
+summary(pcs)
 
 
 
-tr <- matrix(train$Height, nrow=nrow(train))
-tt <- matrix(validate$Height, nrow=nrow(validate))
 
-results <- do.call(rbind, Map(function(n){
-    predictions <- knn(train = tr,
-                       test = tt,
-                       cl = train$index2,
-                       k = n);
-    acc <- sum(predictions == validate$index2)/length(predictions);
-    tibble(k=n,acc=acc);   
-}, seq(1,20))) %>% arrange(desc(acc),k)
+pcs<-prcomp(CS2%>%select(Intelligence,Strength,Speed,Durability,Power,Combat,Total),scale=TRUE)
+summary(pcs)
 
 
-plot(results)
+#Check total column
+CS2<-CS2%>%mutate(pseudo_total=Intelligence+Strength+Speed+Durability+Power+Combat,Total_check=abs(Total-pseudo_total))
+table(CS2$Total_check)
+
+pcs3<-prcomp(CS2%>%select(Intelligence,Strength,Speed,Durability,Power,Combat),scale=TRUE)
+summary(pcs3)
+
+df=data.frame(pcs3$x[,1], pcs3$x[,2])
+colnames(df)=c('pc1','pc2')
+ggplot(df,aes(pc1,pc2))+geom_point()
 
 
-pred <- knn(train = tr,
-            test = matrix(validate$Height, nrow=nrow(validate)),
-            cl = train$index2,
-            k = 6);
-sum(pred==validate$index2)/nrow(validate)
+
+```
+
+Load TSNE from python
+
+```{r , echo=FALSE}
+
+
+
+```
+GBM
+Alignment dataset.  Based on checking the variable importance after doing 5 fold CV, I would argue from the training model that intelligence, speed, and durability stand out.  To be honest, I would argue all seem importanct except for the combat metric (I did not include total in the gbm).  K-fold cross-validation is important for dealing with a limited sample, where re-sampling allows for diversity of model performance so that the average model performance can lead to a more accurate understanding with the constraints of limited sampling.  
+
+For RFE train the model on all predictors, calculate the performance and then variable importnace.  For a subset of a given size, keep the most important variables, train the model on the subset of predictors, calculate performance of given subset.  After all performances are assessed for variable subset combinations of interest, finalize the appropriate predictors and optimal model with optimal predictor subset.
+
+```{r , echo=FALSE}
+CS2$Alignment=as.factor(CS2$Alignment)
+
+set.seed(386537)
+index <- createDataPartition(CS2$Alignment, p=0.66, list=FALSE) 
+trainSet <- CS2[ index,] 
+testSet <- CS2[-index,]
+
+
+predictors=!names(CS2) %in%c("Name","Total","pseudo_total","Total_check","Alignment")
+outcomeName="Alignment"
+
+fitControl <- trainControl(   method = "repeatedcv",   number = 5,   repeats = 5)
+model_gbm<-train(trainSet[,predictors],trainSet$Alignment,method='gbm',trControl=fitControl)
+
+
+varImp(object=model_gbm)
+
+
+write.csv2(CS2,"C:/Users/alexa/OneDrive/Desktop/COURSES/BIOS611/pythonDS.csv",sep=',')
 
 ```
