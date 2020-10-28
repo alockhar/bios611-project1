@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-#Load data
+# Load data
 ```{r }
 
 rm(list = ls(all = TRUE))
@@ -20,7 +20,7 @@ library(tidyverse)
 library(readxl)
 #IP=read_csv("hw_height_weight.csv")
 IP=read_excel("hw_5_heightWeight.xlsx")
-
+CS=read_csv("HW5_characters_stats.csv")
 
 library(gbm)
 library(MLmetrics)
@@ -28,7 +28,7 @@ library(pROC)
 library(ggplot2)
 library(caret)
 ```
-#Q1
+# Q1
 
 Accuracy a little higher .52 than prior exercise.
 ```{r , echo=FALSE}
@@ -67,10 +67,10 @@ model <- gbm(Gender2 ~ Height+Weight, distribution="bernoulli",
 pred <- predict(model, validate, type="response")
 sum((pred>0.5))/nrow(validate)
 ```
-#Q2a
+# Q2a
 For durability and combat I saw different ids with scores above 100.  I would rather remove these 5 observations as well as 3 observations with missing data as I think 602/611 won't really affect inference too much. 
 ```{r , echo=FALSE}
-CS=read_csv("HW5_characters_stats.csv")
+
 
 table(CS$Alignment)
 hist(CS$Intelligence)
@@ -97,14 +97,20 @@ CS2<-CS%>%filter(Intelligence<=100 & Strength<=100 & Speed<=100 & Durability<=10
 ```
 
 
-#Q2b:f
+# Q2bf
+
 Based on including all the numeric columns (including total) in the PCA, one component 95% variance is enough.  When total is removed, however, three pcs are needed to explain at least 85% of the total variance.
-</br> I think normalization is needed when all numeric columns are present as with 1 column the total variance is over-explained by one component. Scaling the date in the pCA then distributed the data more to having 2-3 PCS rather than 1 for all 6 numeric columns.
+<br> 
+
+I think normalization is needed when all numeric columns are present as with 1 column the total variance is over-explained by one component. Scaling the date in the pCA then distributed the data more to having 2-3 PCS rather than 1 for all 6 numeric columns.
 </br>
+
 Creating a pseudo total variable as the summation of all non-total numeric variables and checking the absolute value of the difference with it and the original total, all values were 0 indicating yes Total is the sum of the remaining numeric variables.
 </br>
+
 As discussed above, I would not have included total since it represents all the other numeric variables, anyways, and that is why nearly all the variability is in the first PC prior to scaling.
 </br>
+
 A plot of the two largest PCS were done: one with the scale PCA one scaled PCA with total not included below. There almost looks to be a linear decreasing trend downward in the plot showing higher loadings in PC2 are matching with lower loadings in PC2 and vice-versa.  There appears to be a strong split between the first two PCS despite a lot of the variability being carried by PC1 (even with post- scaling.)
 
 
@@ -134,7 +140,8 @@ ggplot(df,aes(pc1,pc2))+geom_point()
 
 
 ```
-#Q3 and 4
+# Q34
+
 Load TSNE from python
 Based on the python and R TSNE plots, I think there are two clusters but alignment is not helping to separate. 
 
@@ -150,7 +157,8 @@ knitr::include_graphics("/home/rstudio/hw5_tsne.png")
 
 
 ```
-#Q5:7
+# Q57
+
 Alignment dataset.  Based on checking the variable importance after doing 5 fold CV, I would argue from the training model that intelligence, speed, and durability stand out.  To be honest, I would argue all seem importanct except for the combat metric (I did not include total in the gbm).
 
 </br>K-fold cross-validation is important for dealing with a limited sample, where re-sampling allows for diversity of model performance so that the average model performance can lead to a more accurate understanding with the constraints of limited sampling.  
