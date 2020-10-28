@@ -72,7 +72,7 @@ sum((pred>0.5) == validate$Gender2)/nrow(validate)
 ```
 
 GBM
-accuracy .49
+accuracy .51
 ```{r , echo=FALSE}
 
 model <- gbm(Gender2 ~ Height+Weight, distribution="bernoulli",
