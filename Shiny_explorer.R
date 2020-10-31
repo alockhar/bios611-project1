@@ -5,12 +5,10 @@ library(plotly)
 
 args <- commandArgs(trailingOnly=T)
 
-port <- as.numeric(args[[1]]);
+port <- as.numeric(args[[1]])
 
-data <- read_csv("derived_data/Overall.csv") %>%
-  nice_names() %>%
-  filter(total > 6) %>%
-  filter(alignment %in% c("good","bad"));
+data <- read_csv("derived_data/Overall.csv") 
+  
 
 stats <- data %>% select(-name, -alignment) %>% names();
 
