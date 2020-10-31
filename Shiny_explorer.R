@@ -10,14 +10,14 @@ port <- as.numeric(args[[1]])
 data <- read_csv("derived_data/Overall.csv") 
   
 
-#stats <- data %>% select(-name, -alignment) %>% names();
+stats <- data %>% select(-WDuratDays, -Americas) %>% names();
 
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
   
   # App title ----
-  titlePanel("Superhero Powers and Alignment"),
+  titlePanel("Days of exposure by Americas indicator"),
   
   # Sidebar layout with input and output definitions ----
   sidebarLayout(
@@ -61,7 +61,7 @@ server <- function(input, output) {
     bins <- input$bins;
     
     if(input$plotType=="histogram"){
-      ggplotly(ggplot(data, aes_string(stat))+geom_histogram(aes(fill=Americas),
+      ggplotly(ggplot(data, aes_string(WDuratDays))+geom_histogram(aes(y = (..count..)/sum(..count..),fill=Americas),
                                                              position="dodge",
                                                              bins=bins));
     } else {
@@ -69,7 +69,7 @@ server <- function(input, output) {
       mn <- min(d);
       mx <- max(d);
       bw <- (mx-mn)/bins;
-      ggplotly(ggplot(data, aes_string(stat))+geom_density(aes(fill=Americas),
+      ggplotly(ggplot(data, aes_string(WDuratDays))+geom_density(aes(fill=Americas),
                                                            alpha=0.3,
                                                            bw=bw));
       
@@ -79,8 +79,8 @@ server <- function(input, output) {
   
 }
 
- ggplot(sub, aes(WDuratDays)) + 
-    geom_histogram(aes(y = (..count..)/sum(..count..))) + ggtitle(sub$Americas[[1]]) +
+ ggplot(data, aes(WDuratDays)) + 
+    geom_histogram(aes(y = (..count..)/sum(..count..),fill=Americas)) +
     theme(plot.title = element_text(hjust = 0.5))+xlab('Total days of war')+ylab('Proportion of total wars by Americas group')
 
 
