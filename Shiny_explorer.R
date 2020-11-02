@@ -1,7 +1,7 @@
 library(shiny)
 library(tidyverse)
 library(plotly)
-
+library(dplyr)
 
 args <- commandArgs(trailingOnly=T)
 
@@ -14,8 +14,8 @@ data <- read_csv("derived_data/Overall.csv")
  #   geom_point(show.legend = FALSE)+facet_grid(~Americas)+ylab('Total Expsure (Days)')+xlab('Start year')+ labs(color='War Type')+theme(legend.title = element_blank())
 
 
-stats <- data %>% select(WDuratDays, Americas,RelDiffDeathsImp,WarTypeD,TotalBDeathsU) %>% names();
-
+#stats <- data %>% select(WDuratDays, Americas,RelDiffDeathsImp,WarTypeD,TotalBDeathsU) %>% names();
+#out_vars=c("Total Deaths","Relative Difference in deaths")
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
@@ -35,8 +35,8 @@ ui <- fluidPage(
                   label = "TotalBDeathsU:",
                   min = 500,
                   max = 50000,
-                  value = 50000,choices="TotalBDeathsU"),
-      
+                  value = 50000),
+
       
       sliderInput(inputId = "RelDiffDeathsImp",
                   label = "RelDiffDeathsImp:",
@@ -44,7 +44,7 @@ ui <- fluidPage(
                   max = .55,
                   value = .55),
       
-      
+     
       
       
       # selectInput(inputId = "stat",
@@ -53,7 +53,14 @@ ui <- fluidPage(
       
       selectInput(inputId = "deathType",
                   label = "Death Type",
-                  choices=c("Total Deaths","Relative Difference in deaths"))
+                  choices=c("Total Deaths","Relative Difference in deaths")),
+      
+      selectInput(inputId = "WarTypeD",
+                  label = "War Type:",
+                  choices=data$WarTypeD,
+                  selected =data$WarTypeD ),
+      
+      uiOutput("selected_wartype")
       
     ),
     
@@ -69,7 +76,12 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   
-  output$distPlot <- renderPlotly({
+  output$selected_wartype<-renderUI({
+    checkboxGroupInput(inputId = "show_levels",label="Select category/ies to represent:",choices=choices_wt(), selected = choices_wt())})
+    
+    choices_wt<-reactive({return(levels(input$WarTypeD[[1]]))   })
+  
+       output$geomPlot <- renderPlotly({
     
     #stat <- input$stat;
     #TotalDeathsU <- input$TotalDeathsU;
@@ -79,11 +91,11 @@ server <- function(input, output) {
     #                                                          position="dodge",
     #                                                          bins=bins));
     # }
-    
+       #data2<-select(data,input$TotalBDeathsU,input$RelDiffDeathsImp, StartYr1,WDuratDays,input$WarTypeD)%>%filter(!!(as.name(input$WarTypeD)) %in% input$show_levels)
     
     if(input$deathType=="Total Deaths"){
     ggplot(data, 
-           aes(x = StartYr1, y = WDuratDays,size=input$TotalBDeathsU,color=WarTypeD)) +
+           aes(x = StartYr1, y = WDuratDays,size=input$TotalBDeathsU,color=input$WarTypeD)) +
       geom_point(show.legend = FALSE)+facet_grid(~Americas)+ylab('Total Expsure (Days)')+xlab('Start year')+ labs(color='War Type')
     }
     else {
@@ -97,7 +109,7 @@ server <- function(input, output) {
       
     
       ggplot(data, 
-             aes(x = StartYr1, y = WDuratDays,size=input$RelDiffDeathsImp,color=WarTypeD)) +
+             aes(x = StartYr1, y = WDuratDays,size=input$RelDiffDeathsImp,color=input$WarTypeD)) +
         geom_point(show.legend = FALSE)+facet_grid(~Americas)+ylab('Total Expsure (Days)')+xlab('Start year')+ labs(color='War Type')+theme(legend.title = element_blank())
       
       
