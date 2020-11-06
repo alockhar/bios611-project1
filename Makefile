@@ -112,3 +112,9 @@ Aim1_deaths/model_outputs/IntlnonImpTr1.rds\
  derived_data/International.csv\
  Aim1_deaths/International_No_time.R
 	Rscript Aim1_deaths/International_No_time.R
+
+
+.PHONY: Shiny_explorer_scratch
+
+shiny_app: derived_data/Overall.csv rshiny/Shiny_explorer_scratch.R
+		Rscript rshiny/Shiny_explorer_scratch.R ${PORT}
