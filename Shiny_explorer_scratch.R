@@ -5,7 +5,7 @@ library(dplyr)
 
 args <- commandArgs(trailingOnly=T)
 
-#port <- as.numeric(args[[1]])
+port <- as.numeric(args[[1]])
 
 data2 <- read_csv("derived_data/Overall.csv") %>%filter(StartMo1>0)
 
@@ -138,4 +138,4 @@ server<-function(input,output){
 
 
 print(sprintf("Starting shiny on port 8788"));
-shinyApp(ui = ui, server = server, options = list(port=8788, host="0.0.0.0"))
+shinyApp(ui = ui, server = server, options = list(port=port, host="0.0.0.0"))
