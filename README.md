@@ -33,3 +33,25 @@ Aim 2 was multi-fold: to cluster wartype, the Americas indicator variable, time 
 
 The final aim 3 was to look at network community detection based on weighting relative difference in deaths.  A network data structure was made utilizing these weights.  The goal was to descriptively assign membership and look at potentially separating attributes for a given community membership.
 
+
+
+
+
+To run RSS do this:
+
+docker run -v `pwd`:/home/rstudio -e PASSWORD=mypwd -p 8787:8787 -p 8788:8788 -t project1-env
+
+Run the following command in the rstudio terminal to run the rshiny app.
+
+PORT=8788 make Shiny_explorer_scratch.R
+
+THe port, or 8788 above, can be changed as well if the user wants to use on another port.  Open a new tab in your browser to http:/localhost:8788 and the app will be available to interact with.
+
+
+To also run the shiny app:
+
+docker run -p <port>:<port> -v `pwd`:/home/rstudio -it project1-env sudo -H -u rstudio /bin/bash -c "cd ~/; PORT=<port> make Shiny_explorer_scratch.R"
+
+And as above, the <port> can be replaced with the desired port to run the application.
+
+
