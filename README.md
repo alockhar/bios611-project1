@@ -43,7 +43,7 @@ docker run -v `pwd`:/home/rstudio -e PASSWORD=mypwd -p 8787:8787 -p 8788:8788 -t
 
 Run the following command in the rstudio terminal to run the rshiny app.
 
-PORT=8788 make Shiny_explorer_scratch.R
+PORT=8788 make shiny_app
 
 THe port, or 8788 above, can be changed as well if the user wants to use on another port.  Open a new tab in your browser to http:/localhost:8788 and the app will be available to interact with.
 
