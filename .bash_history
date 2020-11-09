@@ -111,3 +111,7 @@ make Report\ File/Project_1_report.pdf
 PORT=8788 make Shiny_explorer
 PORT=8788 make Shiny_explorer_scratch 
 P
+PORT=8788 make Shiny_explorer_scratch 
+PORT=8788 make shiny_app
+make shiny_app
+PORT=8788 make shiny_app
