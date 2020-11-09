@@ -7,16 +7,11 @@ args <- commandArgs(trailingOnly=T)
 
 port <- as.numeric(args[[1]])
 
-data2 <- read_csv("derived_data/Overall.csv") %>%filter(StartMo1>0)
+data2 <- read_csv("derived_data/Overall.csv") %>%filter(StartMo1>0)%>%rename(Relative_difference_in_initator_deaths=RelDiffDeathsImp,Absolute_difference_in_initiator_deaths=AbsDiffDeathsImp,Total_deaths=TotalBDeathsU)
 
 
-# ggplot(data, 
-#        aes(x = StartYr1, y = WDuratDays,size=input$RelDiffDeathsImp,color=input$WarTypeD)) +
-#   geom_point(show.legend = FALSE)+facet_grid(~Americas)+ylab('Total Expsure (Days)')+xlab('Start year')+ labs(color='War Type')+theme(legend.title = element_blank())
 
-
-size<-data2%>%select(RelDiffDeathsImp,AbsDiffDeathsImp,TotalBDeathsU)
-
+size<-data2%>%select(Relative_difference_in_initator_deaths,Absolute_difference_in_initiator_deaths,Total_deaths)
 
 xdat<-data2%>%select(StartYr1,StartMo1)
 
@@ -31,11 +26,11 @@ col<-data2%>%select(WarTypeD)
   
 ui<-fluidPage(
   fluidRow(
-    column(4,selectInput("X_axis_Category",label="X axis Category",choices=as.list(colnames(xdat)),selected="StartYr1")        
+    column(4,selectInput("X_axis_Category",label="Starting time (calendar scale)",choices=as.list(colnames(xdat)),selected="StartYr1")        
      ),
-    column(4,selectInput("Y_axis_Category",label="Y axis Category",choices=as.list(colnames(ydat)),selected="WDuratDays")           
+    column(4,selectInput("Y_axis_Category",label="Total duration of war (calendar scale)",choices=as.list(colnames(ydat)),selected="WDuratDays")           
     ),
-     column(4,selectInput("Size_Category",label="Sized by death metric",choices=as.list(colnames(size)),selected="TotalBDeathsU")
+     column(4,selectInput("Size_Category",label="Sizing by relative diff,abs diff, or total deaths of given war",choices=as.list(colnames(size)),selected="Total_deaths")
      ),
     column(4,selectInput("Color_Category",label="Color Category (default 1 only)",choices=as.list(colnames(col)),selected="WarTypeD")
     ),
@@ -47,7 +42,7 @@ ui<-fluidPage(
   
     
     
-    
+    #Suppressed for future panel chanes
     # mainPanel(
     #   
     #   # Output: Tabset w/ plot, summary, and table ----
@@ -100,7 +95,7 @@ server<-function(input,output){
  # output$Table <- renderTable({
   output$plot_brushed_points<-renderDataTable({
     res<-brushedPoints(dat,input$plot_brush)
-    subset_res<-subset(res,select=c(WarName,Initiator,StartYr1,WDuratDays,RelDiffDeathsImp,TotalBDeathsU,WarTypeD,OutcomeE))
+    subset_res<-subset(res,select=c(WarName,Initiator,StartYr1,WDuratDays,Relative_difference_in_initator_deaths,Total_deaths,WarTypeD,OutcomeE))
     
   #  output$table1 <- renderDataTable(print(subset_res))
       
@@ -113,6 +108,8 @@ server<-function(input,output){
   
  # })
   
+  
+  #Currently suppressed but in process for additional summary tabs
  # output$Summary <- renderPrint({
   # output$plot_brushed_points<-renderDataTable({
   #   res<-brushedPoints(dat,input$plot_brush)
