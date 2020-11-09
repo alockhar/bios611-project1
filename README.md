@@ -48,10 +48,4 @@ PORT=8788 make shiny_app
 THe port, or 8788 above, can be changed as well if the user wants to use on another port.  Open a new tab in your browser to http:/localhost:8788 and the app will be available to interact with.
 
 
-To also run the shiny app:
-
-docker run -p <port>:<port> -v `pwd`:/home/rstudio -it project1-env sudo -H -u rstudio /bin/bash -c "cd ~/; PORT=<port> make Shiny_explorer_scratch.R"
-
-And as above, the <port> can be replaced with the desired port to run the application.
-
 
