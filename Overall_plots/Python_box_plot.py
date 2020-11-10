@@ -48,17 +48,17 @@ max(y_abs)
 
 
 
-plt.figure(figsize=(13,10), dpi= 80)
+plt.figure()
 sns.violinplot(x='StartMo1', y='AbsDiffDeathsImp', data=initStart, scale='width', inner='quartile')
 
-g=plt.annotate('Russian \nCivil War\n1917-1920', xy=(11, -440000), xytext=(12, -420000),
+g=plt.annotate('Russian \nCivil War\n1917-1920', xy=(11, -440000), xytext=(11.5, -420000),
              bbox=dict(boxstyle='square', fc='firebrick'),
-             arrowprops=dict(facecolor='steelblue', shrink=0.05), fontsize=15, color='white')
+             arrowprops=dict(facecolor='steelblue', shrink=0.05), fontsize=7, color='white')
 
 g
 # Decoration
-plt.title('Violin Plot of absolute difference in initiator deaths by war starting month', fontsize=22)
-#plt.show()
+plt.title('Violin Plot of absolute difference in initiator deaths by war starting month', fontsize=12)
+plt.xlabel("Starting Month of War")
 plt.savefig('Overall_plots/Python_proj_violin.png') 
 
 # Decoration
