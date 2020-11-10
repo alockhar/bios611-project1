@@ -112,6 +112,7 @@
 \usepackage{threeparttablex}
 \usepackage[normalem]{ulem}
 \usepackage{makecell}
+\usepackage{xcolor}
 
 \title{Project 1 Report}
 \author{Alexandre Lockhart}
@@ -449,37 +450,37 @@ death difference), showed a slight gain in prediction (not shown but
 R2=.013 in comparison to .002)
 
 \begin{verbatim}
-##                             Description      R2
-## 1 Absolute difference in deaths imputed 0.00015
-## 2                                              
-## 3                                              
-## 4                                              
-## 5                                              
-## 6                                              
+##                             Description     R2
+## 1 Absolute difference in deaths imputed 0.0024
+## 2                                             
+## 3                                             
+## 4                                             
+## 5                                             
+## 6                                             
 ##                           Variables Estimate Std err p-val
-## 1                       (Intercept) -4115.15 2176.88 0.060
-## 2         `AmericasNot in Americas`  3025.74 2254.66 0.181
-## 3                      StartYR_Norm    21.71   15.75 0.170
-## 4                        WDuratDays    -1.29    0.68 0.061
-## 5 `WarTypeDCivil War: Local Issues` -1206.11 1967.19 0.540
-## 6                     WarTypeDOther -1163.35 2949.25 0.694
+## 1                       (Intercept)  -347.91 1996.75  0.86
+## 2         `AmericasNot in Americas`  1991.23 2068.09  0.34
+## 3                      StartYR_Norm     1.33   14.45  0.93
+## 4                        WDuratDays    -0.69    0.63  0.27
+## 5 `WarTypeDCivil War: Local Issues` -1889.24 1804.41  0.30
+## 6                     WarTypeDOther -1307.02 2705.21  0.63
 \end{verbatim}
 
 \begin{verbatim}
 ##                             Description    R2                         Variables
-## 1 Relative difference in deaths imputed 0.014                       (Intercept)
+## 1 Relative difference in deaths imputed 0.011                       (Intercept)
 ## 2                                                     `AmericasNot in Americas`
 ## 3                                                                  StartYR_Norm
 ## 4                                                                    WDuratDays
 ## 5                                             `WarTypeDCivil War: Local Issues`
 ## 6                                                                 WarTypeDOther
-##   Estimate Std err  p-val
-## 1   0.0066  0.0026 0.0114
-## 2    0.004  0.0027 0.1417
-## 3 -5.1e-06 1.9e-05 0.7841
-## 4  2.7e-06 8.1e-07 0.0011
-## 5  -0.0036  0.0023 0.1212
-## 6  -0.0019  0.0035 0.5866
+##   Estimate Std err p-val
+## 1   0.0037  0.0024 0.125
+## 2    0.003  0.0025 0.234
+## 3  1.1e-05 1.7e-05 0.534
+## 4  1.7e-06 7.5e-07 0.022
+## 5  0.00024  0.0022 0.911
+## 6  -0.0017  0.0032 0.601
 \end{verbatim}
 
 \hypertarget{internationalized-non-imputed}{%
@@ -676,6 +677,21 @@ be the next characteristic to find.
 \includegraphics[width=6.67in]{/home/rstudio/Networks/Network_Files/Ov}
 \includegraphics[width=6.67in]{/home/rstudio/Networks/Network_Files/Membership}
 \includegraphics[width=6.67in]{/home/rstudio/Networks/Network_Files/Membership_consolidated}
+
+\hypertarget{python-project-plot}{%
+\section{Python project plot}\label{python-project-plot}}
+
+A violin plot of absolute difference in initiator deaths by calendar
+month was shown. The interest was in seeing if a general shape or
+variability by calendar month might be different for a given war start
+month. Not much was seen, however, though one war did standout in
+December, which was annotated (Russian Civil War 1917-1920). In this
+given war, the anti-Bolsheviks opposing Lenin's regime were perceived as
+the war `initiators' despite fighting for independence and suffered the
+relatively highest number of initiator casualties relatively to the
+other side, of all the curated wars.
+
+\includegraphics[width=14.44in]{/home/rstudio/Overall_plots/Python_proj_violin}
 
 \hypertarget{conclusions}{%
 \section{Conclusions}\label{conclusions}}
