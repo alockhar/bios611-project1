@@ -24,7 +24,8 @@ Report\ File/Project_1_report.pdf:\
  Aim2_out_clustering/Cluster_Files/Aim2_out_clustering.rds\
  Networks/Network_Files/Ov.png\
  Networks/Network_Files/Membership.png\
- Networks/Network_Files/Membership_consolidated.png
+ Networks/Network_Files/Membership_consolidated.png\
+ Overall_plots/Python_proj_violin.png
 	Rscript -e "rmarkdown::render('Report\ File/Project_1_report.Rmd')"
 
 clean:
@@ -32,6 +33,7 @@ clean:
 	rm -f derived_data/*.csv
 	rm -f Overall_plots/plot_files/*.rds
 	rm -f Overall_plots/plot_files/*.png
+    rm -f Overall_plots/*.png
 	rm -f Aim1_deaths/model_outputs/*.rds
 	rm -f Aim2_out_clustering/Cluster_Files/*.png
 	rm -f Aim2_out_clustering/Cluster_Files/*.rds
@@ -113,6 +115,10 @@ Aim1_deaths/model_outputs/IntlnonImpTr1.rds\
  Aim1_deaths/International_No_time.R
 	Rscript Aim1_deaths/International_No_time.R
 
+Overall_plots/Python_proj_violin.png:\
+ derived_data/Overall.csv\
+ Python_box_plot.ipynb
+	python3 Python_box_plot.ipynb
 
 .PHONY: shiny_app
 
