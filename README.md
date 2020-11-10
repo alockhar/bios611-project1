@@ -55,4 +55,6 @@ docker run -p 8765:8765 -v `pwd`:/home/rstudio -e PASSWORD=mypwd -it project1-en
 
 Copy the last link in the build and if running on system like longleaf replace 127.0.0.1 with your local host address
 
-Run make Project1
+Run python3 Overall_plots/Python_box_plot.py for local python file
+
+Run Make clean and then make Report\ File/Project_1_report.pdf from terminal to get updated R report with Python figure embedded at end.
