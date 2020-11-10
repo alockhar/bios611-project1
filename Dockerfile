@@ -27,4 +27,4 @@ RUN R -e "install.packages('plotly')"
 
 RUN apt update -y && apt install -y python3-pip
 RUN pip3 install jupyter jupyterlab
-RUN pip3 install numpy pandas sklearn plotnine matplotlib pandasql bokeh seaborn
+RUN pip3 install numpy pandas sklearn plotnine matplotlib pandasql bokeh seaborn joypy
