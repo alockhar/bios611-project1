@@ -33,7 +33,7 @@ clean:
 	rm -f derived_data/*.csv
 	rm -f Overall_plots/plot_files/*.rds
 	rm -f Overall_plots/plot_files/*.png
-    rm -f Overall_plots/*.png
+	rm -f Overall_plots/*.png
 	rm -f Aim1_deaths/model_outputs/*.rds
 	rm -f Aim2_out_clustering/Cluster_Files/*.png
 	rm -f Aim2_out_clustering/Cluster_Files/*.rds
@@ -117,8 +117,8 @@ Aim1_deaths/model_outputs/IntlnonImpTr1.rds\
 
 Overall_plots/Python_proj_violin.png:\
  derived_data/Overall.csv\
- Python_box_plot.ipynb
-	python3 Python_box_plot.ipynb
+ Overall_plots/Python_box_plot.py
+	python3 Overall_plots/Python_box_plot.py
 
 .PHONY: shiny_app
 
