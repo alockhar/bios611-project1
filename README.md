@@ -49,3 +49,10 @@ THe port, or 8788 above, can be changed as well if the user wants to use on anot
 
 
 
+To run python/jupyter:
+
+docker run -p 8765:8765 -v `pwd`:/home/rstudio -e PASSWORD=mypwd -it project1-env sudo -H -u rstudio /bin/bash -c "cd ~/; jupyter lab --ip 0.0.0.0 --port 8765"
+
+Copy the last link in the build and if running on system like longleaf replace 127.0.0.1 with your local host address
+
+Run make Project1
