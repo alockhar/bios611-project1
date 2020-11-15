@@ -450,37 +450,37 @@ death difference), showed a slight gain in prediction (not shown but
 R2=.013 in comparison to .002)
 
 \begin{verbatim}
+##                             Description      R2
+## 1 Absolute difference in deaths imputed 9.7e-06
+## 2                                              
+## 3                                              
+## 4                                              
+## 5                                              
+## 6                                              
+##                           Variables Estimate Std err p-val
+## 1                       (Intercept) -1486.45 2208.78  0.50
+## 2         `AmericasNot in Americas`  1630.13  2287.7  0.48
+## 3                      StartYR_Norm     0.14   15.98  0.99
+## 4                        WDuratDays     0.87    0.69  0.21
+## 5 `WarTypeDCivil War: Local Issues` -1203.73 1996.03  0.55
+## 6                     WarTypeDOther -3374.92 2992.47  0.26
+\end{verbatim}
+
+\begin{verbatim}
 ##                             Description     R2
-## 1 Absolute difference in deaths imputed 0.0015
+## 1 Relative difference in deaths imputed 0.0044
 ## 2                                             
 ## 3                                             
 ## 4                                             
 ## 5                                             
 ## 6                                             
-##                           Variables Estimate Std err p-val
-## 1                       (Intercept)   280.43 2055.91 0.892
-## 2         `AmericasNot in Americas`  1459.12 2129.37 0.494
-## 3                      StartYR_Norm     7.63   14.88 0.609
-## 4                        WDuratDays    -1.23    0.64 0.058
-## 5 `WarTypeDCivil War: Local Issues` -2388.06 1857.88 0.200
-## 6                     WarTypeDOther -3546.48 2785.36 0.204
-\end{verbatim}
-
-\begin{verbatim}
-##                             Description    R2                         Variables
-## 1 Relative difference in deaths imputed 0.017                       (Intercept)
-## 2                                                     `AmericasNot in Americas`
-## 3                                                                  StartYR_Norm
-## 4                                                                    WDuratDays
-## 5                                             `WarTypeDCivil War: Local Issues`
-## 6                                                                 WarTypeDOther
-##   Estimate Std err  p-val
-## 1   0.0084  0.0024 <0.001
-## 2  0.00044  0.0025   0.86
-## 3 -7.6e-06 1.8e-05   0.67
-## 4  2.9e-06 7.7e-07 <0.001
-## 5  -0.0025  0.0022   0.25
-## 6  -0.0047  0.0033   0.15
+##                           Variables Estimate Std err  p-val
+## 1                       (Intercept)  0.00068  0.0026   0.79
+## 2         `AmericasNot in Americas`   0.0018  0.0027   0.50
+## 3                      StartYR_Norm  2.7e-05 1.9e-05   0.14
+## 4                        WDuratDays  3.5e-06   8e-07 <0.001
+## 5 `WarTypeDCivil War: Local Issues`   0.0026  0.0023   0.26
+## 6                     WarTypeDOther   0.0048  0.0035   0.16
 \end{verbatim}
 
 \hypertarget{internationalized-non-imputed}{%
